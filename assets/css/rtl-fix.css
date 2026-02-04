@@ -198,8 +198,8 @@ input, textarea, select {
     white-space: nowrap !important; /* CRITICAL: Stops text wrapping inside words */
     display: flex !important;
     align-items: center;
-    padding-left: 5px !important; /* Further reduced to 5px */
-    padding-right: 5px !important; /* Further reduced to 5px */
+    padding-left: 8px !important; /* Increased from 5px for better spacing */
+    padding-right: 8px !important; /* Increased from 5px for better spacing */
 }
 
 /* Adjust Right Side (English Button) */

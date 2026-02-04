@@ -647,11 +647,12 @@ ul {
 }
 
 /* Language Switcher Styling */
+/* Language Switcher Styling */
 .main-menu__language-btn {
     display: flex;
     align-items: center;
     color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
     padding: 8px 20px;
     border-radius: 12px;
     transition: all 400ms ease;
@@ -660,6 +661,7 @@ ul {
     text-transform: uppercase;
     line-height: 1;
     letter-spacing: 0.05em;
+    background-color: transparent !important; /* Force transparent background */
 }
 
 .main-menu__language-btn:hover {
