@@ -20,19 +20,32 @@ html, body {
 
 /* Header Fixes */
 .main-header__logo {
-    float: right !important;
+    float: none !important;
     margin-left: 30px;
     margin-right: 0;
 }
 
-.main-menu__list {
-    float: left !important;
+/* Ensure Logo is on the Right */
+.main-header__wrapper-inner {
+    flex-direction: row; /* Default is row, but RTL flips it visually */
 }
 
+/* Ensure Menu Box takes available space */
+.main-header__menu-box {
+    width: auto;
+}
+
+.main-menu__list {
+    float: none !important;
+    display: flex;
+    justify-content: center;
+}
+
+/* Align Action Buttons (English) to the Left */
 .main-menu__right {
-    float: left !important;
-    margin-right: auto; 
-    margin-left: 0;
+    float: none !important;
+    margin-right: auto !important; 
+    margin-left: 0 !important;
 }
 
 /* List Items */
@@ -125,8 +138,14 @@ input, textarea, select {
 
 /* Header Menu Spacing Fix */
 .main-menu__list > li {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.main-menu .main-menu__list > li + li,
+.stricky-header .main-menu__list > li + li {
+    margin-left: 0 !important;
+    margin-right: 15px !important;
 }
 
 /* Product Section Text Spacing Fix */
