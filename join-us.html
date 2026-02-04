@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join Us - EL Masria - Egyptian Dairy Manufacturing Company</title>
+    <!--favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <meta name="description" content="Egyptian Integrated Food Industries - Careers" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/custom-animate.css" />
+    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css" />
+    <link rel="stylesheet" href="assets/vendors/odometer/odometer.min.css" />
+    <link rel="stylesheet" href="assets/vendors/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="assets/icons/style.css">
+    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/reey-font/stylesheet.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/vendors/bxslider/jquery.bxslider.css" />
+    <link rel="stylesheet" href="assets/vendors/bootstrap-select/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="assets/vendors/vegas/vegas.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/vendors/timepicker/timePicker.css" />
+    <link rel="stylesheet" href="assets/css/language-switcher.css" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="assets/css/elmasria.css" />
+    <link rel="stylesheet" href="assets/css/elmasria-responsive.css" />
+
+    <!-- Disable custom cursor -->
+    <style>
+        .custom-cursor__cursor,
+        .custom-cursor__cursor-two {
+            display: none !important;
+            visibility: hidden !important;
+        }
+
+        * {
+            cursor: auto !important;
+        }
+
+        body {
+            cursor: auto !important;
+        }
+
+        /* Modern Application Form Styling */
+        .contact-page {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9f2f9 100%);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-page::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(31, 99, 6, 0.08) 0%, transparent 70%);
+            animation: pulse 15s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.6;
+            }
+        }
+
+        .contact-page .section-title__tagline {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, #1f6306 0%, #ffcd1e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-transform: uppercase;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .contact-page .section-title__title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-top: 15px;
+            background: linear-gradient(135deg, #0e2207 0%, #1f6306 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact-page__form {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 24px;
+            padding: 50px;
+            box-shadow:
+                0 8px 32px rgba(31, 99, 6, 0.1),
+                0 4px 16px rgba(0, 0, 0, 0.05);
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .contact-page__form:hover {
+            transform: translateY(-5px);
+            box-shadow:
+                0 12px 48px rgba(31, 99, 6, 0.15),
+                0 6px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .comment-form__input-box {
+            margin-bottom: 25px;
+        }
+
+        .comment-form__input-box input,
+        .comment-form__input-box textarea {
+            width: 100%;
+            padding: 16px 24px;
+            border: 2px solid transparent;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.8);
+            font-size: 15px;
+            color: #0e2207;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .comment-form__input-box input:focus,
+        .comment-form__input-box textarea:focus {
+            outline: none;
+            border-color: #1f6306;
+            background: #ffffff;
+            box-shadow:
+                0 4px 16px rgba(31, 99, 6, 0.12),
+                0 0 0 4px rgba(31, 99, 6, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .comment-form__input-box textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .comment-form__btn-box {
+            margin-top: 35px;
+        }
+
+        .comment-form__btn {
+            background: linear-gradient(135deg, #1f6306 0%, #2d8c08 100%);
+            border: none;
+            padding: 18px 45px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #ffffff;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow:
+                0 6px 20px rgba(31, 99, 6, 0.3),
+                0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .comment-form__btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .comment-form__btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .comment-form__btn:hover {
+            transform: translateY(-3px);
+            box-shadow:
+                0 10px 30px rgba(31, 99, 6, 0.4),
+                0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .comment-form__btn:active {
+            transform: translateY(-1px);
+        }
+
+        .comment-form__btn i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .comment-form__btn:hover i {
+            transform: translateX(5px);
+        }
+
+        /* Floating label effect */
+        .comment-form__input-box {
+            position: relative;
+        }
+
+        .comment-form__input-box input::placeholder,
+        .comment-form__input-box textarea::placeholder {
+            color: #757873;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .comment-form__input-box input:focus::placeholder,
+        .comment-form__input-box textarea:focus::placeholder {
+            opacity: 0.4;
+            transform: translateX(5px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-page__form {
+                padding: 30px 20px;
+                border-radius: 16px;
+            }
+
+            .contact-page .section-title__title {
+                font-size: 32px;
+            }
+
+            .comment-form__btn {
+                width: 100%;
+                padding: 16px 35px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <div class="preloader">
+        <div class="preloader__image"></div>
+    </div>
+    <!-- /.preloader -->
+
+    <div class="page-wrapper">
+        <header class="main-header">
+            <div class="main-header__wrapper">
+                <div class="main-header__wrapper-inner">
+                    <div class="main-header__logo">
+                        <a href="index.html"><img src="assets/photos/logo.png" width="150" alt=""></a>
+                    </div>
+                    <div class="main-header__menu-box">
+                        <div class="main-header__menu-box-top">
+                            <ul class="list-unstyled main-header__contact-list">
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon-email"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="mailto:info@eifidairy.com">info@eifidairy.com</a></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon-pin"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p>10th Of Ramadan Industrial Zone B1 - Egypt</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="main-header__social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="main-header__menu-box-bottom">
+                            <nav class="main-menu">
+                                <div class="main-menu__wrapper">
+                                    <div class="main-menu__wrapper-inner">
+                                        <div class="main-menu__left">
+                                            <div class="main-menu__main-menu-box">
+                                                <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                                                <ul class="main-menu__list">
+                                                    <li>
+                                                        <a href="index.html">Home</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="about.html">About</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="sustainability.html">Sustainability</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="products.html">Products</a>
+                                                    </li>
+                                                    <li class="current">
+                                                        <a href="join-us.html">Join Us</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="contact.html">Contact</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="main-menu__right">
+                                            <div class="main-menu__search-cart-btn-box">
+                                                <div class="main-menu__language-switcher">
+                                                    <a href="index-rtl.html" class="main-menu__language-btn">
+                                                        <i class="fas fa-globe"></i>
+                                                        <span class="main-menu__language-text">عربي</span>
+                                                    </a>
+                                                </div>
+                                                <div class="main-menu__btn-box">
+                                                    <a href="contact.html" class="thm-btn main-menu__btn">Get Free Quote
+                                                        <i class="icon-right-arrow"></i> </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="main-header__phone-contact-box">
+                        <div class="main-header__phone-number">
+                            <a href="tel:0554499170">0554499170 - 0554499676</a>
+                        </div>
+                        <div class="main-header__call-box">
+                            <div class="main-header__call-inner">
+                                <div class="main-header__call-icon">
+                                    <span class="fas fa-phone"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+        </div><!-- /.stricky-header -->
+
+        <!--Page Header Start-->
+        <section class="page-header">
+            <div class="page-header-bg" style="background-image: url(assets/photos/7.jpeg)">
+            </div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><span>/</span></li>
+                        <li>Join Us</li>
+                    </ul>
+                    <h2>Join Our Team</h2>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+
+
+
+        <!--Services One Start-->
+        <section class="services-one">
+            <div class="services-one__bg" style="background-image: url(assets/images/shapes/services-one-shape-1.png);">
+            </div>
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="section-title__tagline">Open Positions</span>
+                    <h2 class="section-title__title">Career Opportunities</h2>
+                    <div class="section-title__icon">
+                        <img src="assets/images/icon/section-title-icon-1.png" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <!--Services One Single Start-->
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="100ms">
+                        <div class="services-one__single">
+                            <div class="services-one__img-box">
+                                <div class="services-one__img">
+                                    <img src="assets/photos/4.jpeg" alt="">
+                                </div>
+                                <div class="services-one__icon">
+                                    <span class="icon-dairy"></span>
+                                </div>
+                            </div>
+                            <div class="services-one__content">
+                                <h3 class="services-one__title"><a href="contact.html">Production <br>
+                                        Specialists</a></h3>
+                                <p class="services-one__text">Join our dairy production team and contribute to making
+                                    world-class products.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Services One Single End-->
+                    <!--Services One Single Start-->
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="200ms">
+                        <div class="services-one__single">
+                            <div class="services-one__img-box">
+                                <div class="services-one__img">
+                                    <img src="assets/photos/5.jpeg" alt="">
+                                </div>
+                                <div class="services-one__icon">
+                                    <span class="icon-agriculture"></span>
+                                </div>
+                            </div>
+                            <div class="services-one__content">
+                                <h3 class="services-one__title"><a href="contact.html">Quality Control
+                                        <br> Engineers</a></h3>
+                                <p class="services-one__text">Ensure the highest quality standards are maintained
+                                    throughout production.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Services One Single End-->
+                    <!--Services One Single Start-->
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="300ms">
+                        <div class="services-one__single">
+                            <div class="services-one__img-box">
+                                <div class="services-one__img">
+                                    <img src="assets/photos/6.jpeg" alt="">
+                                </div>
+                                <div class="services-one__icon">
+                                    <span class="icon-organic-food"></span>
+                                </div>
+                            </div>
+                            <div class="services-one__content">
+                                <h3 class="services-one__title"><a href="contact.html">Sales & Marketing
+                                        <br> Professionals</a></h3>
+                                <p class="services-one__text">Help us expand our reach and bring our products to more
+                                    customers.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Services One Single End-->
+                </div>
+            </div>
+        </section>
+        <!--Services One End-->
+
+        <!--Contact Page Start-->
+        <section class="contact-page">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="section-title__tagline">Apply Now</span>
+                    <h2 class="section-title__title">Send Your Application</h2>
+                    <div class="section-title__icon">
+                        <img src="assets/images/icon/section-title-icon-1.png" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="contact-page__form">
+                            <form action="#" class="comment-one__form contact-form-validated" novalidate="novalidate">
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <div class="comment-form__input-box">
+                                            <input type="text" placeholder="Your Name" name="name">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="comment-form__input-box">
+                                            <input type="email" placeholder="Email Address" name="email">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="comment-form__input-box">
+                                            <input type="text" placeholder="Phone Number" name="phone">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="comment-form__input-box">
+                                            <input type="text" placeholder="Position Applying For" name="position">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="comment-form__input-box text-message-box">
+                                            <textarea name="message"
+                                                placeholder="Cover Letter / Additional Information"></textarea>
+                                        </div>
+                                        <div class="comment-form__btn-box">
+                                            <button type="submit" class="thm-btn comment-form__btn">Submit Application
+                                                <i class="icon-right-arrow"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Contact Page End-->
+
+        <!--Site Footer Start-->
+        <footer class="site-footer">
+            <div class="site-footer__top">
+                <div class="container">
+                    <div class="site-footer__top-inner">
+                        <div class="site-footer-shape-1 float-bob-x"
+                            style="background-image: url(assets/images/shapes/site-footer-shape-1.png);"></div>
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                                <div class="footer-widget__column footer-widget__about">
+                                    <div class="footer-widget__logo">
+                                        <a href="index.html"><img src="assets/photos/logo.png" width="150" alt=""></a>
+                                    </div>
+                                    <div class="footer-widget__about-text-box">
+                                        <p class="footer-widget__about-text">Egyptian Integrated Food Industries -
+                                            specializing in premium cheese and butter products for local and export
+                                            markets.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                                <div class="footer-widget__column footer-widget__Explore">
+                                    <div class="footer-widget__title-box">
+                                        <h3 class="footer-widget__title">Explore</h3>
+                                    </div>
+                                    <ul class="footer-widget__Explore-list list-unstyled">
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="farmers.html">Our Farmers</a></li>
+                                        <li><a href="project-01.html">New Projects</a></li>
+                                        <li><a href="services.html">Services</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                                <div class="footer-widget__column footer-widget__news">
+                                    <div class="footer-widget__title-box">
+                                        <h3 class="footer-widget__title">News</h3>
+                                    </div>
+                                    <ul class="footer-widget__news-list list-unstyled">
+                                        <li>
+                                            <div class="footer-widget__news-img">
+                                                <img src="assets/photos/14.jpeg" alt="">
+                                            </div>
+                                            <div class="footer-widget__news-content">
+                                                <p class="footer-widget__news-date">20 Jul, 2022</p>
+                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">A
+                                                        Our Products
+                                                        Gives
+                                                        More Good Taste</a></h5>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="footer-widget__news-img">
+                                                <img src="assets/photos/15.jpeg" alt="">
+                                            </div>
+                                            <div class="footer-widget__news-content">
+                                                <p class="footer-widget__news-date">20 Jul, 2022</p>
+                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">A
+                                                        Our Products
+                                                        Gives
+                                                        More Good Taste</a></h5>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                                <div class="footer-widget__column footer-widget__Contact">
+                                    <div class="footer-widget__title-box">
+                                        <h3 class="footer-widget__title">Contact</h3>
+                                    </div>
+                                    <ul class="footer-widget__Contact-list list-unstyled">
+                                        <li>
+                                            <div class="icon">
+                                                <span class="fas fa-phone-square-alt"></span>
+                                            </div>
+                                            <div class="text">
+                                                <p><a href="tel:0554499170">0554499170 - 0554499676</a></p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon">
+                                                <span class="fas fa-envelope"></span>
+                                            </div>
+                                            <div class="text">
+                                                <p><a href="mailto:needhelp@company.com">needhelp@company.com</a></p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon">
+                                                <span class="icon-pin"></span>
+                                            </div>
+                                            <div class="text">
+                                                <p>10th Of Ramadan Industrial Zone B1 - Egypt</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <form class="footer-widget__Contact-form">
+                                        <div class="footer-widget__Contact-input-box">
+                                            <input type="email" placeholder="Email Address" name="email">
+                                            <button type="submit" class="footer-widget__Contact-btn"><i
+                                                    class="icon-right-arrow"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-footer__bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="site-footer__bottom-inner">
+                                <p class="site-footer__bottom-text">© Copyright 2022 by <a href="#">EL Masria.com</a>
+                                </p>
+                                <div class="site-footer__social">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-facebook"></i></a>
+                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="site-footer__bottom-scroll">
+                                    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i
+                                            class="icon-up-arrow"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--Site Footer End-->
+
+    </div><!-- /.page-wrapper -->
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <!-- /.mobile-nav__overlay -->
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+            <div class="logo-box">
+                <a href="index.html" aria-label="logo image"><img src="assets/photos/logo.png" width="143" alt="" /></a>
+            </div>
+            <!-- /.logo-box -->
+            <div class="mobile-nav__container"></div>
+            <!-- /.mobile-nav__container -->
+
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:info@eifidairy.com">info@eifidairy.com</a>
+                </li>
+                <li>
+                    <i class="fa fa-phone-alt"></i>
+                    <a href="tel:0554499170">0554499170 - 0554499676</a>
+                </li>
+            </ul><!-- /.mobile-nav__contact -->
+            <div class="mobile-nav__top">
+                <div class="mobile-nav__social">
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-facebook-square"></a>
+                    <a href="#" class="fab fa-pinterest-p"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                </div><!-- /.mobile-nav__social -->
+            </div><!-- /.mobile-nav__top -->
+
+        </div>
+        <!-- /.mobile-nav__content -->
+    </div>
+    <!-- /.mobile-nav__wrapper -->
+
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <!-- /.search-popup__overlay -->
+        <div class="search-popup__content">
+            <form action="#">
+                <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
+                <input type="text" id="search" placeholder="Search Here..." />
+                <button type="submit" aria-label="search submit" class="thm-btn">
+                    <i class="icon-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+        <!-- /.search-popup__content -->
+    </div>
+    <!-- /.search-popup -->
+
+    <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script src="assets/vendors/nouislider/nouislider.min.js"></script>
+    <script src="assets/vendors/odometer/odometer.min.js"></script>
+    <script src="assets/vendors/swiper/swiper.min.js"></script>
+    <script src="assets/vendors/tiny-slider/tiny-slider.min.js"></script>
+    <script src="assets/vendors/wnumb/wNumb.min.js"></script>
+    <script src="assets/vendors/wow/wow.js"></script>
+    <script src="assets/vendors/isotope/isotope.js"></script>
+    <script src="assets/vendors/countdown/countdown.min.js"></script>
+    <script src="assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/vendors/bxslider/jquery.bxslider.min.js"></script>
+    <script src="assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="assets/vendors/vegas/vegas.min.js"></script>
+    <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
+    <script src="assets/vendors/timepicker/timePicker.js"></script>
+    <script src="assets/vendors/circleType/jquery.circleType.js"></script>
+    <script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
+
+    <!-- template js -->
+    <script src="assets/js/elmasria.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sustainability - EL Masria - Egyptian Dairy Manufacturing Company</title>
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <meta name="description" content="Egyptian Integrated Food Industries - Sustainability" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/custom-animate.css" />
+    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css" />
+    <link rel="stylesheet" href="assets/vendors/odometer/odometer.min.css" />
+    <link rel="stylesheet" href="assets/vendors/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="assets/icons/style.css">
+    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/reey-font/stylesheet.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/vendors/bxslider/jquery.bxslider.css" />
+    <link rel="stylesheet" href="assets/vendors/bootstrap-select/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="assets/vendors/vegas/vegas.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/vendors/timepicker/timePicker.css" />
+    <link rel="stylesheet" href="assets/css/language-switcher.css" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="assets/css/elmasria.css" />
+    <link rel="stylesheet" href="assets/css/elmasria-responsive.css" />
+
+    <!-- Premium Sustainability Page Styling -->
+    <style>
+        .custom-cursor__cursor,
+        .custom-cursor__cursor-two {
+            display: none !important;
+            visibility: hidden !important;
+        }
+
+        * {
+            cursor: auto !important;
+        }
+
+        body {
+            cursor: auto !important;
+            background: #f8f9fa;
+        }
+
+        /* Premium Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #2c5f2d 0%, #1a3a1b 100%);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .page-header__inner {
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-header__title {
+            font-size: 48px !important;
+            font-weight: 700 !important;
+            color: #fff !important;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 15px !important;
+        }
+
+        .thm-breadcrumb li {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        /* Premium About Section */
+        .about-three {
+            padding: 100px 0;
+            background: #fff;
+        }
+
+        .section-title__tagline {
+            color: #4CAF50 !important;
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .section-title__title {
+            font-size: 42px !important;
+            font-weight: 700 !important;
+            color: #2c3e50 !important;
+            line-height: 1.3 !important;
+            margin-bottom: 20px !important;
+        }
+
+        .about-three__text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Premium Image Cards */
+        .about-three__left-single {
+            margin-bottom: 25px;
+        }
+
+        .about-three__left-img {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .about-three__left-img:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .about-three__left-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .about-three__left-img:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Premium Points List */
+        .about-three__points {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            margin-top: 30px;
+        }
+
+        .about-three__points li {
+            padding: 15px 0;
+            border-bottom: 1px solid #e9ecef;
+            font-size: 16px;
+            color: #2c3e50;
+            transition: all 0.3s ease;
+        }
+
+        .about-three__points li:last-child {
+            border-bottom: none;
+        }
+
+        .about-three__points li:hover {
+            padding-left: 10px;
+            color: #4CAF50;
+        }
+
+        .about-three__points li .icon {
+            color: #4CAF50;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+
+        /* Premium Buttons */
+        .thm-btn {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+            transition: all 0.4s ease;
+        }
+
+        .thm-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(76, 175, 80, 0.4);
+        }
+
+        /* Content Spacing */
+        .container {
+            max-width: 1200px;
+        }
+
+        /* Responsive Typography */
+        @media (max-width: 768px) {
+            .page-header__title {
+                font-size: 32px !important;
+            }
+
+            .section-title__title {
+                font-size: 28px !important;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <div class="preloader">
+        <div class="preloader__image"></div>
+    </div>
+    <!-- /.preloader -->
+
+    <div class="page-wrapper">
+        <header class="main-header">
+            <div class="main-header__wrapper">
+                <div class="main-header__wrapper-inner">
+                    <div class="main-header__logo">
+                        <a href="index.html"><img src="assets/photos/logo.png" width="150" alt=""></a>
+                    </div>
+                    <div class="main-header__menu-box">
+                        <div class="main-header__menu-box-top">
+                            <ul class="list-unstyled main-header__contact-list">
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon-email"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="mailto:info@eifidairy.com">info@eifidairy.com</a></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon-pin"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p>10th Of Ramadan Industrial Zone B1 - Egypt</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="main-header__social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="main-header__menu-box-bottom">
+                            <nav class="main-menu">
+                                <div class="main-menu__wrapper">
+                                    <div class="main-menu__wrapper-inner">
+                                        <div class="main-menu__left">
+                                            <div class="main-menu__main-menu-box">
+                                                <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                                                <ul class="main-menu__list">
+                                                    <li>
+                                                        <a href="index.html">Home</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="about.html">About</a>
+                                                    </li>
+                                                    <li class="current">
+                                                        <a href="sustainability.html">Sustainability</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="products.html">Products</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="join-us.html">Join Us</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="contact.html">Contact</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="main-menu__right">
+                                            <div class="main-menu__search-cart-btn-box">
+                                                <div class="main-menu__language-switcher">
+                                                    <a href="index-rtl.html" class="main-menu__language-btn">
+                                                        <i class="fas fa-globe"></i>
+                                                        <span class="main-menu__language-text">عربي</span>
+                                                    </a>
+                                                </div>
+                                                <div class="main-menu__btn-box">
+                                                    <a href="contact.html" class="thm-btn main-menu__btn">Get Free Quote
+                                                        <i class="icon-right-arrow"></i> </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="main-header__phone-contact-box">
+                        <div class="main-header__phone-number">
+                            <a href="tel:0554499170">0554499170 - 0554499676</a>
+                        </div>
+                        <div class="main-header__call-box">
+                            <div class="main-header__call-inner">
+                                <div class="main-header__call-icon">
+                                    <span class="fas fa-phone"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+        </div><!-- /.stricky-header -->
+
+        <!--Page Header Start-->
+        <section class="page-header">
+            <div class="page-header-bg" style="background-image: url(assets/photos/9.jpeg)">
+            </div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><span>/</span></li>
+                        <li>Sustainability</li>
+                    </ul>
+                    <h2>Sustainability</h2>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+
+        <!--Sustainability Content Start-->
+        <section class="about-three">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="about-three__left">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6">
+                                    <div class="about-three__left-single">
+                                        <div class="about-three__left-img">
+                                            <img src="assets/photos/18.jpeg" alt="">
+                                        </div>
+                                        <div class="about-three__left-img about-three__left-img--2">
+                                            <img src="assets/photos/21.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6">
+                                    <div class="about-three__left-single">
+                                        <div class="about-three__left-img">
+                                            <img src="assets/photos/22.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="about-three__right">
+                            <div class="section-title text-left">
+                                <span class="section-title__tagline">Our Commitment</span>
+                                <h2 class="section-title__title">Sustainable Dairy Production</h2>
+                                <div class="section-title__icon">
+                                    <img src="assets/images/icon/section-title-icon-1.png" alt="">
+                                </div>
+                            </div>
+                            <p class="about-three__text-1">At Egyptian Integrated Food Industries, we are committed to
+                                sustainable practices in every aspect of our dairy production, from sourcing to
+                                packaging.</p>
+                            <ul class="list-unstyled about-three__points">
+                                <li>
+                                    <div class="icon-box">
+                                        <span class="fa fa-check"></span>
+                                        <p class="icon-box-text">Environmental Responsibility</p>
+                                    </div>
+                                    <div class="content">
+                                        <p>Minimizing our environmental footprint</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon-box">
+                                        <span class="fa fa-check"></span>
+                                        <p class="icon-box-text">Resource Management</p>
+                                    </div>
+                                    <div class="content">
+                                        <p>Efficient use of water and energy</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="about-three__progress">
+                                <div class="about-three__progress-single">
+                                    <h4 class="about-three__progress-title">Sustainability Goals</h4>
+                                    <div class="bar">
+                                        <div class="bar-inner count-bar" data-percent="85%">
+                                            <div class="count-text">85%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="about-three__progress-single">
+                                    <h4 class="about-three__progress-title">Waste Reduction</h4>
+                                    <div class="bar marb-0">
+                                        <div class="bar-inner count-bar" data-percent="78%">
+                                            <div class="count-text">78%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Sustainability Content End-->
+
+        <!-- Statistics Section -->
+        <section class="sustainability-stats"
+            style="background: linear-gradient(135deg, #4CAF50 0%, #2c5f2d 100%); padding: 80px 0; margin-top: 80px;">
+            <div class="container">
+                <div class="section-title text-center" style="margin-bottom: 60px;">
+                    <span class="section-title__tagline" style="color: #fff;">Our Impact</span>
+                    <h2 class="section-title__title" style="color: #fff;">Sustainability By The Numbers</h2>
+                </div>
+                <div class="row">
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="stat-card"
+                            style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 40px; border-radius: 12px; text-align: center; margin-bottom: 30px;">
+                            <div style="font-size: 48px; font-weight: 700; color: #fff; margin-bottom: 10px;">75%</div>
+                            <div style="color: rgba(255,255,255,0.9); font-size: 16px;">Water Conservation</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="stat-card"
+                            style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 40px; border-radius: 12px; text-align: center; margin-bottom: 30px;">
+                            <div style="font-size: 48px; font-weight: 700; color: #fff; margin-bottom: 10px;">90%</div>
+                            <div style="color: rgba(255,255,255,0.9); font-size: 16px;">Recyclable Packaging</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="stat-card"
+                            style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 40px; border-radius: 12px; text-align: center; margin-bottom: 30px;">
+                            <div style="font-size: 48px; font-weight: 700; color: #fff; margin-bottom: 10px;">60%</div>
+                            <div style="color: rgba(255,255,255,0.9); font-size: 16px;">Energy Reduction</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div
+                            style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 40px; border-radius: 12px; text-align: center; margin-bottom: 30px;">
+                            <div style="font-size: 48px; font-weight: 700; color: #fff; margin-bottom: 10px;">100%</div>
+                            <div style="color: rgba(255,255,255,0.9); font-size: 16px;">Quality Standards</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Commitments Section -->
+        <section style="padding: 100px 0; background: #fff;">
+            <div class="container">
+                <div class="section-title text-center" style="margin-bottom: 60px;">
+                    <span class="section-title__tagline">What We Do</span>
+                    <h2 class="section-title__title">Our Environmental Commitments</h2>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div style="background: #f8f9fa; padding: 40px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: all 0.4s ease;"
+                            onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.12)'"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.08)'">
+                            <div
+                                style="width: 70px; height: 70px; background: linear-gradient(135deg, #4CAF50, #45a049); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+                                <span style="color: #fff; font-size: 32px;">🌱</span>
+                            </div>
+                            <h4 style="font-size: 22px; font-weight: 600; color: #2c3e50; margin-bottom: 15px;">
+                                Renewable Energy</h4>
+                            <p style="color: #666; line-height: 1.8;">Transitioning to 100% renewable energy sources in
+                                our manufacturing facilities by 2030, including solar and wind power.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div style="background: #f8f9fa; padding: 40px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: all 0.4s ease;"
+                            onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.12)'"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.08)'">
+                            <div
+                                style="width: 70px; height: 70px; background: linear-gradient(135deg, #4CAF50, #45a049); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+                                <span style="color: #fff; font-size: 32px;">♻️</span>
+                            </div>
+                            <h4 style="font-size: 22px; font-weight: 600; color: #2c3e50; margin-bottom: 15px;">Zero
+                                Waste Initiative</h4>
+                            <p style="color: #666; line-height: 1.8;">Implementing comprehensive recycling programs and
+                                working toward zero landfill waste in all our production processes.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div style="background: #f8f9fa; padding: 40px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: all 0.4s ease;"
+                            onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.12)'"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.08)'">
+                            <div
+                                style="width: 70px; height: 70px; background: linear-gradient(135deg, #4CAF50, #45a049); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+                                <span style="color: #fff; font-size: 32px;">💧</span>
+                            </div>
+                            <h4 style="font-size: 22px; font-weight: 600; color: #2c3e50; margin-bottom: 15px;">Water
+                                Stewardship</h4>
+                            <p style="color: #666; line-height: 1.8;">Advanced water recycling systems that reduce
+                                consumption by 75% and ensure responsible water management.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div style="background: #f8f9fa; padding: 40px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: all 0.4s ease;"
+                            onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.12)'"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.08)'">
+                            <div
+                                style="width: 70px; height: 70px; background: linear-gradient(135deg, #4CAF50, #45a049); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+                                <span style="color: #fff; font-size: 32px;">📦</span>
+                            </div>
+                            <h4 style="font-size: 22px; font-weight: 600; color: #2c3e50; margin-bottom: 15px;">
+                                Sustainable Packaging</h4>
+                            <p style="color: #666; line-height: 1.8;">Using eco-friendly, biodegradable materials for
+                                all product packaging, minimizing plastic use and environmental impact.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div style="background: #f8f9fa; padding: 40px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: all 0.4s ease;"
+                            onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.12)'"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.08)'">
+                            <div
+                                style="width: 70px; height: 70px; background: linear-gradient(135deg, #4CAF50, #45a049); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+                                <span style="color: #fff; font-size: 32px;">🌾</span>
+                            </div>
+                            <h4 style="font-size: 22px; font-weight: 600; color: #2c3e50; margin-bottom: 15px;">
+                                Responsible Sourcing</h4>
+                            <p style="color: #666; line-height: 1.8;">Partnering with local farmers who practice
+                                sustainable dairy production, ensuring ethical and environmentally-friendly supply
+                                chains.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div style="background: #f8f9fa; padding: 40px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: all 0.4s ease;"
+                            onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.12)'"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.08)'">
+                            <div
+                                style="width: 70px; height: 70px; background: linear-gradient(135deg, #4CAF50, #45a049); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+                                <span style="color: #fff; font-size: 32px;">🌍</span>
+                            </div>
+                            <h4 style="font-size: 22px; font-weight: 600; color: #2c3e50; margin-bottom: 15px;">Carbon
+                                Neutrality</h4>
+                            <p style="color: #666; line-height: 1.8;">Committed to achieving carbon neutrality by 2035
+                                through emission reduction and carbon offset programs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Journey Section -->
+        <section style="padding: 100px 0; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+            <div class="container">
+                <div class="section-title text-center" style="margin-bottom: 60px;">
+                    <span class="section-title__tagline">Our Progress</span>
+                    <h2 class="section-title__title">The Sustainability Journey</h2>
+                </div>
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <div
+                        style="border-left: 4px solid #4CAF50; padding-left: 40px; margin-bottom: 50px; position: relative;">
+                        <div
+                            style="position: absolute; left: -14px; top: 0; width: 24px; height: 24px; background: #4CAF50; border-radius: 50%; border: 4px solid #fff;">
+                        </div>
+                        <h4 style="font-size: 20px; font-weight: 600; color: #4CAF50; margin-bottom: 10px;">2020 -
+                            Foundation</h4>
+                        <p style="color: #666; line-height: 1.8;">Launched our sustainability initiative with
+                            comprehensive environmental impact assessments and established baseline metrics for
+                            improvement.</p>
+                    </div>
+                    <div
+                        style="border-left: 4px solid #4CAF50; padding-left: 40px; margin-bottom: 50px; position: relative;">
+                        <div
+                            style="position: absolute; left: -14px; top: 0; width: 24px; height: 24px; background: #4CAF50; border-radius: 50%; border: 4px solid #fff;">
+                        </div>
+                        <h4 style="font-size: 20px; font-weight: 600; color: #4CAF50; margin-bottom: 10px;">2022 -
+                            Implementation</h4>
+                        <p style="color: #666; line-height: 1.8;">Implemented advanced water recycling systems and began
+                            transitioning to renewable energy sources, reducing our carbon footprint by 35%.</p>
+                    </div>
+                    <div
+                        style="border-left: 4px solid #4CAF50; padding-left: 40px; margin-bottom: 50px; position: relative;">
+                        <div
+                            style="position: absolute; left: -14px; top: 0; width: 24px; height: 24px; background: #4CAF50; border-radius: 50%; border: 4px solid #fff;">
+                        </div>
+                        <h4 style="font-size: 20px; font-weight: 600; color: #4CAF50; margin-bottom: 10px;">2024 -
+                            Acceleration</h4>
+                        <p style="color: #666; line-height: 1.8;">Achieved 75% water conservation and 90% recyclable
+                            packaging. Expanded our sustainability program to include supply chain partners.</p>
+                    </div>
+                    <div style="border-left: 4px solid #4CAF50; padding-left: 40px; position: relative;">
+                        <div
+                            style="position: absolute; left: -14px; top: 0; width: 24px; height: 24px; background: #4CAF50; border-radius: 50%; border: 4px solid #fff;">
+                        </div>
+                        <h4 style="font-size: 20px; font-weight: 600; color: #4CAF50; margin-bottom: 10px;">2030 -
+                            Vision</h4>
+                        <p style="color: #666; line-height: 1.8;">Target: 100% renewable energy, zero waste to landfill,
+                            and complete supply chain sustainability certification.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section
+            style="padding: 100px 0; background: linear-gradient(135deg, #2c5f2d 0%, #1a3a1b 100%); position: relative; overflow: hidden;">
+            <div
+                style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.4); z-index: 1;">
+            </div>
+            <div class="container" style="position: relative; z-index: 2;">
+                <div class="row align-items-center">
+                    <div class="col-xl-8">
+                        <h2 style="font-size: 38px; font-weight: 700; color: #fff; margin-bottom: 20px;">Join Us in
+                            Building a Sustainable Future</h2>
+                        <p style="font-size: 18px; color: rgba(255,255,255,0.9); line-height: 1.8;">Together, we can
+                            make a difference. Learn more about our sustainability initiatives and discover how you can
+                            be part of the solution.</p>
+                    </div>
+                    <div class="col-xl-4 text-right">
+                        <a href="contact.html" class="thm-btn"
+                            style="background: #fff; color: #2c5f2d; padding: 18px 40px; border-radius: 50px; font-weight: 600; display: inline-block; box-shadow: 0 8px 25px rgba(255,255,255,0.2);">Contact
+                            Us <i class="icon-right-arrow"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--Site Footer Start-->
+        <footer class="site-footer">
+            <div class="site-footer__top">
+                <div class="container">
+                    <div class="site-footer__top-inner">
+                        <div class="site-footer-shape-1 float-bob-x"
+                            style="background-image: url(assets/images/shapes/site-footer-shape-1.png);"></div>
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                                <div class="footer-widget__column footer-widget__about">
+                                    <div class="footer-widget__logo">
+                                        <a href="index.html"><img src="assets/photos/logo.png" width="150" alt=""></a>
+                                    </div>
+                                    <div class="footer-widget__about-text-box">
+                                        <p class="footer-widget__about-text">Egyptian Integrated Food Industries -
+                                            specializing in premium cheese and butter products for local and export
+                                            markets.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                                <div class="footer-widget__column footer-widget__Explore">
+                                    <div class="footer-widget__title-box">
+                                        <h3 class="footer-widget__title">Explore</h3>
+                                    </div>
+                                    <ul class="footer-widget__Explore-list list-unstyled">
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="farmers.html">Our Farmers</a></li>
+                                        <li><a href="project-01.html">New Projects</a></li>
+                                        <li><a href="services.html">Services</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                                <div class="footer-widget__column footer-widget__news">
+                                    <div class="footer-widget__title-box">
+                                        <h3 class="footer-widget__title">News</h3>
+                                    </div>
+                                    <ul class="footer-widget__news-list list-unstyled">
+                                        <li>
+                                            <div class="footer-widget__news-img">
+                                                <img src="assets/photos/14.jpeg" alt="">
+                                            </div>
+                                            <div class="footer-widget__news-content">
+                                                <p class="footer-widget__news-date">20 Jul, 2022</p>
+                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">A
+                                                        Our Products
+                                                        Gives
+                                                        More Good Taste</a></h5>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="footer-widget__news-img">
+                                                <img src="assets/photos/15.jpeg" alt="">
+                                            </div>
+                                            <div class="footer-widget__news-content">
+                                                <p class="footer-widget__news-date">20 Jul, 2022</p>
+                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">A
+                                                        Our Products
+                                                        Gives
+                                                        More Good Taste</a></h5>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                                <div class="footer-widget__column footer-widget__Contact">
+                                    <div class="footer-widget__title-box">
+                                        <h3 class="footer-widget__title">Contact</h3>
+                                    </div>
+                                    <ul class="footer-widget__Contact-list list-unstyled">
+                                        <li>
+                                            <div class="icon">
+                                                <span class="fas fa-phone-square-alt"></span>
+                                            </div>
+                                            <div class="text">
+                                                <p><a href="tel:0554499170">0554499170 - 0554499676</a></p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon">
+                                                <span class="fas fa-envelope"></span>
+                                            </div>
+                                            <div class="text">
+                                                <p><a href="mailto:needhelp@company.com">needhelp@company.com</a></p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon">
+                                                <span class="icon-pin"></span>
+                                            </div>
+                                            <div class="text">
+                                                <p>10th Of Ramadan Industrial Zone B1 - Egypt</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <form class="footer-widget__Contact-form">
+                                        <div class="footer-widget__Contact-input-box">
+                                            <input type="email" placeholder="Email Address" name="email">
+                                            <button type="submit" class="footer-widget__Contact-btn"><i
+                                                    class="icon-right-arrow"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-footer__bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="site-footer__bottom-inner">
+                                <p class="site-footer__bottom-text">© Copyright 2022 by <a href="#">EL Masria.com</a>
+                                </p>
+                                <div class="site-footer__social">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-facebook"></i></a>
+                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="site-footer__bottom-scroll">
+                                    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i
+                                            class="icon-up-arrow"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--Site Footer End-->
+
+    </div><!-- /.page-wrapper -->
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <!-- /.mobile-nav__overlay -->
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+            <div class="logo-box">
+                <a href="index.html" aria-label="logo image"><img src="assets/photos/logo.png" width="143" alt="" /></a>
+            </div>
+            <!-- /.logo-box -->
+            <div class="mobile-nav__container"></div>
+            <!-- /.mobile-nav__container -->
+
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:info@eifidairy.com">info@eifidairy.com</a>
+                </li>
+                <li>
+                    <i class="fa fa-phone-alt"></i>
+                    <a href="tel:0554499170">0554499170 - 0554499676</a>
+                </li>
+            </ul><!-- /.mobile-nav__contact -->
+            <div class="mobile-nav__top">
+                <div class="mobile-nav__social">
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-facebook-square"></a>
+                    <a href="#" class="fab fa-pinterest-p"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                </div><!-- /.mobile-nav__social -->
+            </div><!-- /.mobile-nav__top -->
+
+        </div>
+        <!-- /.mobile-nav__content -->
+    </div>
+    <!-- /.mobile-nav__wrapper -->
+
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <!-- /.search-popup__overlay -->
+        <div class="search-popup__content">
+            <form action="#">
+                <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
+                <input type="text" id="search" placeholder="Search Here..." />
+                <button type="submit" aria-label="search submit" class="thm-btn">
+                    <i class="icon-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+        <!-- /.search-popup__content -->
+    </div>
+    <!-- /.search-popup -->
+
+    <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script src="assets/vendors/nouislider/nouislider.min.js"></script>
+    <script src="assets/vendors/odometer/odometer.min.js"></script>
+    <script src="assets/vendors/swiper/swiper.min.js"></script>
+    <script src="assets/vendors/tiny-slider/tiny-slider.min.js"></script>
+    <script src="assets/vendors/wnumb/wNumb.min.js"></script>
+    <script src="assets/vendors/wow/wow.js"></script>
+    <script src="assets/vendors/isotope/isotope.js"></script>
+    <script src="assets/vendors/countdown/countdown.min.js"></script>
+    <script src="assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/vendors/bxslider/jquery.bxslider.min.js"></script>
+    <script src="assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="assets/vendors/vegas/vegas.min.js"></script>
+    <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
+    <script src="assets/vendors/timepicker/timePicker.js"></script>
+    <script src="assets/vendors/circleType/jquery.circleType.js"></script>
+    <script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
+
+    <!-- template js -->
+    <script src="assets/js/elmasria.js"></script>
+</body>
+
+</html>

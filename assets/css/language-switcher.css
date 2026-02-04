@@ -1,0 +1,245 @@
+/* Elegant & Classy Language Switcher Styles */
+.main-menu__language-switcher {
+    position: relative;
+    margin-right: 20px;
+}
+
+/* Primary Elegant Button Style */
+.main-menu__language-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Elegant gradient overlay on hover */
+.main-menu__language-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.main-menu__language-btn:hover::before {
+    left: 100%;
+}
+
+.main-menu__language-btn:hover {
+    transform: translateY(-1px);
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+/* Subtle icon animation - NO SPINNING */
+.main-menu__language-btn i {
+    font-size: 16px;
+    transition: all 0.3s ease;
+    opacity: 0.9;
+}
+
+.main-menu__language-btn:hover i {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.main-menu__language-text {
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+/* Alternative Minimalist Design - Toggle Style */
+.main-menu__language-toggle {
+    display: inline-flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 30px;
+    padding: 6px;
+    gap: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.main-menu__language-toggle:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-color: #d1d5db;
+}
+
+.main-menu__language-item {
+    padding: 8px 18px;
+    border-radius: 24px;
+    color: #6b7280;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
+    letter-spacing: 0.3px;
+}
+
+.main-menu__language-item.active {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(26, 26, 46, 0.2);
+}
+
+.main-menu__language-item:hover:not(.active) {
+    background: #f9fafb;
+    color: #374151;
+}
+
+/* Sophisticated Dropdown Style */
+.main-menu__language-dropdown {
+    position: relative;
+    z-index: 99;
+}
+
+.main-menu__language-current {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 20px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 28px;
+    color: #1f2937;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    letter-spacing: 0.3px;
+}
+
+.main-menu__language-current:hover {
+    border-color: #1a1a2e;
+    color: #1a1a2e;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    transform: translateY(-1px);
+}
+
+.main-menu__language-current i {
+    color: #1a1a2e;
+    font-size: 16px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.main-menu__language-current:hover i {
+    opacity: 1;
+}
+
+.main-menu__language-arrow {
+    font-size: 10px;
+    transition: transform 0.3s ease;
+    opacity: 0.6;
+}
+
+.main-menu__language-dropdown:hover .main-menu__language-arrow {
+    transform: rotate(180deg);
+    opacity: 1;
+}
+
+.main-menu__language-options {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    padding: 8px;
+    min-width: 160px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-menu__language-dropdown:hover .main-menu__language-options {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.main-menu__language-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    color: #4b5563;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    letter-spacing: 0.2px;
+}
+
+.main-menu__language-option:hover {
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+    color: #1a1a2e;
+    transform: translateX(2px);
+}
+
+.main-menu__language-option i {
+    font-size: 16px;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.main-menu__language-option:hover i {
+    opacity: 1;
+}
+
+.main-menu__language-flag {
+    font-size: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .main-menu__language-switcher {
+        margin-right: 12px;
+    }
+
+    .main-menu__language-btn,
+    .main-menu__language-current {
+        padding: 10px 18px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 767px) {
+    .main-menu__language-text {
+        display: none;
+    }
+
+    .main-menu__language-btn,
+    .main-menu__language-current {
+        padding: 9px 14px;
+    }
+}
