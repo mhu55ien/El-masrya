@@ -662,6 +662,7 @@ ul {
     line-height: 1;
     letter-spacing: 0.05em;
     background-color: transparent !important; /* Force transparent background */
+    background: transparent !important; /* Double force for some browsers */
 }
 
 .main-menu__language-btn:hover {
