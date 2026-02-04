@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Contact Us - EL Masria - Egyptian Dairy Manufacturing Company </title>
+    <title>Dairy Excellence Matters to Healthy Living - EL Masria</title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
@@ -14,12 +14,8 @@
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
@@ -46,6 +42,7 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/elmasria.css" />
     <link rel="stylesheet" href="assets/css/elmasria-responsive.css" />
+    <link rel="stylesheet" href="assets/css/language-switcher.css" />
 
     <!-- Disable custom cursor -->
     <style>
@@ -62,23 +59,106 @@
         body {
             cursor: auto !important;
         }
+
+        /* News Detail Styling */
+        .news-detail {
+            padding: 80px 0;
+        }
+
+        .news-detail__img {
+            margin-bottom: 40px;
+            border-radius: 15px;
+            overflow: hidden;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .news-detail__img img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .news-detail__meta {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ece9e0;
+        }
+
+        .news-detail__meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--el-masria-gray);
+            font-size: 15px;
+        }
+
+        .news-detail__meta-item i {
+            color: var(--el-masria-base);
+            font-size: 18px;
+        }
+
+        .news-detail__title {
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--el-masria-black);
+            margin-bottom: 30px;
+            font-family: var(--el-masria-font-two);
+        }
+
+        .news-detail__content {
+            font-size: 16px;
+            line-height: 30px;
+            color: var(--el-masria-gray);
+        }
+
+        .news-detail__content p {
+            margin-bottom: 25px;
+        }
+
+        .news-detail__content h3 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--el-masria-black);
+            margin: 35px 0 20px;
+            font-family: var(--el-masria-font-two);
+        }
+
+        .news-detail__content ul {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+
+        .news-detail__content ul li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        .news-detail__content ul li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--el-masria-base);
+        }
     </style>
 
 </head>
 
 <body>
 
-
-
-
-
-
-
     <div class="preloader">
         <div class="preloader__image"></div>
     </div>
     <!-- /.preloader -->
-
 
     <div class="page-wrapper">
         <header class="main-header">
@@ -88,32 +168,6 @@
                         <a href="index.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
                     </div>
                     <div class="main-header__menu-box">
-                        <div class="main-header__menu-box-top">
-                            <ul class="list-unstyled main-header__contact-list">
-                                <li>
-                                    <div class="icon">
-                                        <i class="icon-email"></i>
-                                    </div>
-                                    <div class="text">
-                                        <p><a href="mailto:needhelp@company.com">needhelp@company.com</a></p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="icon">
-                                        <i class="icon-pin"></i>
-                                    </div>
-                                    <div class="text">
-                                        <p>10th Of Ramadan Industrial Zone B1 - Egypt</p>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="main-header__social">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-facebook"></i></a>
-                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
                         <div class="main-header__menu-box-bottom">
                             <nav class="main-menu">
                                 <div class="main-menu__wrapper">
@@ -137,7 +191,7 @@
                                                     <li>
                                                         <a href="join-us.html">Join Us</a>
                                                     </li>
-                                                    <li class="current">
+                                                    <li>
                                                         <a href="contact.html">Contact</a>
                                                     </li>
                                                 </ul>
@@ -146,32 +200,16 @@
                                         <div class="main-menu__right">
                                             <div class="main-menu__search-cart-btn-box">
                                                 <div class="main-menu__language-switcher">
-                                                    <a href="contact-ar.html" class="main-menu__language-btn">
-    <i class="fas fa-globe"></i>
-    <span class="main-menu__language-text">عربي</span>
-</a>
-                                                </div>
-                                                <div class="main-menu__btn-box">
-                                                    <a href="contact.html" class="thm-btn main-menu__btn">Get Free Quote
-                                                        <i class="icon-right-arrow"></i> </a>
+                                                    <a href="news-healthy-living-ar.html" class="main-menu__language-btn">
+                                                        <i class="fas fa-globe"></i>
+                                                        <span class="main-menu__language-text">عربي</span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </nav>
-                        </div>
-                    </div>
-                    <div class="main-header__phone-contact-box">
-                        <div class="main-header__phone-number">
-                            <a href="tel:0554499170">0554499170 - 0554499676</a>
-                        </div>
-                        <div class="main-header__call-box">
-                            <div class="main-header__call-inner">
-                                <div class="main-header__call-icon">
-                                    <span class="fas fa-phone"></span>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -184,138 +222,116 @@
 
         <!--Page Header Start-->
         <section class="page-header">
-            <div class="page-header-bg" style="background-image: url(assets/photos/22.jpeg)">
+            <div class="page-header-bg" style="background-image: url(assets/photos/21.jpeg)">
             </div>
             <div class="container">
                 <div class="page-header__inner">
-                    <h2>contact us</h2>
+                    <h2>News & Articles</h2>
                 </div>
             </div>
         </section>
         <!--Page Header End-->
 
-        <!--Google Map Start-->
-        <section class="google-map">
+        <!--News Detail Start-->
+        <section class="news-detail">
             <div class="container">
-                <div class="google-map-box">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd"
-                        class="google-map__one" allowfullscreen>
-                    </iframe>
-                </div>
-                <div class="contact-details">
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-6 col-md-6">
-                            <div class="contact-details__single">
-                                <div class="contact-details__icon">
-                                    <span class="icon-help"></span>
-                                </div>
-                                <div class="contact-details__text">
-                                    <p>Have Question?</p>
-                                    <h3><a href="tel:0554499170">0554499170 - 0554499676</a></h3>
-                                </div>
+                <div class="row">
+                    <div class="col-xl-10 offset-xl-1">
+                        <div class="news-detail__img">
+                            <img loading="lazy" src="assets/photos/21.jpeg" alt="Dairy Excellence and Healthy Living">
+                        </div>
+                        
+                        <div class="news-detail__meta">
+                            <div class="news-detail__meta-item">
+                                <i class="far fa-calendar"></i>
+                                <span>October 05, 2024</span>
+                            </div>
+                            <div class="news-detail__meta-item">
+                                <i class="far fa-user"></i>
+                                <span>EL Masria Team</span>
+                            </div>
+                            <div class="news-detail__meta-item">
+                                <i class="far fa-folder"></i>
+                                <span>Health & Nutrition</span>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-6 col-md-6">
-                            <div class="contact-details__single">
-                                <div class="contact-details__icon">
-                                    <span class="icon-mailbox"></span>
-                                </div>
-                                <div class="contact-details__text">
-                                    <p>Write Email</p>
-                                    <h3><a href="mailto:needhelp@company.com">needhelp@company.com</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-6 col-md-6">
-                            <div class="contact-details__single contact-details__single-last">
-                                <div class="contact-details__icon">
-                                    <span class="icon-maps-and-flags"></span>
-                                </div>
-                                <div class="contact-details__text">
-                                    <p>Visit Office</p>
-                                    <h3>10th Of Ramadan Industrial Zone B1 - Egypt</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-6 col-md-6">
-                            <div class="contact-details__single">
-                                <div class="contact-details__social">
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-facebook"></i></a>
-                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Google Map End-->
 
-        <!--Contact Two Start-->
-        <section class="contact-two">
-            <div class="contact-two__shape-1 float-bob-x">
-                <img loading="lazy" src="assets/images/shapes/contact-two-shape-1.png" alt="">
-            </div>
-            <div class="container">
-                <div class="section-title text-center">
-                    <span class="section-title__tagline">Write a Message</span>
-                    <h2 class="section-title__title">Always here to help you</h2>
-                    <div class="section-title__icon">
-                        <img loading="lazy" src="assets/images/icon/section-title-icon-1.png" alt="">
+                        <h2 class="news-detail__title">Dairy Excellence Matters to Healthy Living</h2>
+
+                        <div class="news-detail__content">
+                            <p>In today's health-conscious world, the quality of the food we consume has never been more important. Dairy products, when produced with excellence and care, play a vital role in supporting healthy lifestyles across all age groups. At EL Masria, we understand that our commitment to dairy excellence directly impacts the health and well-being of the families we serve.</p>
+
+                            <p>The connection between high-quality dairy products and healthy living is supported by decades of nutritional research. However, not all dairy products are created equal. The difference lies in the production methods, quality control measures, and the commitment to excellence that defines truly premium dairy products.</p>
+
+                            <h3>Nutritional Powerhouse</h3>
+
+                            <p>Dairy products are among nature's most complete foods, offering a unique combination of essential nutrients that are difficult to obtain from other sources. High-quality dairy products provide bioavailable calcium, complete proteins, vitamins D and B12, phosphorus, and other vital minerals that support various bodily functions.</p>
+
+                            <p>Calcium, perhaps the most well-known nutrient in dairy, is crucial for building and maintaining strong bones and teeth. However, its benefits extend far beyond skeletal health. Calcium plays essential roles in muscle function, nerve transmission, and blood clotting. The calcium in dairy products is particularly well-absorbed by the body, making dairy an efficient source of this vital mineral.</p>
+
+                            <h3>Quality Makes the Difference</h3>
+
+                            <p>The nutritional value of dairy products is directly influenced by production quality. When dairy products are produced with excellence—from the health of the dairy animals to the processing methods used—they retain maximum nutritional value. This is why our commitment to quality at every stage of production is not just about taste; it's about delivering optimal nutrition to our customers.</p>
+
+                            <p>Fresh, high-quality milk contains beneficial enzymes and proteins that can be compromised by improper handling or processing. Our careful temperature control, minimal processing approach, and rapid cold chain management ensure that these valuable nutrients remain intact from farm to table.</p>
+
+                            <h3>Health Benefits Across Life Stages</h3>
+
+                            <ul>
+                                <li>Supports bone development and strength in growing children</li>
+                                <li>Provides essential nutrients for pregnant and nursing mothers</li>
+                                <li>Helps maintain muscle mass and bone density in adults</li>
+                                <li>Supports healthy aging and reduces osteoporosis risk in seniors</li>
+                                <li>Contributes to cardiovascular health through beneficial fatty acids</li>
+                                <li>Supports immune system function with bioactive compounds</li>
+                            </ul>
+
+                            <h3>The Role of Protein</h3>
+
+                            <p>Dairy products are excellent sources of high-quality protein, containing all nine essential amino acids that the body cannot produce on its own. These complete proteins are crucial for building and repairing tissues, producing enzymes and hormones, and supporting immune function.</p>
+
+                            <p>The proteins in dairy, particularly whey and casein, are highly digestible and efficiently utilized by the body. Athletes and active individuals often turn to dairy products for post-exercise recovery, as the combination of proteins and carbohydrates supports muscle repair and glycogen replenishment.</p>
+
+                            <h3>Probiotics and Digestive Health</h3>
+
+                            <p>Many dairy products, particularly fermented varieties like yogurt and certain cheeses, contain beneficial bacteria known as probiotics. These friendly microorganisms support digestive health, enhance nutrient absorption, and contribute to a healthy gut microbiome. The quality of the dairy product directly affects the viability and effectiveness of these beneficial bacteria.</p>
+
+                            <p>Our traditional cheese-making processes naturally encourage the development of beneficial bacterial cultures. These probiotics not only contribute to the distinctive flavors of our cheeses but also offer potential health benefits to consumers.</p>
+
+                            <h3>Vitamin D and Calcium Synergy</h3>
+
+                            <p>One of the unique advantages of dairy products is the natural synergy between calcium and vitamin D. Vitamin D enhances calcium absorption in the intestines, making dairy an exceptionally efficient source of these two critical nutrients. This partnership is particularly important for bone health, immune function, and overall wellness.</p>
+
+                            <p>At EL Masria, we ensure that our dairy products maintain optimal levels of naturally occurring vitamin D through careful handling and minimal processing. This preserves the natural nutritional profile that makes dairy such a valuable component of a healthy diet.</p>
+
+                            <h3>Supporting Active Lifestyles</h3>
+
+                            <p>For individuals leading active lifestyles, high-quality dairy products offer unique advantages. The combination of proteins, carbohydrates, and electrolytes in dairy makes it an excellent choice for pre- and post-exercise nutrition. The natural sugars provide quick energy, while the proteins support muscle recovery and growth.</p>
+
+                            <p>Research has shown that consuming dairy products as part of a balanced diet can support weight management, muscle development, and overall physical performance. However, these benefits are maximized when the dairy products are of the highest quality—free from contaminants and rich in natural nutrients.</p>
+
+                            <h3>Our Commitment to Your Health</h3>
+
+                            <p>At EL Masria, we view our role as more than just dairy producers—we are partners in the health and wellness of the communities we serve. This responsibility drives our unwavering commitment to excellence in every aspect of our operations. From the care of our dairy animals to the final packaging of our products, every decision is made with the health of our consumers in mind.</p>
+
+                            <p>We invest continuously in quality control measures, modern processing equipment, and staff training to ensure that every product meets the highest standards of safety and nutritional value. Our comprehensive testing protocols verify that our products are free from contaminants while retaining their full nutritional potential.</p>
+
+                            <p>Dairy excellence is not just about producing delicious products—it's about contributing to the health and vitality of the families who trust us with their nutrition. By maintaining the highest standards of quality and safety, we ensure that our dairy products continue to play a positive role in supporting healthy, active lifestyles for generations to come.</p>
+
+                            <p>When you choose EL Masria dairy products, you're not just selecting food—you're choosing a commitment to health, quality, and excellence that has been our hallmark since day one. This is how dairy excellence truly matters to healthy living.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="contact-two__form-box">
-                    <form action="assets/inc/sendemail.php" class="contact-two__form contact-form-validated"
-                        novalidate="novalidate">
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="contact-form__input-box">
-                                    <input type="text" placeholder="Your Name" name="name">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="contact-form__input-box">
-                                    <input type="email" placeholder="Email Address" name="email">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="contact-form__input-box">
-                                    <input type="text" placeholder="Phone" name="Phone Number">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="contact-form__input-box">
-                                    <input type="text" placeholder="Subject" name="Subject">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="contact-form__input-box text-message-box">
-                                    <textarea name="message" placeholder="Write a Comment"></textarea>
-                                </div>
-                                <div class="contact-form__btn-box">
-                                    <a href="about.html" class="thm-btn contact-two__btn">Send a Message<i
-                                            class="icon-right-arrow"></i> </a>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
                 </div>
             </div>
         </section>
-        <!--Contact Two End-->
+        <!--News Detail End-->
 
         <!--Site Footer Start-->
         <footer class="site-footer">
             <div class="site-footer__top">
                 <div class="container">
                     <div class="site-footer__top-inner">
-                        <div class="site-footer-shape-1 float-bob-x"
-                            style="background-image: url(assets/images/shapes/site-footer-shape-1.png);"></div>
+                        <div class="site-footer-shape-1 float-bob-x" style="background-image: url(assets/images/shapes/site-footer-shape-1.png);"></div>
                         <div class="row">
                             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                                 <div class="footer-widget__column footer-widget__about">
@@ -323,9 +339,7 @@
                                         <a href="index.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
                                     </div>
                                     <div class="footer-widget__about-text-box">
-                                        <p class="footer-widget__about-text">Egyptian Integrated Food Industries -
-                                            specializing in premium cheese and butter products for local and export
-                                            markets.</p>
+                                        <p class="footer-widget__about-text">Egyptian Integrated Food Industries - specializing in premium cheese and butter products for local and export markets.</p>
                                     </div>
                                 </div>
                             </div>
@@ -336,43 +350,10 @@
                                     </div>
                                     <ul class="footer-widget__Explore-list list-unstyled">
                                         <li><a href="about.html">About</a></li>
-                                        <li><a href="farmers.html">Our Farmers</a></li>
-                                        <li><a href="project-01.html">New Projects</a></li>
-                                        <li><a href="services.html">Services</a></li>
+                                        <li><a href="products.html">Products</a></li>
+                                        <li><a href="sustainability.html">Sustainability</a></li>
+                                        <li><a href="join-us.html">Join Us</a></li>
                                         <li><a href="contact.html">Contact</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                                <div class="footer-widget__column footer-widget__news">
-                                    <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">News</h3>
-                                    </div>
-                                    <ul class="footer-widget__news-list list-unstyled">
-                                        <li>
-                                            <div class="footer-widget__news-img">
-                                                <img loading="lazy" src="assets/images/resources/footer-widget-news-img-1.jpg" alt="">
-                                            </div>
-                                            <div class="footer-widget__news-content">
-                                                <p class="footer-widget__news-date">20 Jul, 2022</p>
-                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">A
-                                                        Our Products
-                                                        Gives
-                                                        More Good Taste</a></h5>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="footer-widget__news-img">
-                                                <img loading="lazy" src="assets/images/resources/footer-widget-news-img-2.jpg" alt="">
-                                            </div>
-                                            <div class="footer-widget__news-content">
-                                                <p class="footer-widget__news-date">20 Jul, 2022</p>
-                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">A
-                                                        Our Products
-                                                        Gives
-                                                        More Good Taste</a></h5>
-                                            </div>
-                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -407,13 +388,6 @@
                                             </div>
                                         </li>
                                     </ul>
-                                    <form class="footer-widget__Contact-form">
-                                        <div class="footer-widget__Contact-input-box">
-                                            <input type="email" placeholder="Email Address" name="email">
-                                            <button type="submit" class="footer-widget__Contact-btn"><i
-                                                    class="icon-right-arrow"></i></button>
-                                        </div>
-                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -425,8 +399,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="site-footer__bottom-inner">
-                                <p class="site-footer__bottom-text">© Copyright 2022 by <a href="#">EL Masria.com</a>
-                                </p>
+                                <p class="site-footer__bottom-text">© Copyright 2024 by <a href="#">EL Masria.com</a></p>
                                 <div class="site-footer__social">
                                     <a href="#"><i class="fab fa-twitter"></i></a>
                                     <a href="#"><i class="fab fa-facebook"></i></a>
@@ -434,8 +407,7 @@
                                     <a href="#"><i class="fab fa-instagram"></i></a>
                                 </div>
                                 <div class="site-footer__bottom-scroll">
-                                    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i
-                                            class="icon-up-arrow"></i></a>
+                                    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="icon-up-arrow"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -445,66 +417,51 @@
         </footer>
         <!--Site Footer End-->
 
-
     </div><!-- /.page-wrapper -->
-
 
     <div class="mobile-nav__wrapper">
         <div class="mobile-nav__overlay mobile-nav__toggler"></div>
-        <!-- /.mobile-nav__overlay -->
         <div class="mobile-nav__content">
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
-
             <div class="logo-box">
                 <a href="index.html" aria-label="logo image"><img loading="lazy" src="assets/photos/logo.png" width="143" alt="" /></a>
             </div>
-            <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>
-            <!-- /.mobile-nav__container -->
-
             <ul class="mobile-nav__contact list-unstyled">
                 <li>
                     <i class="fa fa-envelope"></i>
-                    <a href="mailto:needhelp@packageName__.com">needhelp@EL Masria.com</a>
+                    <a href="mailto:needhelp@company.com">needhelp@EL Masria.com</a>
                 </li>
                 <li>
                     <i class="fa fa-phone-alt"></i>
                     <a href="tel:0554499170">0554499170 - 0554499676</a>
                 </li>
-            </ul><!-- /.mobile-nav__contact -->
+            </ul>
             <div class="mobile-nav__top">
                 <div class="mobile-nav__social">
                     <a href="#" class="fab fa-twitter"></a>
                     <a href="#" class="fab fa-facebook-square"></a>
                     <a href="#" class="fab fa-pinterest-p"></a>
                     <a href="#" class="fab fa-instagram"></a>
-                </div><!-- /.mobile-nav__social -->
-            </div><!-- /.mobile-nav__top -->
-
-
-
+                </div>
+            </div>
         </div>
-        <!-- /.mobile-nav__content -->
     </div>
-    <!-- /.mobile-nav__wrapper -->
 
     <div class="search-popup">
         <div class="search-popup__overlay search-toggler"></div>
-        <!-- /.search-popup__overlay -->
         <div class="search-popup__content">
             <form action="#">
-                <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
+                <label for="search" class="sr-only">search here</label>
                 <input type="text" id="search" placeholder="Search Here..." />
                 <button type="submit" aria-label="search submit" class="thm-btn">
                     <i class="icon-magnifying-glass"></i>
                 </button>
             </form>
         </div>
-        <!-- /.search-popup__content -->
     </div>
-    <!-- /.search-popup -->
 
-
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="icon-up-arrow"></i></a>
 
     <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
     <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -531,11 +488,10 @@
     <script src="assets/vendors/circleType/jquery.circleType.js"></script>
     <script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
 
-
-
-
     <!-- template js -->
     <script src="assets/js/elmasria.js"></script>
+
 </body>
 
 </html>
+

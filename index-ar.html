@@ -1,26 +1,27 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> EL Masria - Egyptian Dairy Manufacturing Company </title>
+    <title> المصرية - الشركة المصرية لتصنيع الألبان </title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
     <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
-    <meta name="description" content="Egyptian Dairy Manufacturing Company " />
+    <meta name="description" content="Mexican Dairy Manufacturing Company " />
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Cairo Font for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
 
     <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
@@ -44,12 +45,18 @@
     <link rel="stylesheet" href="assets/vendors/timepicker/timePicker.css" />
 
     <!-- template styles -->
+    <!-- template styles -->
     <link rel="stylesheet" href="assets/css/elmasria.css" />
     <link rel="stylesheet" href="assets/css/elmasria-responsive.css" />
+    <link rel="stylesheet" href="assets/css/rtl-fix.css" />
     <link rel="stylesheet" href="assets/css/language-switcher.css" />
 
-    <!-- Disable custom cursor and premium styling -->
     <style>
+        /* Arabic Font Override */
+        body, h1, h2, h3, h4, h5, h6, p, a, span, li, div {
+            font-family: 'Cairo', sans-serif !important;
+        }
+
         .custom-cursor__cursor,
         .custom-cursor__cursor-two {
             display: none !important;
@@ -149,16 +156,18 @@
             line-height: 1.4;
             margin: 0;
         }
+        
+        /* RTL Icons mirroring */
+        .icon-right-arrow::before {
+            content: "\e908"; /* Check if you have left arrow code or rotate */
+            transform: rotate(180deg);
+            display: inline-block;
+        }
     </style>
 
 </head>
 
 <body>
-
-
-
-
-
 
 
     <div class="preloader">
@@ -172,7 +181,7 @@
             <div class="main-header__wrapper">
                 <div class="main-header__wrapper-inner">
                     <div class="main-header__logo">
-                        <a href="index.html"><img src="assets/photos/logo.png" width="150" alt=""></a>
+                        <a href="index-ar.html"><img src="assets/photos/logo.png" width="150" alt=""></a>
                     </div>
                     <div class="main-header__menu-box">
                         <div class="main-header__menu-box-top">
@@ -190,7 +199,7 @@
                                         <i class="icon-pin"></i>
                                     </div>
                                     <div class="text">
-                                        <p>10th Of Ramadan Industrial Zone B1 - Egypt</p>
+                                        <p>العاشر من رمضان المنطقة الصناعية B1 - مصر</p>
                                     </div>
                                 </li>
                             </ul>
@@ -209,38 +218,38 @@
                                             <div class="main-menu__main-menu-box">
                                                 <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                                                 <ul class="main-menu__list">
-                                                    <li class="current">
-                                                        <a href="index.html">Home</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="about.html">About</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="sustainability.html">Sustainability</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="products.html">Products</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="join-us.html">Join Us</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="contact.html">Contact</a>
-                                                    </li>
-                                                </ul>
+    <li class="current">
+        <a href="index-ar.html">الرئيسية</a>
+    </li>
+    <li>
+        <a href="about-ar.html">عن الشركة</a>
+    </li>
+    <li>
+        <a href="sustainability-ar.html">الاستدامة</a>
+    </li>
+    <li>
+        <a href="products-ar.html">منتجاتنا</a>
+    </li>
+    <li>
+        <a href="join-us-ar.html">انضم إلينا</a>
+    </li>
+    <li>
+        <a href="contact-ar.html">اتصل بنا</a>
+    </li>
+</ul>
                                             </div>
                                         </div>
                                         <div class="main-menu__right">
                                             <div class="main-menu__search-cart-btn-box">
                                                 <div class="main-menu__language-switcher">
-                                                    <a href="index-ar.html" class="main-menu__language-btn">
+                                                    <a href="index.html" class="main-menu__language-btn">
                                                         <i class="fas fa-globe"></i>
-                                                        <span class="main-menu__language-text">عربي</span>
+                                                        <span class="main-menu__language-text">English</span>
                                                     </a>
                                                 </div>
                                                 <div class="main-menu__btn-box">
-                                                    <a href="contact.html" class="thm-btn main-menu__btn">Get Free Quote
-                                                        <i class="icon-right-arrow"></i> </a>
+                                                    <a href="contact-ar.html" class="thm-btn main-menu__btn">احصل على عرض
+    <i class="icon-right-arrow"></i> </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -294,11 +303,11 @@
                             <div class="row">
                                 <div class="col-xl-12">
                                     <div class="main-slider__content">
-                                        <p class="main-slider__sub-title">Egyptian Integrated Food Industries</p>
-                                        <h2 class="main-slider__title">Premium Dairy Products.</h2>
+                                        <p class="main-slider__sub-title">المصرية للصناعات الغذائية المتكاملة</p>
+                                        <h2 class="main-slider__title">منتجات ألبان فاخرة.</h2>
                                         <div class="main-slider__btn-box">
-                                            <a href="about.html" class="thm-btn main-slider__btn">Discover More <i
-                                                    class="icon-right-arrow"></i> </a>
+                                            <a href="about-ar.html" class="thm-btn main-slider__btn">اكتشف المزيد <i
+     class="icon-right-arrow"></i> </a>
                                         </div>
                                     </div>
                                 </div>
@@ -313,11 +322,11 @@
                             <div class="row">
                                 <div class="col-xl-12">
                                     <div class="main-slider__content">
-                                        <p class="main-slider__sub-title">Premium Quality Dairy Products</p>
-                                        <h2 class="main-slider__title">Dairy Excellence.</h2>
+                                        <p class="main-slider__sub-title">منتجات ألبان عالية الجودة</p>
+                                        <h2 class="main-slider__title">تميز في صناعة الألبان.</h2>
                                         <div class="main-slider__btn-box">
-                                            <a href="about.html" class="thm-btn main-slider__btn">Discover More <i
-                                                    class="icon-right-arrow"></i> </a>
+                                            <a href="about-ar.html" class="thm-btn main-slider__btn">اكتشف المزيد <i
+     class="icon-right-arrow"></i> </a>
                                         </div>
                                     </div>
                                 </div>
@@ -332,11 +341,11 @@
                             <div class="row">
                                 <div class="col-xl-12">
                                     <div class="main-slider__content">
-                                        <p class="main-slider__sub-title">Premium Quality Dairy Products</p>
-                                        <h2 class="main-slider__title">Dairy Excellence.</h2>
+                                        <p class="main-slider__sub-title">منتجات ألبان عالية الجودة</p>
+                                        <h2 class="main-slider__title">تميز في صناعة الألبان.</h2>
                                         <div class="main-slider__btn-box">
-                                            <a href="about.html" class="thm-btn main-slider__btn">Discover More <i
-                                                    class="icon-right-arrow"></i> </a>
+                                            <a href="about-ar.html" class="thm-btn main-slider__btn">اكتشف المزيد <i
+     class="icon-right-arrow"></i> </a>
                                         </div>
                                     </div>
                                 </div>
@@ -374,7 +383,7 @@
                                 <span class="icon-farm"></span>
                             </div>
                             <div class="feature-one__content">
-                                <h3 class="feature-one__title">Consistent <br> Quality</h3>
+                                <h3 class="feature-one__title">جودة <br> ثابتة</h3>
                             </div>
                         </div>
                     </div>
@@ -386,7 +395,7 @@
                                 <span class="icon-agriculture"></span>
                             </div>
                             <div class="feature-one__content">
-                                <h3 class="feature-one__title">Carefully Selected <br> Ingredients</h3>
+                                <h3 class="feature-one__title">مكونات مختارة <br> بعناية</h3>
                             </div>
                         </div>
                     </div>
@@ -398,7 +407,7 @@
                                 <span class="icon-harvest"></span>
                             </div>
                             <div class="feature-one__content">
-                                <h3 class="feature-one__title">Premium Dairy <br> Products</h3>
+                                <h3 class="feature-one__title">منتجات ألبان <br> فاخرة</h3>
                             </div>
                         </div>
                     </div>
@@ -418,22 +427,21 @@
                     <div class="col-xl-6">
                         <div class="about-one__left">
                             <div class="section-title text-left">
-                                <span class="section-title__tagline">About Us</span>
-                                <h2 class="section-title__title">Egyptian Integrated Food Industries</h2>
+                                <span class="section-title__tagline">عن الشركة</span>
+                                <h2 class="section-title__title">المصرية للصناعات الغذائية المتكاملة</h2>
                                 <div class="section-title__icon">
                                     <img loading="lazy" src="assets/images/icon/section-title-icon-1.png" alt="">
                                 </div>
                             </div>
-                            <p class="about-one__text-1">An Egyptian company specialized in dairy production</p>
-                            <p class="about-one__text-2">Delivering high-quality cheese and butter products with
-                                authentic taste and consistent standards for both local and export markets.</p>
+                            <p class="about-one__text-1">شركة مصرية متخصصة في إنتاج الألبان</p>
+                            <p class="about-one__text-2">نقدم منتجات الجبن والزبدة عالية الجودة بطعم أصيل ومعايير ثابتة للأسواق المحلية والدولية.</p>
                             <ul class="list-unstyled about-one__points">
                                 <li>
                                     <div class="icon">
                                         <span class="icon-tick"></span>
                                     </div>
                                     <div class="text">
-                                        <p>World-class Egyptian dairy products</p>
+                                        <p>منتجات ألبان مصرية عالمية المستوى</p>
                                     </div>
                                 </li>
                                 <li>
@@ -441,14 +449,14 @@
                                         <span class="icon-tick"></span>
                                     </div>
                                     <div class="text">
-                                        <p>Highest quality and hygiene standards</p>
+                                        <p>أعلى معايير الجودة والنظافة</p>
                                     </div>
                                 </li>
                             </ul>
                             <div class="about-one__btn-and-ceo">
                                 <div class="about-one__btn-box">
-                                    <a href="about.html" class="thm-btn about-one__btn">About More <i
-                                            class="icon-right-arrow"></i> </a>
+                                    <a href="about-ar.html" class="thm-btn about-one__btn">اقرأ المزيد <i
+    class="icon-right-arrow"></i> </a>
                                 </div>
                             </div>
                         </div>
@@ -476,8 +484,8 @@
             </div>
             <div class="container">
                 <div class="section-title text-center">
-                    <span class="section-title__tagline">Our Products</span>
-                    <h2 class="section-title__title">Premium Dairy Products</h2>
+                    <span class="section-title__tagline">منتجاتنا</span>
+                    <h2 class="section-title__title">منتجات ألبان فاخرة</h2>
                     <div class="section-title__icon">
                         <img loading="lazy" src="assets/images/icon/section-title-icon-1.png" alt="">
                     </div>
@@ -495,10 +503,9 @@
                                 </div>
                             </div>
                             <div class="services-one__content">
-                                <h3 class="services-one__title"><a href="cheese-products.html">Cheese <br>
-                                        Products</a></h3>
-                                <p class="services-one__text">Premium quality cheese varieties made from the finest
-                                    ingredients for authentic taste.</p>
+                                <h3 class="services-one__title"><a href="products-ar.html">منتجات <br>
+                                        الجبن</a></h3>
+                                <p class="services-one__text">تشكيلة فاخرة من الجبن مصنوعة من أجود المكونات لطعم أصيل.</p>
                             </div>
                         </div>
                     </div>
@@ -515,10 +522,9 @@
                                 </div>
                             </div>
                             <div class="services-one__content">
-                                <h3 class="services-one__title"><a href="butter-products.html">Butter
-                                        <br> Products</a></h3>
-                                <p class="services-one__text">Rich, creamy butter products crafted with traditional
-                                    methods and natural ingredients.</p>
+                                <h3 class="services-one__title"><a href="products-ar.html">منتجات
+                                        <br> الزبدة</a></h3>
+                                <p class="services-one__text">منتجات زبدة غنية وكريمية مصنوعة بالطرق التقليدية ومكونات طبيعية.</p>
                             </div>
                         </div>
                     </div>
@@ -535,10 +541,9 @@
                                 </div>
                             </div>
                             <div class="services-one__content">
-                                <h3 class="services-one__title"><a href="cream-products.html">Cream
-                                        <br> Products</a></h3>
-                                <p class="services-one__text">Fresh dairy cream products perfect for cooking and
-                                    culinary excellence.</p>
+                                <h3 class="services-one__title"><a href="products-ar.html">منتجات
+                                        <br> القشطة</a></h3>
+                                <p class="services-one__text">منتجات قشطة طازجة مثالية للطبخ والتميز في المأكولات.</p>
                             </div>
                         </div>
                     </div>
@@ -555,11 +560,10 @@
                                 </div>
                             </div>
                             <div class="services-one__content">
-                                <h3 class="services-one__title"><a href="dairy-products.html">All Dairy <br>
-                                        Products</a>
+                                <h3 class="services-one__title"><a href="products-ar.html">كل المنتجات <br>
+                                        </a>
                                 </h3>
-                                <p class="services-one__text">Complete range of dairy products delivering quality and
-                                    nutrition to your table.</p>
+                                <p class="services-one__text">مجموعة كاملة من منتجات الألبان تقدم الجودة والتغذية لمائدتك.</p>
                             </div>
                         </div>
                     </div>
@@ -654,13 +658,13 @@
                             data-wow-duration="2500ms">
                             <img loading="lazy" src="assets/images/shapes/unbeatable-shape-2.png" alt="" class="float-bob-y">
                         </div>
-                        <p class="unbeatable-one__tagline">We’re Selling Healthy Products</p>
-                        <h3 class="unbeatable-one__title">Unbeatable Quality and
-                            <br> Dairy Standards
+                        <p class="unbeatable-one__tagline">نحن نبيع منتجات صحية</p>
+                        <h3 class="unbeatable-one__title">جودة لا تضاهى ومعايير
+                            <br> ألبان قياسية
                         </h3>
                         <div class="unbeatable-one__btn-box">
-                            <a href="about.html" class="thm-btn unbeatable-one__btn">Discover More <i
-                                    class="icon-right-arrow"></i> </a>
+                            <a href="about-ar.html" class="thm-btn unbeatable-one__btn">اكتشف المزيد <i
+    class="icon-right-arrow"></i> </a>
                         </div>
                     </div>
                 </div>
@@ -684,16 +688,14 @@
                     <div class="col-xl-6">
                         <div class="healthy-food-one__right">
                             <div class="section-title text-left">
-                                <span class="section-title__tagline">Pure Dairy Products</span>
-                                <h2 class="section-title__title">Quality dairy products
-                                    for your family</h2>
+                                <span class="section-title__tagline">منتجات ألبان نقية</span>
+                                <h2 class="section-title__title"> منتجات ألبان عالية الجودة
+                                    لأسرتك</h2>
                                 <div class="section-title__icon">
                                     <img loading="lazy" src="assets/images/icon/section-title-icon-1.png" alt="">
                                 </div>
                             </div>
-                            <p class="healthy-food-one__text">Our dairy production process ensures the highest quality
-                                standards from collection to packaging. We maintain strict hygiene protocols and quality
-                                control at every stage to deliver fresh, safe, and nutritious products to our customers.
+                            <p class="healthy-food-one__text">تضمن عملية إنتاج الألبان لدينا أعلى معايير الجودة من التجميع وحتى التعبئة. نحن نحافظ على بروتوكولات صارمة للنظافة ومراقبة الجودة في كل مرحلة لتقديم منتجات طازجة وآمنة ومغذية لعملائنا.
                             </p>
                             <ul class="list-unstyled healthy-food-one__list">
                                 <li class="healthy-food-one__single">
@@ -701,7 +703,7 @@
                                         <div class="healthy-food-one__icon">
                                             <span class="icon-harvester"></span>
                                         </div>
-                                        <p class="healthy-food-one__title">Milk Collection</p>
+                                        <p class="healthy-food-one__title">جمع الحليب</p>
                                     </div>
                                 </li>
                                 <li class="healthy-food-one__single">
@@ -709,7 +711,7 @@
                                         <div class="healthy-food-one__icon">
                                             <span class="icon-agriculture-1"></span>
                                         </div>
-                                        <p class="healthy-food-one__title">Processing</p>
+                                        <p class="healthy-food-one__title">التصنيع</p>
                                     </div>
                                 </li>
                                 <li class="healthy-food-one__single">
@@ -717,7 +719,7 @@
                                         <div class="healthy-food-one__icon">
                                             <span class="icon-harvest-1"></span>
                                         </div>
-                                        <p class="healthy-food-one__title">Quality Control</p>
+                                        <p class="healthy-food-one__title">مراقبة الجودة</p>
                                     </div>
                                 </li>
                             </ul>
@@ -731,7 +733,7 @@
         <section class="blog-one">
             <div class="container">
                 <div class="section-title text-center">
-                    <h2 class="section-title__title">Latest News & Articles</h2>
+                    <h2 class="section-title__title">أحدث الأخبار والمقالات</h2>
                     <div class="section-title__icon">
                         <img loading="lazy" src="assets/images/icon/section-title-icon-1.png" alt="">
                     </div>
@@ -746,13 +748,13 @@
                                 </div>
                                 <div class="blog-one__date">
                                     <span>28</span>
-                                    <p>Aug</p>
+                                    <p>أغسطس</p>
                                 </div>
                             </div>
                             <div class="blog-one__content">
-                                <h3 class="blog-one__title">Why Quality Matters in Dairy Production</h3>
+                                <h3 class="blog-one__title">لماذا تهم الجودة في إنتاج الألبان</h3>
                                 <div class="blog-one__btn-box">
-                                    <a href="news-quality-matters.html" class="thm-btn blog-one__btn">Read More <i class="icon-right-arrow"></i></a>
+                                    <a href="news-quality-matters-ar.html" class="thm-btn blog-one__btn">اقرأ المزيد <i class="icon-right-arrow"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -767,13 +769,13 @@
                                 </div>
                                 <div class="blog-one__date">
                                     <span>15</span>
-                                    <p>Sep</p>
+                                    <p>سبتمبر</p>
                                 </div>
                             </div>
                             <div class="blog-one__content">
-                                <h3 class="blog-one__title">Traditional Cheese Making Process Excellence</h3>
+                                <h3 class="blog-one__title">تميز عملية صناعة الجبن التقليدية</h3>
                                 <div class="blog-one__btn-box">
-                                    <a href="news-cheese-making.html" class="thm-btn blog-one__btn">Read More <i class="icon-right-arrow"></i></a>
+                                    <a href="news-cheese-making-ar.html" class="thm-btn blog-one__btn">اقرأ المزيد <i class="icon-right-arrow"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -788,13 +790,13 @@
                                 </div>
                                 <div class="blog-one__date">
                                     <span>05</span>
-                                    <p>Oct</p>
+                                    <p>أكتوبر</p>
                                 </div>
                             </div>
                             <div class="blog-one__content">
-                                <h3 class="blog-one__title">Dairy Excellence Matters to Healthy Living</h3>
+                                <h3 class="blog-one__title">التميز في الألبان مهم لحياة صحية</h3>
                                 <div class="blog-one__btn-box">
-                                    <a href="news-healthy-living.html" class="thm-btn blog-one__btn">Read More <i class="icon-right-arrow"></i></a>
+                                    <a href="news-healthy-living-ar.html" class="thm-btn blog-one__btn">اقرأ المزيد <i class="icon-right-arrow"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -802,114 +804,116 @@
                     <!--Blog One Single End-->
                 </div>
             </div>
+        </section>
+        <!--Blog One End-->
 
         <!--Site Footer Start-->
         <footer class="site-footer">
             <div class="site-footer__top">
                 <div class="container">
                     <div class="site-footer__top-inner">
-                        <div class="site-footer-shape-1 float-bob-x"
-                            style="background-image: url(assets/images/shapes/site-footer-shape-1.png);"></div>
-                        <div class="row">
-                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-                                <div class="footer-widget__column footer-widget__about">
-                                    <div class="footer-widget__logo">
-                                        <a href="index.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
-                                    </div>
-                                    <div class="footer-widget__about-text-box">
-                                        <p class="footer-widget__about-text">Egyptian Integrated Food Industries -
-                                            specializing in premium cheese and butter products for local and export
-                                            markets.</p>
-                                    </div>
-                                </div>
+                        <div class="site-footer__top-left">
+                            <div class="site-footer__top-logo">
+                                <a href="index-ar.html"><img loading="lazy" src="assets/photos/logo.png" width="140" alt=""></a>
                             </div>
-                            <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                                <div class="footer-widget__column footer-widget__Explore">
-                                    <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">Explore</h3>
-                                    </div>
-                                    <ul class="footer-widget__Explore-list list-unstyled">
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="farmers.html">Our Farmers</a></li>
-                                        <li><a href="project-01.html">New Projects</a></li>
-                                        <li><a href="services.html">Services</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                    </ul>
-                                </div>
+                            <div class="site-footer__top-title-box">
+                                <h3 class="site-footer__top-title">دعنا نساعدك في العثور على ما تحتاج - تواصل معنا</h3>
                             </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                                <div class="footer-widget__column footer-widget__news">
+                        </div>
+                        <div class="site-footer__top-right">
+                            <div class="site-footer__top-right-social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-footer__middle">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                            <div class="footer-widget__column footer-widget__about">
+                                <div class="footer-widget__title-box">
+                                    <h3 class="footer-widget__title">معلومات الاتصال</h3>
+                                </div>
+                                <p class="footer-widget__about-text">العاشر من رمضان المنطقة الصناعية B1 - مصر</p>
+                                <ul class="footer-widget__about-contact list-unstyled">
+                                    <li>
+                                        <div class="icon">
+                                            <i class="fas fa-phone-square-alt"></i>
+                                        </div>
+                                        <div class="text">
+                                            <a href="tel:0554499170">0554499170</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <div class="text">
+                                            <a href="mailto:info@eifidairy.com">info@eifidairy.com</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                            <div class="footer-widget__column footer-widget__links">
+                                <div class="footer-widget__title-box">
+                                        <h3 class="footer-widget__title">استكشف</h3>
+                                </div>
+                                <ul class="footer-widget__Explore-list list-unstyled">
+    <li><a href="about-ar.html">عن الشركة</a></li>
+    <li><a href="farmers.html">مزارعونا</a></li>
+    <li><a href="project-01.html">مشاريع جديدة</a></li>
+    <li><a href="services.html">خدماتنا</a></li>
+    <li><a href="contact-ar.html">اتصل بنا</a></li>
+</ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                            <div class="footer-widget__column footer-widget__news">
                                     <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">News</h3>
+                                        <h3 class="footer-widget__title">أخبارنا</h3>
                                     </div>
                                     <ul class="footer-widget__news-list list-unstyled">
                                         <li>
                                             <div class="footer-widget__news-img">
-                                                <img loading="lazy" src="assets/photos/14.jpeg" alt="">
+                                                <img loading="lazy" src="assets/photos/8.jpeg" alt="">
                                             </div>
                                             <div class="footer-widget__news-content">
-                                                <p class="footer-widget__news-date">20 Jul, 2022</p>
-                                                <h5 class="footer-widget__news-sub-title"><a
-                                                        href="blog-details.html">Premium
-                                                        Dairy Products
-                                                        for Healthy
-                                                        Living</a></h5>
+                                                <p class="footer-widget__news-date">28 أغسطس 2024</p>
+                                                <h5 class="footer-widget__news-sub-title"><a href="news-quality-matters-ar.html">الجودة تهم</a></h5>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="footer-widget__news-img">
-                                                <img loading="lazy" src="assets/photos/15.jpeg" alt="">
+                                                <img loading="lazy" src="assets/photos/9.jpeg" alt="">
                                             </div>
                                             <div class="footer-widget__news-content">
-                                                <p class="footer-widget__news-date">20 Jul, 2022</p>
-                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">A
-                                                        Our Products
-                                                        Gives
-                                                        More Good Taste</a></h5>
+                                                <p class="footer-widget__news-date">15 سبتمبر 2024</p>
+                                                <h5 class="footer-widget__news-sub-title"><a href="news-cheese-making-ar.html">صناعة الجبن</a></h5>
                                             </div>
                                         </li>
                                     </ul>
-                                </div>
                             </div>
-                            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                                <div class="footer-widget__column footer-widget__Contact">
-                                    <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">Contact</h3>
-                                    </div>
-                                    <ul class="footer-widget__Contact-list list-unstyled">
-                                        <li>
-                                            <div class="icon">
-                                                <span class="fas fa-phone-square-alt"></span>
-                                            </div>
-                                            <div class="text">
-                                                <p><a href="tel:0554499170">0554499170 - 0554499676</a></p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="icon">
-                                                <span class="fas fa-envelope"></span>
-                                            </div>
-                                            <div class="text">
-                                                <p><a href="mailto:needhelp@company.com">needhelp@company.com</a></p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="icon">
-                                                <span class="icon-pin"></span>
-                                            </div>
-                                            <div class="text">
-                                                <p>10th Of Ramadan Industrial Zone B1 - Egypt</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <form class="footer-widget__Contact-form">
-                                        <div class="footer-widget__Contact-input-box">
-                                            <input type="email" placeholder="Email Address" name="email">
-                                            <button type="submit" class="footer-widget__Contact-btn"><i
-                                                    class="icon-right-arrow"></i></button>
-                                        </div>
-                                    </form>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                            <div class="footer-widget__column footer-widget__newsletter">
+                                <div class="footer-widget__title-box">
+                                    <h3 class="footer-widget__title">النشرة البريدية</h3>
                                 </div>
+                                <p class="footer-widget__newsletter-text">اشترك في نشرتنا البريدية للحصول على آخر التحديثات والأخبار.</p>
+                                <form class="footer-widget__newsletter-form">
+                                    <div class="footer-widget__newsletter-input-box">
+                                        <input type="email" placeholder="عنوان البريد الإلكتروني" name="email">
+                                        <button type="submit" class="footer-widget__newsletter-btn"><i
+                                                class="fas fa-paper-plane"></i></button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -920,17 +924,8 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="site-footer__bottom-inner">
-                                <p class="site-footer__bottom-text">© Copyright 2022 by <a href="#">EL Masria.com</a>
-                                </p>
-                                <div class="site-footer__social">
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-facebook"></i></a>
-                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                                <div class="site-footer__bottom-scroll">
-                                    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i
-                                            class="icon-up-arrow"></i></a>
+                                <div class="site-footer__bottom-text">
+                                    <p>© الحقوق محفوظة 2024 بواسطة <a href="#">المصرية</a></p>
                                 </div>
                             </div>
                         </div>
@@ -951,7 +946,7 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
 
             <div class="logo-box">
-                <a href="index.html" aria-label="logo image"><img loading="lazy" src="assets/photos/logo.png" width="122" alt="" /></a>
+                <a href="index-ar.html" aria-label="logo image"><img loading="lazy" src="assets/photos/logo.png" width="155" alt="" /></a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>
@@ -960,11 +955,11 @@
             <ul class="mobile-nav__contact list-unstyled">
                 <li>
                     <i class="fa fa-envelope"></i>
-                    <a href="mailto:needhelp@packageName__.com">needhelp@EL Masria.com</a>
+                    <a href="mailto:info@eifidairy.com">info@eifidairy.com</a>
                 </li>
                 <li>
                     <i class="fa fa-phone-alt"></i>
-                    <a href="tel:0554499170">0554499170 - 0554499676</a>
+                    <a href="tel:0554499170">0554499170</a>
                 </li>
             </ul><!-- /.mobile-nav__contact -->
             <div class="mobile-nav__top">
@@ -984,7 +979,7 @@
     <!-- /.mobile-nav__wrapper -->
 
     <div class="search-popup">
-        <div class="search-popup__overlay search-toggler"></div>
+        <div class="search-popup__overlay search-popup__toggler"></div>
         <!-- /.search-popup__overlay -->
         <div class="search-popup__content">
             <form action="#">
@@ -1034,3 +1029,4 @@
 </body>
 
 </html>
+

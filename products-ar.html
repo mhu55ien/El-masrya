@@ -1,10 +1,10 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Our Products - EL Masria - Egyptian Dairy Manufacturing Company </title>
+    <title> منتجاتنا - المصرية - الشركة المصرية لتصنيع الألبان </title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
@@ -14,13 +14,13 @@
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Cairo Font for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
@@ -47,9 +47,15 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/elmasria.css" />
     <link rel="stylesheet" href="assets/css/elmasria-responsive.css" />
+    <link rel="stylesheet" href="assets/css/rtl-fix.css" />
 
     <!-- Disable custom cursor -->
     <style>
+        /* Arabic Font Override */
+        body, h1, h2, h3, h4, h5, h6, p, a, span, li, div {
+            font-family: 'Cairo', sans-serif !important;
+        }
+
         .custom-cursor__cursor,
         .custom-cursor__cursor-two {
             display: none !important;
@@ -210,6 +216,13 @@
         .filter-layout .col-xl-4 {
             transition: all 0.5s ease;
         }
+        
+        /* RTL Icons mirroring */
+        .icon-right-arrow::before {
+            content: "\e908"; 
+            transform: rotate(180deg);
+            display: inline-block;
+        }
 
         /* Responsive adjustments */
         @media (max-width: 1199px) {
@@ -241,11 +254,6 @@
 <body>
 
 
-
-
-
-
-
     <div class="preloader">
         <div class="preloader__image"></div>
     </div>
@@ -257,7 +265,7 @@
             <div class="main-header__wrapper">
                 <div class="main-header__wrapper-inner">
                     <div class="main-header__logo">
-                        <a href="index.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
+                        <a href="index-ar.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
                     </div>
                     <div class="main-header__menu-box">
                         <div class="main-header__menu-box-top">
@@ -275,7 +283,7 @@
                                         <i class="icon-pin"></i>
                                     </div>
                                     <div class="text">
-                                        <p>10th Of Ramadan Industrial Zone B1 - Egypt</p>
+                                        <p>العاشر من رمضان المنطقة الصناعية B1 - مصر</p>
                                     </div>
                                 </li>
                             </ul>
@@ -294,38 +302,38 @@
                                             <div class="main-menu__main-menu-box">
                                                 <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                                                 <ul class="main-menu__list">
-                                                    <li>
-                                                        <a href="index.html">Home</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="about.html">About</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="sustainability.html">Sustainability</a>
-                                                    </li>
-                                                    <li class="current">
-                                                        <a href="products.html">Products</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="join-us.html">Join Us</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="contact.html">Contact</a>
-                                                    </li>
-                                                </ul>
+    <li>
+        <a href="index-ar.html">الرئيسية</a>
+    </li>
+    <li>
+        <a href="about-ar.html">عن الشركة</a>
+    </li>
+    <li>
+        <a href="sustainability-ar.html">الاستدامة</a>
+    </li>
+    <li class="current">
+        <a href="products-ar.html">منتجاتنا</a>
+    </li>
+    <li>
+        <a href="join-us-ar.html">انضم إلينا</a>
+    </li>
+    <li>
+        <a href="contact-ar.html">اتصل بنا</a>
+    </li>
+</ul>
                                             </div>
                                         </div>
                                         <div class="main-menu__right">
                                             <div class="main-menu__search-cart-btn-box">
                                                 <div class="main-menu__language-switcher">
-                                                    <a href="products-ar.html" class="main-menu__language-btn">
+                                                    <a href="products.html" class="main-menu__language-btn">
                                                         <i class="fas fa-globe"></i>
-                                                        <span class="main-menu__language-text">عربي</span>
+                                                        <span class="main-menu__language-text">English</span>
                                                     </a>
                                                 </div>
                                                 <div class="main-menu__btn-box">
-                                                    <a href="contact.html" class="thm-btn main-menu__btn">Get Free Quote
-                                                        <i class="icon-right-arrow"></i> </a>
+                                                    <a href="contact-ar.html" class="thm-btn main-menu__btn">احصل على عرض
+    <i class="icon-right-arrow"></i> </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -360,7 +368,7 @@
             </div>
             <div class="container">
                 <div class="page-header__inner">
-                    <h2>Our Products</h2>
+                    <h2>منتجاتنا</h2>
                 </div>
             </div>
         </section>
@@ -375,44 +383,44 @@
                                 <!-- All Products Category -->
                                 <div class="product__category-card active" data-filter="*">
                                     <div class="product__category-img-item">
-                                        <img loading="lazy" src="assets/photos/1.jpeg" alt="All Products">
+                                        <img loading="lazy" src="assets/photos/1.jpeg" alt="كل المنتجات">
                                     </div>
-                                    <h4 class="product__category-title">All Products</h4>
+                                    <h4 class="product__category-title">كل المنتجات</h4>
                                 </div>
                                 <!-- Cheese Varieties Category -->
                                 <div class="product__category-card" data-filter=".cheese">
                                     <div class="product__category-img-item">
-                                        <img loading="lazy" src="assets/photos/3.jpeg" alt="Cheese Varieties">
+                                        <img loading="lazy" src="assets/photos/3.jpeg" alt="أنواع الجبن">
                                     </div>
-                                    <h4 class="product__category-title">Cheese Varieties</h4>
+                                    <h4 class="product__category-title">أنواع الجبن</h4>
                                 </div>
                                 <!-- Dairy Farm Category -->
                                 <div class="product__category-card" data-filter=".dairy">
                                     <div class="product__category-img-item">
-                                        <img loading="lazy" src="assets/photos/4.jpeg" alt="Dairy Farm">
+                                        <img loading="lazy" src="assets/photos/4.jpeg" alt="مزرعة الألبان">
                                     </div>
-                                    <h4 class="product__category-title">Dairy Farm</h4>
+                                    <h4 class="product__category-title">مزرعة الألبان</h4>
                                 </div>
                                 <!-- Economy Solution Category -->
                                 <div class="product__category-card" data-filter=".economy">
                                     <div class="product__category-img-item">
-                                        <img loading="lazy" src="assets/photos/7.jpeg" alt="Economy Solution">
+                                        <img loading="lazy" src="assets/photos/7.jpeg" alt="حلول اقتصادية">
                                     </div>
-                                    <h4 class="product__category-title">Economy Solution</h4>
+                                    <h4 class="product__category-title">حلول اقتصادية</h4>
                                 </div>
                                 <!-- Production Excellence Category -->
                                 <div class="product__category-card" data-filter=".excellence">
                                     <div class="product__category-img-item">
-                                        <img loading="lazy" src="assets/photos/6.jpeg" alt="Production Excellence">
+                                        <img loading="lazy" src="assets/photos/6.jpeg" alt="تميز الإنتاج">
                                     </div>
-                                    <h4 class="product__category-title">Production Excellence</h4>
+                                    <h4 class="product__category-title">تميز الإنتاج</h4>
                                 </div>
                                 <!-- Cream Products Category -->
                                 <div class="product__category-card" data-filter=".cream">
                                     <div class="product__category-img-item">
-                                        <img loading="lazy" src="assets/photos/2.jpeg" alt="Cream Products">
+                                        <img loading="lazy" src="assets/photos/2.jpeg" alt="منتجات القشطة">
                                     </div>
-                                    <h4 class="product__category-title">Cream Products</h4>
+                                    <h4 class="product__category-title">منتجات القشطة</h4>
                                 </div>
                         </div>
                     </div>
@@ -426,7 +434,7 @@
                                 <div class="col-xl-12">
                                     <div class="product__showing-result">
                                         <div class="product__showing-text-box">
-                                            <p class="product__showing-text">All Products</p>
+                                            <p class="product__showing-text">كل المنتجات</p>
                                         </div>
                                     </div>
                                 </div>
@@ -442,7 +450,7 @@
                                                         <a href="assets/photos/1.jpeg" class="product__all-img-link">
                                                             <img loading="lazy" src="assets/photos/1.jpeg" alt="">
                                                         </a>
-                                                        <span class="product__all-sale">Sale</span>
+                                                        <span class="product__all-sale">عرض</span>
                                                     </div>
                                                     <div class="product__all-img">
                                                         <a href="assets/photos/8.jpeg" class="product__all-img-link">
@@ -452,9 +460,9 @@
                                                 </div>
                                             </div>
                                             <div class="product__all-content">
-                                                <h4 class="product__all-title"><a href="product-details.html">Premium Mozzarella</a></h4>
-                                                <p class="product__all-desc">Rich and creamy mozzarella perfect for pizzas and salads.</p>
-                                                <p class="product__all-price">Starting from $8.50</p>
+                                                <h4 class="product__all-title"><a href="product-details.html">موتزاريلا فاخرة</a></h4>
+                                                <p class="product__all-desc">موتزاريلا غنية وكريمية مثالية للبيتزا والسلطات.</p>
+                                                <p class="product__all-price">يبدأ من 8.50 د.م</p>
                                             </div>
                                         </div>
                                     </div>
@@ -477,9 +485,9 @@
                                                 </div>
                                             </div>
                                             <div class="product__all-content">
-                                                <h4 class="product__all-title"><a href="product-details.html">Fresh Farm Cream</a></h4>
-                                                <p class="product__all-desc">Natural farm-fresh cream, ideal for cooking and desserts.</p>
-                                                <p class="product__all-price">$4.20 per liter</p>
+                                                <h4 class="product__all-title"><a href="product-details.html">قشطة مزارع طازجة</a></h4>
+                                                <p class="product__all-desc">قشطة مزارع طبيعية طازجة، مثالية للطبخ والحلويات.</p>
+                                                <p class="product__all-price">4.20 د.م للتر</p>
                                             </div>
                                         </div>
                                     </div>
@@ -502,9 +510,9 @@
                                                 </div>
                                             </div>
                                             <div class="product__all-content">
-                                                <h4 class="product__all-title"><a href="product-details.html">Gouda Cheese Wheels</a></h4>
-                                                <p class="product__all-desc">Aged Dutch-style Gouda with a distinct nutty flavor.</p>
-                                                <p class="product__all-price">$12.00</p>
+                                                <h4 class="product__all-title"><a href="product-details.html">أجبان جودة</a></h4>
+                                                <p class="product__all-desc">جبنة جودة هولندية معتقة بنكهة مميزة.</p>
+                                                <p class="product__all-price">12.00 د.م</p>
                                             </div>
                                         </div>
                                     </div>
@@ -527,9 +535,9 @@
                                                 </div>
                                             </div>
                                             <div class="product__all-content">
-                                                <h4 class="product__all-title"><a href="product-details.html">Organic Whole Milk</a></h4>
-                                                <p class="product__all-desc">Fresh organic whole milk from pasture-raised cows.</p>
-                                                <p class="product__all-price">$3.50</p>
+                                                <h4 class="product__all-title"><a href="product-details.html">حليب كامل الدسم</a></h4>
+                                                <p class="product__all-desc">حليب عضوي طازج كامل الدسم.</p>
+                                                <p class="product__all-price">3.50 د.م</p>
                                             </div>
                                         </div>
                                     </div>
@@ -552,9 +560,9 @@
                                                 </div>
                                             </div>
                                             <div class="product__all-content">
-                                                <h4 class="product__all-title"><a href="product-details.html">Specialty Cheddar</a></h4>
-                                                <p class="product__all-desc">Sharp and tangy aged cheddar, perfect for cheese platters.</p>
-                                                <p class="product__all-price">$9.00</p>
+                                                <h4 class="product__all-title"><a href="product-details.html">شيدر مخصوص</a></h4>
+                                                <p class="product__all-desc">شيدر معتقة حادة المذاق، مثالية لأطباق الجبن.</p>
+                                                <p class="product__all-price">9.00 د.م</p>
                                             </div>
                                         </div>
                                     </div>
@@ -577,9 +585,9 @@
                                                 </div>
                                             </div>
                                             <div class="product__all-content">
-                                                <h4 class="product__all-title"><a href="product-details.html">Cooking Cream</a></h4>
-                                                <p class="product__all-desc">Versatile cooking cream for smooth sauces and soups.</p>
-                                                <p class="product__all-price">$5.25</p>
+                                                <h4 class="product__all-title"><a href="product-details.html">كريمة الطبخ</a></h4>
+                                                <p class="product__all-desc">كريمة طبخ متعددة الاستخدامات للصلصات والشوربات.</p>
+                                                <p class="product__all-price">5.25 د.م</p>
                                             </div>
                                         </div>
                                     </div>
@@ -602,9 +610,9 @@
                                                 </div>
                                             </div>
                                             <div class="product__all-content">
-                                                <h4 class="product__all-title"><a href="product-details.html">Artisan Feta</a></h4>
-                                                <p class="product__all-desc">Tangy and salty feta cheese, traditional Greek style.</p>
-                                                <p class="product__all-price">$7.40</p>
+                                                <h4 class="product__all-title"><a href="product-details.html">فيتا حرفية</a></h4>
+                                                <p class="product__all-desc">جبنة فيتا مالحة ولاذعة، على الطريقة اليونانية التقليدية.</p>
+                                                <p class="product__all-price">7.40 د.م</p>
                                             </div>
                                         </div>
                                     </div>
@@ -627,9 +635,9 @@
                                                 </div>
                                             </div>
                                             <div class="product__all-content">
-                                                <h4 class="product__all-title"><a href="product-details.html">Pure Butter Rolls</a></h4>
-                                                <p class="product__all-desc">Creamy unsalted butter rolled for freshness and quality.</p>
-                                                <p class="product__all-price">$10.00</p>
+                                                <h4 class="product__all-title"><a href="product-details.html">رولات زبدة نقية</a></h4>
+                                                <p class="product__all-desc">زبدة كريمية غير مملحة ملفوفة للحفاظ على النضارة.</p>
+                                                <p class="product__all-price">10.00 د.م</p>
                                             </div>
                                         </div>
                                     </div>
@@ -643,7 +651,7 @@
                                                         <a href="assets/photos/logo.png" class="product__all-img-link">
                                                             <img loading="lazy" src="assets/photos/logo.png" alt="">
                                                         </a>
-                                                        <span class="product__all-sale">Sale</span>
+                                                        <span class="product__all-sale">عرض</span>
                                                     </div>
                                                     <div class="product__all-img">
                                                         <a href="assets/photos/8.jpeg" class="product__all-img-link">
@@ -653,9 +661,9 @@
                                                 </div>
                                             </div>
                                             <div class="product__all-content">
-                                                <h4 class="product__all-title"><a href="product-details.html">Masria Signature Selection</a></h4>
-                                                <p class="product__all-desc">Our finest selection of premium dairy products in one box.</p>
-                                                <p class="product__all-price">$25.00</p>
+                                                <h4 class="product__all-title"><a href="product-details.html">مختارات المصرية</a></h4>
+                                                <p class="product__all-desc">مختاراتنا الفاخرة من منتجات الألبان في صندوق واحد.</p>
+                                                <p class="product__all-price">25.00 د.م</p>
                                             </div>
                                         </div>
                                     </div>
@@ -680,33 +688,31 @@
                             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                                 <div class="footer-widget__column footer-widget__about">
                                     <div class="footer-widget__logo">
-                                        <a href="index.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
+                                        <a href="index-ar.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
                                     </div>
                                     <div class="footer-widget__about-text-box">
-                                        <p class="footer-widget__about-text">Egyptian Integrated Food Industries -
-                                            specializing in premium cheese and butter products for local and export
-                                            markets.</p>
+                                        <p class="footer-widget__about-text">المصرية للصناعات الغذائية المتكاملة - متخصصة في منتجات الجبن والزبدة الفاخرة للأسواق المحلية والتصدير.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                                 <div class="footer-widget__column footer-widget__Explore">
                                     <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">Explore</h3>
+                                        <h3 class="footer-widget__title">استكشف</h3>
                                     </div>
                                     <ul class="footer-widget__Explore-list list-unstyled">
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="farmers.html">Our Farmers</a></li>
-                                        <li><a href="project-01.html">New Projects</a></li>
-                                        <li><a href="services.html">Services</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                    </ul>
+    <li><a href="about-ar.html">عن الشركة</a></li>
+    <li><a href="farmers.html">مزارعونا</a></li>
+    <li><a href="project-01.html">مشاريع جديدة</a></li>
+    <li><a href="services.html">خدماتنا</a></li>
+    <li><a href="contact-ar.html">اتصل بنا</a></li>
+</ul>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
                                 <div class="footer-widget__column footer-widget__news">
                                     <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">News</h3>
+                                        <h3 class="footer-widget__title">أخبارنا</h3>
                                     </div>
                                     <ul class="footer-widget__news-list list-unstyled">
                                         <li>
@@ -714,11 +720,8 @@
                                                 <img loading="lazy" src="assets/photos/16.jpeg" alt="">
                                             </div>
                                             <div class="footer-widget__news-content">
-                                                <p class="footer-widget__news-date">20 Jul, 2022</p>
-                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">A
-                                                        Our Products
-                                                        Gives
-                                                        More Good Taste</a></h5>
+                                                <p class="footer-widget__news-date">20 يوليو، 2022</p>
+                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">منتجاتنا تعطي طعماً أفضل</a></h5>
                                             </div>
                                         </li>
                                         <li>
@@ -726,11 +729,8 @@
                                                 <img loading="lazy" src="assets/photos/17.jpeg" alt="">
                                             </div>
                                             <div class="footer-widget__news-content">
-                                                <p class="footer-widget__news-date">20 Jul, 2022</p>
-                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">A
-                                                        Our Products
-                                                        Gives
-                                                        More Good Taste</a></h5>
+                                                <p class="footer-widget__news-date">20 يوليو، 2022</p>
+                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">منتجاتنا تعطي طعماً أفضل</a></h5>
                                             </div>
                                         </li>
                                     </ul>
@@ -739,7 +739,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                                 <div class="footer-widget__column footer-widget__Contact">
                                     <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">Contact</h3>
+                                        <h3 class="footer-widget__title">اتصل بنا</h3>
                                     </div>
                                     <ul class="footer-widget__Contact-list list-unstyled">
                                         <li>
@@ -763,13 +763,13 @@
                                                 <span class="icon-pin"></span>
                                             </div>
                                             <div class="text">
-                                                <p>10th Of Ramadan Industrial Zone B1 - Egypt</p>
+                                                <p>العاشر من رمضان المنطقة الصناعية B1 - مصر</p>
                                             </div>
                                         </li>
                                     </ul>
                                     <form class="footer-widget__Contact-form">
                                         <div class="footer-widget__Contact-input-box">
-                                            <input type="email" placeholder="Email Address" name="email">
+                                            <input type="email" placeholder="البريد الإلكتروني" name="email">
                                             <button type="submit" class="footer-widget__Contact-btn"><i
                                                     class="icon-right-arrow"></i></button>
                                         </div>
@@ -785,7 +785,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="site-footer__bottom-inner">
-                                <p class="site-footer__bottom-text">© Copyright 2022 by <a href="#">EL Masria.com</a>
+                                <p class="site-footer__bottom-text">© الحقوق محفوظة 2024 بواسطة <a href="#">المصرية</a>
                                 </p>
                                 <div class="site-footer__social">
                                     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -816,7 +816,7 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
 
             <div class="logo-box">
-                <a href="index.html" aria-label="logo image"><img loading="lazy" src="assets/photos/logo.png" width="143" alt="" /></a>
+                <a href="index-ar.html" aria-label="logo image"><img loading="lazy" src="assets/photos/logo.png" width="143" alt="" /></a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>
@@ -897,13 +897,14 @@
 
 
 
+
     <!-- Custom Category Filter Script -->
     <script>
         // Use window load to ensure images are fully loaded before Isotope layout
         jQuery(window).on('load', function() {
             var $ = jQuery;
             
-            // Initialize Owl Carousel for product items
+            // Initialize Owl Carousel for product items (RTL Mode)
             $('.product__all-carousel').each(function() {
                 $(this).owlCarousel({
                     items: 1,
@@ -912,9 +913,10 @@
                     nav: true,
                     dots: false,
                     autoplay: false,
+                    rtl: true, // Enable RTL mode
                     navText: [
-                        '<svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="15 18 9 12 15 6"></polyline></svg>',
-                        '<svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="9 18 15 12 9 6"></polyline></svg>'
+                        '<svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="9 18 15 12 9 6"></polyline></svg>', // Right pointing arrow for Next in RTL? No, usually Left/Right swaps. Let's see. 
+                        '<svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="15 18 9 12 15 6"></polyline></svg>'
                     ],
                     smartSpeed: 600,
                     mouseDrag: true,
@@ -977,12 +979,13 @@
                 }
             });
 
-            // Initialize Isotope
+            // Initialize Isotope (RTL support via isOriginLeft: false)
             var $grid = $('.filter-layout');
             if ($grid.length) {
                 $grid.isotope({
                     itemSelector: '.col-xl-3', // Updated selector
                     layoutMode: 'fitRows',
+                    isOriginLeft: false, // Right-to-left layout
                     transitionDuration: '0.6s',
                     hiddenStyle: {
                         opacity: 0,
@@ -1012,3 +1015,4 @@
 </body>
 
 </html>
+

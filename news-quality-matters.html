@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Contact Us - EL Masria - Egyptian Dairy Manufacturing Company </title>
+    <title>Why Quality Matters in Dairy Production - EL Masria</title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
@@ -14,12 +14,8 @@
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
@@ -46,6 +42,7 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/elmasria.css" />
     <link rel="stylesheet" href="assets/css/elmasria-responsive.css" />
+    <link rel="stylesheet" href="assets/css/language-switcher.css" />
 
     <!-- Disable custom cursor -->
     <style>
@@ -62,23 +59,106 @@
         body {
             cursor: auto !important;
         }
+
+        /* News Detail Styling */
+        .news-detail {
+            padding: 80px 0;
+        }
+
+        .news-detail__img {
+            margin-bottom: 40px;
+            border-radius: 15px;
+            overflow: hidden;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .news-detail__img img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .news-detail__meta {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ece9e0;
+        }
+
+        .news-detail__meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--el-masria-gray);
+            font-size: 15px;
+        }
+
+        .news-detail__meta-item i {
+            color: var(--el-masria-base);
+            font-size: 18px;
+        }
+
+        .news-detail__title {
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--el-masria-black);
+            margin-bottom: 30px;
+            font-family: var(--el-masria-font-two);
+        }
+
+        .news-detail__content {
+            font-size: 16px;
+            line-height: 30px;
+            color: var(--el-masria-gray);
+        }
+
+        .news-detail__content p {
+            margin-bottom: 25px;
+        }
+
+        .news-detail__content h3 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--el-masria-black);
+            margin: 35px 0 20px;
+            font-family: var(--el-masria-font-two);
+        }
+
+        .news-detail__content ul {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+
+        .news-detail__content ul li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        .news-detail__content ul li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--el-masria-base);
+        }
     </style>
 
 </head>
 
 <body>
 
-
-
-
-
-
-
     <div class="preloader">
         <div class="preloader__image"></div>
     </div>
     <!-- /.preloader -->
-
 
     <div class="page-wrapper">
         <header class="main-header">
@@ -88,32 +168,6 @@
                         <a href="index.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
                     </div>
                     <div class="main-header__menu-box">
-                        <div class="main-header__menu-box-top">
-                            <ul class="list-unstyled main-header__contact-list">
-                                <li>
-                                    <div class="icon">
-                                        <i class="icon-email"></i>
-                                    </div>
-                                    <div class="text">
-                                        <p><a href="mailto:needhelp@company.com">needhelp@company.com</a></p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="icon">
-                                        <i class="icon-pin"></i>
-                                    </div>
-                                    <div class="text">
-                                        <p>10th Of Ramadan Industrial Zone B1 - Egypt</p>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="main-header__social">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-facebook"></i></a>
-                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
                         <div class="main-header__menu-box-bottom">
                             <nav class="main-menu">
                                 <div class="main-menu__wrapper">
@@ -137,7 +191,7 @@
                                                     <li>
                                                         <a href="join-us.html">Join Us</a>
                                                     </li>
-                                                    <li class="current">
+                                                    <li>
                                                         <a href="contact.html">Contact</a>
                                                     </li>
                                                 </ul>
@@ -146,32 +200,16 @@
                                         <div class="main-menu__right">
                                             <div class="main-menu__search-cart-btn-box">
                                                 <div class="main-menu__language-switcher">
-                                                    <a href="contact-ar.html" class="main-menu__language-btn">
-    <i class="fas fa-globe"></i>
-    <span class="main-menu__language-text">عربي</span>
-</a>
-                                                </div>
-                                                <div class="main-menu__btn-box">
-                                                    <a href="contact.html" class="thm-btn main-menu__btn">Get Free Quote
-                                                        <i class="icon-right-arrow"></i> </a>
+                                                    <a href="news-quality-matters-ar.html" class="main-menu__language-btn">
+                                                        <i class="fas fa-globe"></i>
+                                                        <span class="main-menu__language-text">عربي</span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </nav>
-                        </div>
-                    </div>
-                    <div class="main-header__phone-contact-box">
-                        <div class="main-header__phone-number">
-                            <a href="tel:0554499170">0554499170 - 0554499676</a>
-                        </div>
-                        <div class="main-header__call-box">
-                            <div class="main-header__call-inner">
-                                <div class="main-header__call-icon">
-                                    <span class="fas fa-phone"></span>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -184,138 +222,90 @@
 
         <!--Page Header Start-->
         <section class="page-header">
-            <div class="page-header-bg" style="background-image: url(assets/photos/22.jpeg)">
+            <div class="page-header-bg" style="background-image: url(assets/photos/8.jpeg)">
             </div>
             <div class="container">
                 <div class="page-header__inner">
-                    <h2>contact us</h2>
+                    <h2>News & Articles</h2>
                 </div>
             </div>
         </section>
         <!--Page Header End-->
 
-        <!--Google Map Start-->
-        <section class="google-map">
+        <!--News Detail Start-->
+        <section class="news-detail">
             <div class="container">
-                <div class="google-map-box">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd"
-                        class="google-map__one" allowfullscreen>
-                    </iframe>
-                </div>
-                <div class="contact-details">
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-6 col-md-6">
-                            <div class="contact-details__single">
-                                <div class="contact-details__icon">
-                                    <span class="icon-help"></span>
-                                </div>
-                                <div class="contact-details__text">
-                                    <p>Have Question?</p>
-                                    <h3><a href="tel:0554499170">0554499170 - 0554499676</a></h3>
-                                </div>
+                <div class="row">
+                    <div class="col-xl-10 offset-xl-1">
+                        <div class="news-detail__img">
+                            <img loading="lazy" src="assets/photos/8.jpeg" alt="Quality in Dairy Production">
+                        </div>
+                        
+                        <div class="news-detail__meta">
+                            <div class="news-detail__meta-item">
+                                <i class="far fa-calendar"></i>
+                                <span>August 28, 2024</span>
+                            </div>
+                            <div class="news-detail__meta-item">
+                                <i class="far fa-user"></i>
+                                <span>EL Masria Team</span>
+                            </div>
+                            <div class="news-detail__meta-item">
+                                <i class="far fa-folder"></i>
+                                <span>Quality Standards</span>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-6 col-md-6">
-                            <div class="contact-details__single">
-                                <div class="contact-details__icon">
-                                    <span class="icon-mailbox"></span>
-                                </div>
-                                <div class="contact-details__text">
-                                    <p>Write Email</p>
-                                    <h3><a href="mailto:needhelp@company.com">needhelp@company.com</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-6 col-md-6">
-                            <div class="contact-details__single contact-details__single-last">
-                                <div class="contact-details__icon">
-                                    <span class="icon-maps-and-flags"></span>
-                                </div>
-                                <div class="contact-details__text">
-                                    <p>Visit Office</p>
-                                    <h3>10th Of Ramadan Industrial Zone B1 - Egypt</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-6 col-md-6">
-                            <div class="contact-details__single">
-                                <div class="contact-details__social">
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-facebook"></i></a>
-                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Google Map End-->
 
-        <!--Contact Two Start-->
-        <section class="contact-two">
-            <div class="contact-two__shape-1 float-bob-x">
-                <img loading="lazy" src="assets/images/shapes/contact-two-shape-1.png" alt="">
-            </div>
-            <div class="container">
-                <div class="section-title text-center">
-                    <span class="section-title__tagline">Write a Message</span>
-                    <h2 class="section-title__title">Always here to help you</h2>
-                    <div class="section-title__icon">
-                        <img loading="lazy" src="assets/images/icon/section-title-icon-1.png" alt="">
+                        <h2 class="news-detail__title">Why Quality Matters in Dairy Production</h2>
+
+                        <div class="news-detail__content">
+                            <p>In the dairy industry, quality is not just a standard—it's a commitment to excellence that affects every aspect of production, from farm to table. At EL Masria, we understand that producing premium dairy products requires unwavering dedication to quality at every step of the process.</p>
+
+                            <p>Quality in dairy production begins with the source. The health and well-being of dairy animals directly impact the quality of milk they produce. This is why we work closely with local farmers who share our commitment to animal welfare and sustainable farming practices. Regular veterinary care, proper nutrition, and comfortable living conditions are essential elements that contribute to high-quality milk production.</p>
+
+                            <h3>The Science Behind Quality Control</h3>
+
+                            <p>Modern dairy production relies heavily on scientific methods and rigorous testing protocols. Our state-of-the-art facilities are equipped with advanced testing equipment that monitors various quality parameters throughout the production process. From the moment milk arrives at our facility, it undergoes comprehensive testing to ensure it meets our strict quality standards.</p>
+
+                            <p>Temperature control is one of the most critical factors in maintaining dairy product quality. We maintain precise temperature conditions during storage, processing, and transportation to preserve the nutritional value and freshness of our products. This attention to detail ensures that our customers receive products that are not only safe but also retain their natural goodness.</p>
+
+                            <h3>Key Quality Indicators We Monitor</h3>
+
+                            <ul>
+                                <li>Bacterial count and microbial safety</li>
+                                <li>Fat and protein content</li>
+                                <li>Temperature consistency throughout the cold chain</li>
+                                <li>pH levels and acidity</li>
+                                <li>Absence of antibiotics and contaminants</li>
+                                <li>Sensory characteristics (taste, smell, texture)</li>
+                            </ul>
+
+                            <h3>Impact on Consumer Health</h3>
+
+                            <p>The importance of quality in dairy production extends far beyond taste and texture—it directly impacts consumer health and nutrition. High-quality dairy products are rich sources of essential nutrients including calcium, protein, vitamins D and B12, and other vital minerals. When quality standards are compromised, these nutritional benefits can be diminished.</p>
+
+                            <p>Our commitment to quality ensures that every product leaving our facility provides maximum nutritional value to consumers. We believe that quality dairy products play a crucial role in supporting healthy lifestyles, particularly for growing children, pregnant women, and elderly individuals who have higher nutritional requirements.</p>
+
+                            <h3>Sustainability and Quality</h3>
+
+                            <p>At EL Masria, we recognize that true quality encompasses environmental responsibility. Our quality standards extend to sustainable practices that minimize environmental impact while maintaining product excellence. This includes efficient water usage, waste reduction programs, and energy-efficient processing methods.</p>
+
+                            <p>By investing in quality at every level—from sustainable farming practices to advanced processing technology—we ensure that our products meet the highest standards while contributing to a healthier planet for future generations.</p>
+
+                            <p>Quality in dairy production is not a destination but a continuous journey of improvement and innovation. As we move forward, we remain committed to raising the bar for quality standards in the Egyptian dairy industry, ensuring that every product bearing the EL Masria name represents the pinnacle of excellence in dairy manufacturing.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="contact-two__form-box">
-                    <form action="assets/inc/sendemail.php" class="contact-two__form contact-form-validated"
-                        novalidate="novalidate">
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="contact-form__input-box">
-                                    <input type="text" placeholder="Your Name" name="name">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="contact-form__input-box">
-                                    <input type="email" placeholder="Email Address" name="email">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="contact-form__input-box">
-                                    <input type="text" placeholder="Phone" name="Phone Number">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="contact-form__input-box">
-                                    <input type="text" placeholder="Subject" name="Subject">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="contact-form__input-box text-message-box">
-                                    <textarea name="message" placeholder="Write a Comment"></textarea>
-                                </div>
-                                <div class="contact-form__btn-box">
-                                    <a href="about.html" class="thm-btn contact-two__btn">Send a Message<i
-                                            class="icon-right-arrow"></i> </a>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
                 </div>
             </div>
         </section>
-        <!--Contact Two End-->
+        <!--News Detail End-->
 
         <!--Site Footer Start-->
         <footer class="site-footer">
             <div class="site-footer__top">
                 <div class="container">
                     <div class="site-footer__top-inner">
-                        <div class="site-footer-shape-1 float-bob-x"
-                            style="background-image: url(assets/images/shapes/site-footer-shape-1.png);"></div>
+                        <div class="site-footer-shape-1 float-bob-x" style="background-image: url(assets/images/shapes/site-footer-shape-1.png);"></div>
                         <div class="row">
                             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                                 <div class="footer-widget__column footer-widget__about">
@@ -323,9 +313,7 @@
                                         <a href="index.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
                                     </div>
                                     <div class="footer-widget__about-text-box">
-                                        <p class="footer-widget__about-text">Egyptian Integrated Food Industries -
-                                            specializing in premium cheese and butter products for local and export
-                                            markets.</p>
+                                        <p class="footer-widget__about-text">Egyptian Integrated Food Industries - specializing in premium cheese and butter products for local and export markets.</p>
                                     </div>
                                 </div>
                             </div>
@@ -336,43 +324,10 @@
                                     </div>
                                     <ul class="footer-widget__Explore-list list-unstyled">
                                         <li><a href="about.html">About</a></li>
-                                        <li><a href="farmers.html">Our Farmers</a></li>
-                                        <li><a href="project-01.html">New Projects</a></li>
-                                        <li><a href="services.html">Services</a></li>
+                                        <li><a href="products.html">Products</a></li>
+                                        <li><a href="sustainability.html">Sustainability</a></li>
+                                        <li><a href="join-us.html">Join Us</a></li>
                                         <li><a href="contact.html">Contact</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                                <div class="footer-widget__column footer-widget__news">
-                                    <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">News</h3>
-                                    </div>
-                                    <ul class="footer-widget__news-list list-unstyled">
-                                        <li>
-                                            <div class="footer-widget__news-img">
-                                                <img loading="lazy" src="assets/images/resources/footer-widget-news-img-1.jpg" alt="">
-                                            </div>
-                                            <div class="footer-widget__news-content">
-                                                <p class="footer-widget__news-date">20 Jul, 2022</p>
-                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">A
-                                                        Our Products
-                                                        Gives
-                                                        More Good Taste</a></h5>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="footer-widget__news-img">
-                                                <img loading="lazy" src="assets/images/resources/footer-widget-news-img-2.jpg" alt="">
-                                            </div>
-                                            <div class="footer-widget__news-content">
-                                                <p class="footer-widget__news-date">20 Jul, 2022</p>
-                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">A
-                                                        Our Products
-                                                        Gives
-                                                        More Good Taste</a></h5>
-                                            </div>
-                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -407,13 +362,6 @@
                                             </div>
                                         </li>
                                     </ul>
-                                    <form class="footer-widget__Contact-form">
-                                        <div class="footer-widget__Contact-input-box">
-                                            <input type="email" placeholder="Email Address" name="email">
-                                            <button type="submit" class="footer-widget__Contact-btn"><i
-                                                    class="icon-right-arrow"></i></button>
-                                        </div>
-                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -425,8 +373,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="site-footer__bottom-inner">
-                                <p class="site-footer__bottom-text">© Copyright 2022 by <a href="#">EL Masria.com</a>
-                                </p>
+                                <p class="site-footer__bottom-text">© Copyright 2024 by <a href="#">EL Masria.com</a></p>
                                 <div class="site-footer__social">
                                     <a href="#"><i class="fab fa-twitter"></i></a>
                                     <a href="#"><i class="fab fa-facebook"></i></a>
@@ -434,8 +381,7 @@
                                     <a href="#"><i class="fab fa-instagram"></i></a>
                                 </div>
                                 <div class="site-footer__bottom-scroll">
-                                    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i
-                                            class="icon-up-arrow"></i></a>
+                                    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="icon-up-arrow"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -445,66 +391,51 @@
         </footer>
         <!--Site Footer End-->
 
-
     </div><!-- /.page-wrapper -->
-
 
     <div class="mobile-nav__wrapper">
         <div class="mobile-nav__overlay mobile-nav__toggler"></div>
-        <!-- /.mobile-nav__overlay -->
         <div class="mobile-nav__content">
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
-
             <div class="logo-box">
                 <a href="index.html" aria-label="logo image"><img loading="lazy" src="assets/photos/logo.png" width="143" alt="" /></a>
             </div>
-            <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>
-            <!-- /.mobile-nav__container -->
-
             <ul class="mobile-nav__contact list-unstyled">
                 <li>
                     <i class="fa fa-envelope"></i>
-                    <a href="mailto:needhelp@packageName__.com">needhelp@EL Masria.com</a>
+                    <a href="mailto:needhelp@company.com">needhelp@EL Masria.com</a>
                 </li>
                 <li>
                     <i class="fa fa-phone-alt"></i>
                     <a href="tel:0554499170">0554499170 - 0554499676</a>
                 </li>
-            </ul><!-- /.mobile-nav__contact -->
+            </ul>
             <div class="mobile-nav__top">
                 <div class="mobile-nav__social">
                     <a href="#" class="fab fa-twitter"></a>
                     <a href="#" class="fab fa-facebook-square"></a>
                     <a href="#" class="fab fa-pinterest-p"></a>
                     <a href="#" class="fab fa-instagram"></a>
-                </div><!-- /.mobile-nav__social -->
-            </div><!-- /.mobile-nav__top -->
-
-
-
+                </div>
+            </div>
         </div>
-        <!-- /.mobile-nav__content -->
     </div>
-    <!-- /.mobile-nav__wrapper -->
 
     <div class="search-popup">
         <div class="search-popup__overlay search-toggler"></div>
-        <!-- /.search-popup__overlay -->
         <div class="search-popup__content">
             <form action="#">
-                <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
+                <label for="search" class="sr-only">search here</label>
                 <input type="text" id="search" placeholder="Search Here..." />
                 <button type="submit" aria-label="search submit" class="thm-btn">
                     <i class="icon-magnifying-glass"></i>
                 </button>
             </form>
         </div>
-        <!-- /.search-popup__content -->
     </div>
-    <!-- /.search-popup -->
 
-
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="icon-up-arrow"></i></a>
 
     <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
     <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -531,11 +462,10 @@
     <script src="assets/vendors/circleType/jquery.circleType.js"></script>
     <script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
 
-
-
-
     <!-- template js -->
     <script src="assets/js/elmasria.js"></script>
+
 </body>
 
 </html>
+

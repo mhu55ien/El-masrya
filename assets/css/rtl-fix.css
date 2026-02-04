@@ -1,0 +1,321 @@
+/* RTL Overrides for Elmasria Theme */
+
+/* Basic Directionality */
+html, body {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Flexbox utilities - usually flip automatically, but some helper classes might be forced */
+.me-auto { margin-left: auto !important; margin-right: 0 !important; }
+.ms-auto { margin-right: auto !important; margin-left: 0 !important; }
+
+/* Text Alignment */
+.text-left, .text-start { text-align: right !important; }
+.text-right, .text-end { text-align: left !important; }
+
+/* Floats - Critical as CSS 'left' is physical left */
+.pull-left, .float-left, .float-start { float: right !important; }
+.pull-right, .float-right, .float-end { float: left !important; }
+
+/* Header Fixes */
+.main-header__logo {
+    float: right !important;
+    margin-left: 30px;
+    margin-right: 0;
+}
+
+.main-menu__list {
+    float: left !important;
+}
+
+.main-menu__right {
+    float: left !important;
+    margin-right: auto; 
+    margin-left: 0;
+}
+
+/* List Items */
+ul, ol {
+    padding-right: 0; 
+}
+
+/* Icons mirroring */
+.icon-right-arrow::before {
+    transform: rotate(180deg);
+    display: inline-block;
+}
+
+.fa-angle-right:before { content: "\f104"; } /* Switch to angle-left */
+.fa-angle-left:before { content: "\f105"; } /* Switch to angle-right */
+
+/* Slider Content Alignment */
+.main-slider__content {
+    text-align: right;
+}
+
+/* Search/Cart Box */
+.main-menu__search-cart-btn-box {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/* Footer Widget */
+.footer-widget__title:before {
+    left: auto !important;
+    right: 0 !important;
+}
+
+/* Form inputs */
+input, textarea, select {
+    text-align: right;
+}
+
+/* Close button on mobile menu */
+.mobile-nav__close {
+    left: 20px;
+    right: auto;
+}
+
+/* ---------------------------
+   Healthy Food Section Fixes 
+   --------------------------- */
+.healthy-food-one__bg {
+    left: auto !important;
+    right: -77px !important;
+    transform: scaleX(-1); /* Flip the background shape for RTL */
+}
+
+/* Fix the Main Left Container (which is now on the Right) */
+.healthy-food-one__left {
+    transform: translate(10px, -50px) !important; /* Move Right instead of Left */
+}
+
+/* Fix the Yellow Background Block */
+.healthy-food-one__left:after {
+    left: auto !important;
+    right: -40px !important; /* Mirror position to the Right side */
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 20px !important; /* Mirror radius */
+}
+
+/* Flip the image box transforms & decoration */
+.healthy-food-one__img {
+    transform: translate(30px, -40px) !important;
+}
+
+.healthy-food-one__img::before {
+    left: auto !important;
+    right: -25px !important;
+    border-radius: 0 20px 20px 0 !important; 
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+/* List items distribution fix */
+.healthy-food-one__single + .healthy-food-one__single {
+    margin-left: 0 !important;
+    margin-right: 30px !important;
+}
+
+/* Section title alignment */
+.healthy-food-one .section-title {
+    text-align: right !important;
+}
+
+/* Header Menu Spacing Fix */
+.main-menu__list > li {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+/* Product Section Text Spacing Fix */
+.product__showing-text-box {
+    margin-right: 30px !important;
+}
+
+/* ---------------------------
+   Sticky Header RTL Fixes
+   --------------------------- */
+
+/* Ensure the top-level sticky content helps align items */
+.stricky-header .sticky-header__content {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+/* Logo Setup */
+.stricky-header .sticky-header__logo {
+    flex-shrink: 0;
+    margin-left: 20px !important;
+    padding: 5px;
+    float: none !important;
+}
+
+/* Menu Container Setup */
+.stricky-header .sticky-header__menu {
+    flex-grow: 1;
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end; /* Pushes content to the Left (End in RTL) */
+}
+
+/* Force Flexbox and Layout for Sticky Header Content */
+.stricky-header .main-menu__wrapper-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-end !important; /* Align to the left */
+    align-items: center !important;
+    width: 100% !important;
+}
+
+/* Clean up Floats within Sticky Header */
+.stricky-header .main-menu__left,
+.stricky-header .main-menu__right,
+.stricky-header .main-menu__list {
+    float: none !important;
+}
+
+/* Center Menu Items & Prevent Wrapping */
+.stricky-header .main-menu__left {
+    flex-grow: 1 !important;
+    justify-content: center !important;
+    display: flex !important;
+    order: 2; /* Menu Middle */
+}
+
+.stricky-header .main-menu__list {
+    display: flex !important;
+    flex-wrap: nowrap !important; /* CRITICAL: Stops word wrapping to next line */
+    align-items: center !important;
+    margin: 0 !important;
+}
+
+.stricky-header .main-menu__list > li {
+    white-space: nowrap !important; /* CRITICAL: Stops text wrapping inside words */
+    display: flex !important;
+    align-items: center;
+    padding-left: 5px !important; /* Further reduced to 5px */
+    padding-right: 5px !important; /* Further reduced to 5px */
+}
+
+/* Adjust Right Side (English Button) */
+.stricky-header .main-menu__right {
+    order: 3; /* Left side in RTL */
+    padding-left: 10px !important; /* Reduced to fit in header */
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    display: flex !important;
+    align-items: center;
+    white-space: nowrap !important;
+}
+
+/* Ensure Logo is correctly placed */
+.stricky-header .sticky-header__logo {
+    order: -1 !important; /* CRITICAL: Must be lower than Menu (0) to appear on the RIGHT in RTL */
+    margin-left: 5px !important; /* Reduced from 10px */
+    margin-right: 0 !important;
+}
+
+/* Ensure Menu Container fills space and behaves */
+.stricky-header .sticky-header__menu {
+    flex-grow: 1;
+    order: 0; /* Appears to the Left of Logo in RTL */
+}
+
+/* Ensure the English button has space */
+.stricky-header .main-menu__language-switcher {
+    margin-left: 0 !important;
+}
+
+/* ---------------------------
+   Provide One Section (About) Fixes
+   --------------------------- */
+.Provide-One__left {
+    float: right !important; /* Image to Right */
+}
+
+.Provide-One__right {
+    float: left !important; /* Content to Left */
+    padding-left: 0 !important;
+    padding-right: 50px !important; /* Add padding on the right to separate from image */
+}
+
+/* Support Badge on Image */
+.provide-one__sopport {
+    right: auto !important;
+    left: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 16px !important;
+    padding-left: 30px !important;
+    padding-right: 48px !important;
+}
+
+.provide-one__support-text {
+    margin-left: 0 !important;
+    margin-right: 17px !important;
+}
+
+/* Content Spacing */
+.Provide-One__content {
+    margin-right: 0 !important; /* Ensure it starts from where padding ends */
+    max-width: 100% !important; /* allow it to fit */
+    padding-left: 30px; /* Space from left edge */
+}
+
+/* Progress Circles Alignment */
+.Provide-One__progress-content h3 {
+    margin-left: 0 !important;
+    margin-right: 20px !important;
+}
+
+/* Background Shape Flip */
+.provide-one__bg-shape {
+    right: auto !important;
+    left: 0 !important;
+    transform: scaleX(-1);
+}
+
+/* Ensure text doesn't overflow */
+.Provide-One__text {
+    padding-left: 20px;
+}
+
+/* Adjust Progress Layout if needed */
+.Provide-One__progress {
+    margin-bottom: 20px;
+}
+
+/* Fix Percentage interfering with text */
+.Provide-One__progress-box span {
+    transform: translate(-50%, -50%) !important; /* Center the percentage number in the circle */
+    left: 50% !important;
+    top: 50% !important;
+    right: auto !important;
+}
+
+/* Ensure proper spacing for the text next to the circle */
+.Provide-One__progress-content {
+    margin-right: 15px !important;
+    margin-left: 0 !important;
+}
+
+.Provide-One__progress-content h3 {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    line-height: 1.4 !important; /* Increased line-height for better readability */
+}
+
+/* ---------------------------
+   About Three Section (Linear Progress) Fixes
+   --------------------------- */
+.about-three__progress .count-text {
+    right: auto !important;
+    left: 10px !important; /* Move to the tip (Left in RTL) */
+    color: var(--el-masria-base) !important; /* Make it Green and Clear */
+    font-weight: 800 !important;
+    font-size: 18px !important;
+}

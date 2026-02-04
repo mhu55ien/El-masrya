@@ -19,7 +19,7 @@
 --------------------------------------------------------------*/
 :root {
   --el-masria-font: 'DM Sans', sans-serif;
-  --el-masria-font-two: 'Amatic SC', cursive;
+  --el-masria-font-two: 'DM Sans', sans-serif;
   --el-masria-reey-font: "reeyregular";
   --el-masria-gray: #757873;
   --el-masria-gray-rgb: 117, 120, 115;
@@ -51,6 +51,7 @@ body {
   font-size: 16px;
   line-height: 30px;
   font-weight: 500;
+  overflow-x: hidden;
 }
 
 body.locked {
@@ -240,6 +241,8 @@ ul {
   display: inline-block;
   vertical-align: middle;
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   outline: none !important;
   background-color: var(--el-masria-base);
   color: var(--el-masria-white);
@@ -643,28 +646,33 @@ ul {
   display: none !important;
 }
 
-/* Style formatting for simple text toggle */
+/* Language Switcher Styling */
 .main-menu__language-btn {
     display: flex;
     align-items: center;
     color: #ffffff;
-    border: 2px solid rgba(255, 255, 255, 0.3); /* Subtle border */
-    padding: 5px 15px;
-    border-radius: 10px; /* Match header roundness */
-    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 20px;
+    border-radius: 12px;
+    transition: all 400ms ease;
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 0.05em;
 }
 
 .main-menu__language-btn:hover {
-    background-color: #ffffff;
-    color: #1b3b1a; /* Dark text on white */
-    border-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1); /* Match Nav Links Hover */
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.6);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
 }
 
 .main-menu__language-text {
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .main-menu__search-cart-btn-box {
@@ -3139,7 +3147,7 @@ ul {
 .about-one {
   position: relative;
   display: block;
-  padding: 120px 0 120px;
+  padding: 80px 0 60px; /* Reduced padding for cleaner look */
   z-index: 1;
 }
 
@@ -3436,7 +3444,7 @@ ul {
 .services-one {
   position: relative;
   display: block;
-  padding: 120px 0 90px;
+  padding: 80px 0 50px; /* Reduced and organized */
   z-index: 1;
 }
 
@@ -3590,7 +3598,7 @@ ul {
 .brand-one__inner {
   position: relative;
   display: block;
-  padding: 60px 0 60px;
+  padding: 0 0 60px; /* Removed top padding as it follows services which has bottom */
 }
 
 .brand-one__shape-1 {
@@ -3760,7 +3768,7 @@ ul {
 .healthy-food-one {
   position: relative;
   display: block;
-  padding: 120px 0 120px;
+  padding: 80px 0 80px;
   z-index: 1;
 }
 
@@ -4684,99 +4692,151 @@ ul {
 .blog-one {
   position: relative;
   display: block;
-  padding: 120px 0 90px;
+  padding: 80px 0 80px;
 }
 
 .blog-one__single {
   position: relative;
   display: block;
-  margin-bottom: 30px;
-  background-color: var(--el-masria-white);
-  border: 1px solid #f0f0f0;
-  border-radius: 20px;
+  border-radius: 15px;
+  padding: 0 0 45px;
+  background-color: rgb(255, 255, 255);
   overflow: hidden;
-  transition: all 500ms cubic-bezier(0.25, 0.8, 0.25, 1);
-  z-index: 1;
+  border: 2px solid transparent;
+  box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.05);
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  margin-bottom: 30px;
 }
 
 .blog-one__single:hover {
-  transform: translateY(-10px);
-  background-color: var(--el-masria-base); /* Dark Green on hover */
-  border-color: var(--el-masria-base);
-  box-shadow: 0 20px 40px rgba(27, 59, 26, 0.2);
+  border: 2px solid var(--el-masria-primary);
+  transform: translateY(-5px);
+  box-shadow: 0px 15px 70px 0px rgba(0, 0, 0, 0.1);
 }
 
-.blog-one__single:hover .blog-one__title a,
-.blog-one__single:hover .blog-one__text {
-  color: var(--el-masria-white) !important;
+.blog-one__img-box {
+  position: relative;
+  display: block;
 }
 
 .blog-one__img {
   position: relative;
   display: block;
+  width: 100%;
+  margin: 0;
   overflow: hidden;
-  z-index: 1;
+  height: 250px;
+  border: 10px solid #fff;
+  border-radius: 15px;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
 
-.blog-one__img:before {
-  display: none; /* Remove the overlay spot */
+.blog-one__single:hover .blog-one__img {
+  background-color: var(--el-masria-black);
 }
 
 .blog-one__img img {
   width: 100%;
-  border-top-left-radius: var(--el-masria-bdr-radius);
-  border-top-right-radius: var(--el-masria-bdr-radius);
+  height: 100%;
+  object-fit: cover;
+  -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
 
 .blog-one__single:hover .blog-one__img img {
   transform: scale(1.05);
+  opacity: .5;
 }
 
+/* Date badge positioned like product icon */
 .blog-one__date {
   position: absolute;
-  bottom: 15px; /* Absolute relative to .blog-one__single */
-  right: 15px;
-  background-color: var(--el-masria-primary); 
-  padding: 6px 12px;
-  border-radius: 8px;
+  display: inline-block;
+  bottom: -45px; /* Half of badge height to overlap */
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 10;
-  text-align: center;
-  transition: all 400ms ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.blog-one__single:hover .blog-one__date {
-  background-color: var(--el-masria-white);
+.blog-one__date span,
+.blog-one__date p {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background-color: var(--el-masria-base);
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: 800;
+  border: 10px solid #fff;
+  color: var(--el-masria-white);
+  transition: all 500ms ease;
+  margin: 0;
+  line-height: 1;
+  text-align: center;
+  flex-direction: column;
+  padding: 0;
+}
+
+/* Make the badge a single circle with day and month */
+.blog-one__date {
+  width: 80px;
+  height: 80px;
+  background-color: var(--el-masria-base);
+  border-radius: 50%;
+  border: 10px solid #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 500ms ease;
 }
 
 .blog-one__date span {
-  font-size: 13px;
+  font-size: 22px;
   font-weight: 800;
   line-height: 1;
-  color: var(--el-masria-black);
-  text-transform: uppercase;
+  color: var(--el-masria-white);
   display: block;
+  background: none;
+  border: none;
+  width: auto;
+  height: auto;
+  margin-bottom: 2px;
 }
 
 .blog-one__date p {
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
-  color: var(--el-masria-black);
+  color: var(--el-masria-white);
   text-transform: uppercase;
   margin: 0;
   line-height: 1;
+  background: none;
+  border: none;
+  width: auto;
+  height: auto;
 }
 
-.blog-one__date:hover p {
+.blog-one__single:hover .blog-one__date {
+  background-color: var(--el-masria-primary);
+}
+
+.blog-one__single:hover .blog-one__date span,
+.blog-one__single:hover .blog-one__date p {
   color: var(--el-masria-black);
 }
 
 .blog-one__content {
   position: relative;
   display: block;
-  background-color: transparent; /* Clean white background from container */
-  padding: 30px 30px 35px;
+  text-align: center;
+  margin-top: 40px;
+  padding: 0 25px;
 }
 
 .blog-one__meta {
@@ -4810,13 +4870,41 @@ ul {
   font-weight: 700;
   line-height: 1.4;
   font-family: var(--el-masria-font);
-  margin: 0;
+  margin: 0 0 20px 0;
+  color: var(--el-masria-black);
+  transition: all 500ms ease;
+}
+
+/* Remove all title link hover effects */
+.blog-one__title a {
+  color: var(--el-masria-black);
+  pointer-events: none; /* Disable clicking */
 }
 
 .blog-one__title a:hover {
-  color: #ffcd1e !important; /* Bright Yellow/Gold */
-  text-shadow: 0 0 15px rgba(255, 205, 30, 0.7); /* Yellow Glow */
+  color: var(--el-masria-black);
+  text-shadow: none;
   text-decoration: none;
+}
+
+/* Read More Button Styling */
+.blog-one__btn-box {
+  position: relative;
+  display: block;
+  margin-top: 20px;
+}
+
+.blog-one__btn {
+  padding: 10px 25px 10px 35px;
+  font-size: 14px;
+  border-radius: 32px;
+}
+
+.blog-one__btn i {
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  font-size: 14px;
 }
 
 /*--------------------------------------------------------------
@@ -7585,6 +7673,7 @@ ul {
   background: rgb(31, 99, 6);
   background: linear-gradient(90deg, rgba(31, 99, 6, 1) 21%, rgba(255, 205, 30, 1) 68%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: 2;
 }
@@ -10613,7 +10702,9 @@ ul {
 
 .product__showing-text {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 700; /* Increased weight for style */
+  margin-left: 15px; /* Added spacing from edge */
+  color: var(--el-masria-base); /* Added color for style */
 }
 
 .product__showing-sort {
@@ -10650,19 +10741,23 @@ ul {
 .product__all-single {
   position: relative;
   display: block;
+  background-color: var(--el-masria-white);
+  border-radius: var(--el-masria-bdr-radius);
+  padding: 15px; /* Reduced from excessive padding */
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.05); /* Added subtle shadow */
   margin-bottom: 21px;
+  overflow: hidden; /* Ensure content stays inside */
 }
 
 .product__all-img-box {
   position: relative;
   display: block;
-  -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
+  overflow: hidden; /* Fix for image overflow */
 }
 
 .product__all-single:hover .product__all-img-box {
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: none; /* Remove weird hover shadow on image box */
 }
 
 .product__all-img {
@@ -10676,7 +10771,8 @@ ul {
 }
 
 .product__all-img img {
-  width: 100%;
+  width: 100% !important;
+  height: auto;
   border-radius: var(--el-masria-bdr-radius);
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
@@ -10746,7 +10842,8 @@ ul {
   position: relative;
   display: block;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 15px;
+  padding: 0 5px; /* Add small horizontal padding */
 }
 
 .product__all-review {
@@ -10766,12 +10863,72 @@ ul {
 }
 
 .product__all-title {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   line-height: 29px;
-  font-family: var(--el-masria-font);
+  font-family: var(--el-masria-font) !important;
   margin-top: 8px;
   margin-bottom: 1px;
+}
+
+.product__all-desc {
+    font-size: 15px;
+    color: var(--el-masria-gray);
+    margin-top: 8px;
+    margin-bottom: 10px;
+    line-height: 24px;
+}
+
+/* Product Carousel Styling */
+.product__all-carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--el-masria-bdr-radius);
+    margin-bottom: 20px;
+}
+
+.product__all-carousel .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.product__all-single:hover .product__all-carousel .owl-nav {
+    opacity: 1;
+}
+
+.product__all-carousel .owl-nav button {
+    pointer-events: auto;
+    background: rgba(255, 255, 255, 0.8) !important;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.product__all-carousel .owl-nav button:hover {
+    background: var(--el-masria-primary) !important;
+}
+
+.product__all-carousel .owl-nav button span, 
+.product__all-carousel .owl-nav button svg {
+    width: 16px; 
+    height: 16px;
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+    color: #000;
 }
 
 .product__all-title a {
@@ -12348,3 +12505,678 @@ body.boxed-wrapper {
     right: -40px;
   }
 }
+
+/*--------------------------------------------------------------
+# Sustainability Page Components
+--------------------------------------------------------------*/
+
+/* Commitment Card - Unified Rectangle Design */
+.commitment-card {
+    position: relative;
+    background: #ffffff;
+    padding: 70px 40px 40px;
+    border-radius: 20px;
+    margin-top: 30px; /* Reduced margin */
+    margin-bottom: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+    transition: all 500ms cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid #eef0f2;
+    overflow: visible;
+    z-index: 1;
+}
+
+/* Alternating Green Hover */
+.col-xl-4:nth-child(odd) .commitment-card:hover {
+    transform: translateY(-12px);
+    background: #e8f5e9 !important; /* Stronger Green */
+    border-color: var(--el-masria-primary) !important;
+}
+
+/* Alternating Yellow Hover */
+.col-xl-4:nth-child(even) .commitment-card:hover {
+    transform: translateY(-12px);
+    background: #fff9c4 !important; /* Stronger Yellow */
+    border-color: #ffcd1e !important;
+}
+
+
+/* Background pulse effect on hover */
+.commitment-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.05) 0%, transparent 100%);
+    opacity: 0;
+    transition: all 400ms ease;
+    z-index: -1;
+}
+
+.commitment-card:hover::before {
+    opacity: 1;
+}
+
+.commitment-card__icon-box {
+    position: absolute;
+    top: -40px;
+    left: -15px; /* Overlapping the top-left edge */
+    width: 80px;
+    height: 80px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    border: 6px solid #ffffff;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    transition: all 400ms ease;
+}
+
+.commitment-card:hover .commitment-card__icon-box {
+    border-color: var(--el-masria-primary);
+    transform: scale(1.05);
+}
+
+/* Marker dot removed as requested */
+
+
+.commitment-card__icon-box span {
+    color: var(--el-masria-primary);
+    font-size: 36px;
+    transition: all 400ms ease;
+}
+
+.commitment-card:hover .commitment-card__icon-box span {
+    color: #ffcd1e;
+}
+
+.commitment-card__title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--el-masria-primary); /* Brand Color */
+    margin-bottom: 15px;
+    font-family: var(--el-masria-font-two);
+}
+
+.commitment-card__text {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* Sustainability Stats Section */
+.sustainability-stats-section {
+    position: relative;
+    padding: 60px 0; /* Tightened from 80/100 */
+    background: #f8faf8;
+}
+
+.stat-card {
+    background: #ffffff;
+    padding: 50px 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 500ms cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid #eef0f2;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    margin-bottom: 30px;
+}
+
+/* Alternating Stat Card Hovers */
+.col-xl-3:nth-child(odd) .stat-card:hover {
+    background: #e8f5e9 !important; /* Green */
+    border-color: var(--el-masria-primary) !important;
+    transform: translateY(-10px);
+}
+
+.col-xl-3:nth-child(even) .stat-card:hover {
+    background: #fff9c4 !important; /* Yellow */
+    border-color: #ffcd1e !important;
+    transform: translateY(-10px);
+}
+
+
+.stat-card__number {
+    font-size: 56px;
+    font-weight: 800;
+    color: var(--el-masria-primary);
+    margin-bottom: 10px;
+    line-height: 1;
+    font-family: var(--el-masria-font-two);
+}
+
+.stat-card:hover .stat-card__number {
+    color: #ffcd1e;
+}
+
+.stat-card__text {
+    font-size: 15px;
+    font-weight: 700;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+/* Modern Stem & Box Timeline Design */
+.sustainability-timeline-section {
+    position: relative;
+    padding: 60px 0; /* Tightened */
+    background: #fff;
+    overflow: hidden;
+}
+
+.timeline-container {
+    position: relative;
+    padding: 30px 0; /* Tightened */
+}
+
+.timeline-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: #2c3e50; /* Thick dark axis like reference */
+    transform: translateY(-50%);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 0 40px;
+    text-align: center;
+    z-index: 2;
+    height: 500px; /* Increased height for better vertical flow */
+    display: flex;
+    flex-direction: column;
+}
+
+/* UP: Content ABOVE the axis */
+.timeline-item--up {
+    justify-content: flex-end;
+    padding-bottom: 300px; /* Increased buffer to 50px from axis center (250) */
+}
+
+/* DOWN: Content BELOW the axis */
+.timeline-item--down {
+    justify-content: flex-start;
+    padding-top: 300px; /* Increased buffer to 50px from axis center (250) */
+}
+
+/* Content Container - With smooth motion transitions */
+.timeline-content {
+    background: transparent;
+    padding: 0;
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+    border: none;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    transition: all 800ms cubic-bezier(0.4, 0, 0.2, 1); /* Slower, graceful transition */
+}
+
+.timeline-item--up .timeline-content {
+    flex-direction: column-reverse !important; /* Visual from line: Year(bottom) -> Title -> Body(top) */
+}
+
+.timeline-item--down .timeline-content {
+    flex-direction: column !important; /* Visual from line: Year(top) -> Title -> Body(bottom) */
+}
+
+/* Synchronized Hover: Cards move AWAY from the line, line grows LESS */
+.timeline-item:hover .timeline-stem {
+    height: 30px; /* Minimal growth (+5px) */
+    background: var(--el-masria-primary);
+}
+
+.timeline-item--up:hover .timeline-content {
+    transform: translateY(-40px) scale(1.08); /* Moves 40px UP */
+}
+
+.timeline-item--down:hover .timeline-content {
+    transform: translateY(40px) scale(1.08); /* Moves 40px DOWN */
+}
+
+/* The Colorful Year Box from reference */
+.timeline-year-box {
+    padding: 8px 30px;
+    background: #f0f0f0;
+    color: #2c3e50;
+    font-weight: 800;
+    font-size: 20px;
+    border-radius: 4px;
+    margin: 10px 0;
+    transition: all 400ms ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Alternating Timeline Year Boxes */
+.owl-item:nth-child(odd) .timeline-year-box {
+    border-bottom: 4px solid var(--el-masria-primary);
+}
+
+.owl-item:nth-child(even) .timeline-year-box {
+    border-bottom: 4px solid #ffcd1e;
+}
+
+.timeline-item:hover .timeline-year-box {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.owl-item:nth-child(odd) .timeline-item:hover .timeline-year-box {
+    background: var(--el-masria-primary);
+    color: #fff;
+}
+
+.owl-item:nth-child(even) .timeline-item:hover .timeline-year-box {
+    background: #ffcd1e;
+    color: #2c3e50;
+}
+
+/* Set specific colors for each item to make it "colorful" */
+.owl-item:nth-child(5n+1) .timeline-year-box { background: #E8F5E9; color: #2E7D32; border-bottom: 3px solid #4CAF50; }
+.owl-item:nth-child(5n+2) .timeline-year-box { background: #FFFDE7; color: #F9A825; border-bottom: 3px solid #FFEB3B; }
+.owl-item:nth-child(5n+3) .timeline-year-box { background: #E3F2FD; color: #1565C0; border-bottom: 3px solid #2196F3; }
+.owl-item:nth-child(5n+4) .timeline-year-box { background: #FCE4EC; color: #AD1457; border-bottom: 3px solid #E91E63; }
+.owl-item:nth-child(5n+5) .timeline-year-box { background: #F3E5F5; color: #6A1B9A; border-bottom: 3px solid #9C27B0; }
+
+.timeline-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.timeline-text {
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Shortened Tree Branches (Stems) - Precision stopping */
+.timeline-stem {
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    background: #2c3e50;
+    transform: translateX(-50%);
+    transition: all 800ms cubic-bezier(0.4, 0, 0.2, 1); /* Matching card speed */
+    z-index: 1;
+}
+
+.timeline-item--up .timeline-stem {
+    bottom: 50%; 
+    height: 25px; /* Base height */
+}
+
+.timeline-item--down .timeline-stem {
+    top: 50%;
+    height: 25px; /* Base height */
+}
+
+/* Junction Dots on Axis */
+.timeline-dot {
+    width: 14px;
+    height: 14px;
+    background: #ffcd1e;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    box-shadow: 0 0 0 2px #2c3e50;
+    transition: all 400ms ease;
+}
+
+/* Synchronized Hover: Stems grow but cards stay ahead */
+.timeline-item:hover .timeline-stem {
+    height: 40px; /* Grows 15px, while card moves 20px away */
+    background: var(--el-masria-primary);
+}
+
+.timeline-item:hover .timeline-dot {
+    background: var(--el-masria-primary);
+    transform: translate(-50%, -50%) scale(1.25);
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.3);
+}
+
+/* Hover effects for stems */
+.timeline-item:hover .timeline-stem {
+    height: 90px;
+    background: var(--el-masria-primary);
+}
+
+.timeline-item:hover .timeline-dot {
+    background: var(--el-masria-primary);
+    border-color: #ffcd1e;
+}
+
+/* Adjust margins for the requested order Year -> Title -> Body */
+.timeline-year-box {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.timeline-title {
+    margin-bottom: 10px;
+}
+
+.timeline-text {
+    margin-top: 0;
+}
+
+.timeline-item:hover .timeline-content::before {
+    height: 70px;
+    opacity: 1;
+}
+
+.timeline-year {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--el-masria-primary);
+    display: block;
+    margin-bottom: 5px;
+    font-family: var(--el-masria-font-two);
+}
+
+.timeline-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.timeline-text {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Navigation Arrows */
+.timeline-carousel.owl-carousel .owl-nav {
+    position: absolute;
+    top: -100px;
+    right: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.timeline-carousel.owl-carousel .owl-nav button {
+    width: 50px;
+    height: 50px;
+    background: #fff !important;
+    color: var(--el-masria-primary) !important;
+    border-radius: 50% !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px !important;
+    transition: all 300ms ease !important;
+}
+
+.timeline-carousel.owl-carousel .owl-nav button:hover {
+    background: var(--el-masria-primary) !important;
+    color: #fff !important;
+}
+
+.timeline-carousel.owl-carousel .owl-nav button.disabled {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*--------------------------------------------------------------
+# Product Page Enhancements
+--------------------------------------------------------------*/
+
+/* Category Filter Styling */
+.post-filter {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.post-filter li {
+    position: relative;
+    display: block;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.post-filter li .filter-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #444;
+    transition: all 300ms ease;
+    display: inline-block;
+    padding: 5px 0;
+}
+
+.post-filter li:hover .filter-text,
+.post-filter li.active .filter-text {
+    color: var(--el-masria-primary);
+    padding-left: 10px;
+}
+
+.post-filter li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--el-masria-primary);
+    transition: all 300ms ease;
+}
+
+.post-filter li:hover::after,
+.post-filter li.active::after {
+    width: 30px;
+}
+
+/* Product Card Restyling */
+.product__all-single {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: all 500ms cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid #f0f2f4;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.02);
+}
+
+.product__all-single:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    border-color: var(--el-masria-primary);
+}
+
+.product__all-img-box {
+    border-radius: 15px;
+    background: #f9fafb;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 500ms ease;
+    overflow: hidden;
+}
+
+.product__all-single:hover .product__all-img-box {
+    background: #fff;
+}
+
+.product__all-img {
+    position: relative;
+    z-index: 1;
+}
+
+.product__all-img img {
+    width: 100%;
+    height: auto;
+    transition: transform 600ms cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.product__all-single:hover .product__all-img img {
+    transform: scale(1.08);
+}
+
+.product__all-sale {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--el-masria-primary);
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+}
+
+.product__all-content {
+    padding: 5px 0 10px;
+}
+
+.product__all-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-family: var(--el-masria-font-two);
+}
+
+.product__all-title a {
+    color: #2c3e50;
+    transition: all 300ms ease;
+}
+
+.product__all-single:hover .product__all-title a {
+    color: var(--el-masria-primary);
+}
+
+/* Sidebar adjustments */
+.product__sidebar-single {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    border: 1px solid #f0f2f4;
+}
+
+.product__sidebar-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.product__sidebar-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--el-masria-primary);
+}
+.product__all-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--el-masria-primary);
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+/* Search Bar Hover Styling */
+.shop-search input[type="text"] {
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    border: 1px solid #f0f2f4;
+    border-radius: 15px;
+    padding: 0 25px;
+    font-size: 16px;
+    color: #444;
+    transition: all 400ms ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
+
+.shop-search input[type="text"]:focus,
+.shop-search input[type="text"]:hover {
+    outline: none;
+    border-color: var(--el-masria-primary);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+}
+
+/* Fixes for Product Cards and Header */
+.product__all-single {
+  background-color: var(--el-masria-white);
+  border-radius: var(--el-masria-bdr-radius);
+  padding: 15px !important;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.product__all-content {
+  margin-top: 15px !important;
+  padding: 0 5px !important;
+}
+
+.product__all-title {
+  font-size: 20px !important;
+}
+
+/* Ensure sticky header doesn't block view when hidden */
+.stricky-header {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(-100%);
+}
+
+.stricky-header.stricky-fixed {
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translateY(0%) !important;
+}
+
+
+
+
+
+/* Fix Product Container Width */
+.product .container {
+  width: auto !important;
+  max-width: none !important;
+  margin-left: 30px !important;
+  margin-right: 30px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+
+/* Remove negative margins from Isotope container to prevent left overflow */
+.filter-layout {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+

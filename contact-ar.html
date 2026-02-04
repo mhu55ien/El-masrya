@@ -1,10 +1,10 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Contact Us - EL Masria - Egyptian Dairy Manufacturing Company </title>
+    <title> اتصل بنا - المصرية - الشركة المصرية لتصنيع الألبان </title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
@@ -14,13 +14,14 @@
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Cairo Font for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
 
     <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
@@ -46,9 +47,15 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/elmasria.css" />
     <link rel="stylesheet" href="assets/css/elmasria-responsive.css" />
+    <link rel="stylesheet" href="assets/css/rtl-fix.css" />
 
     <!-- Disable custom cursor -->
     <style>
+        /* Arabic Font Override */
+        body, h1, h2, h3, h4, h5, h6, p, a, span, li, div {
+            font-family: 'Cairo', sans-serif !important;
+        }
+
         .custom-cursor__cursor,
         .custom-cursor__cursor-two {
             display: none !important;
@@ -62,16 +69,18 @@
         body {
             cursor: auto !important;
         }
+        
+        /* RTL Icons mirroring */
+        .icon-right-arrow::before {
+            content: "\e908"; 
+            transform: rotate(180deg);
+            display: inline-block;
+        }
     </style>
 
 </head>
 
 <body>
-
-
-
-
-
 
 
     <div class="preloader">
@@ -85,7 +94,7 @@
             <div class="main-header__wrapper">
                 <div class="main-header__wrapper-inner">
                     <div class="main-header__logo">
-                        <a href="index.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
+                        <a href="index-ar.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
                     </div>
                     <div class="main-header__menu-box">
                         <div class="main-header__menu-box-top">
@@ -103,7 +112,7 @@
                                         <i class="icon-pin"></i>
                                     </div>
                                     <div class="text">
-                                        <p>10th Of Ramadan Industrial Zone B1 - Egypt</p>
+                                        <p>العاشر من رمضان المنطقة الصناعية B1 - مصر</p>
                                     </div>
                                 </li>
                             </ul>
@@ -123,22 +132,22 @@
                                                 <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                                                 <ul class="main-menu__list">
                                                     <li>
-                                                        <a href="index.html">Home</a>
+                                                        <a href="index-ar.html">الرئيسية</a>
                                                     </li>
                                                     <li>
-                                                        <a href="about.html">About</a>
+                                                        <a href="about-ar.html">عن الشركة</a>
                                                     </li>
                                                     <li>
-                                                        <a href="sustainability.html">Sustainability</a>
+                                                        <a href="sustainability-ar.html">الاستدامة</a>
                                                     </li>
                                                     <li>
-                                                        <a href="products.html">Products</a>
+                                                        <a href="products-ar.html">منتجاتنا</a>
                                                     </li>
                                                     <li>
-                                                        <a href="join-us.html">Join Us</a>
+                                                        <a href="join-us-ar.html">انضم إلينا</a>
                                                     </li>
                                                     <li class="current">
-                                                        <a href="contact.html">Contact</a>
+                                                        <a href="contact-ar.html">اتصل بنا</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -146,13 +155,13 @@
                                         <div class="main-menu__right">
                                             <div class="main-menu__search-cart-btn-box">
                                                 <div class="main-menu__language-switcher">
-                                                    <a href="contact-ar.html" class="main-menu__language-btn">
-    <i class="fas fa-globe"></i>
-    <span class="main-menu__language-text">عربي</span>
-</a>
+                                                    <a href="contact.html" class="main-menu__language-btn">
+                                                        <i class="fas fa-globe"></i>
+                                                        <span class="main-menu__language-text">English</span>
+                                                    </a>
                                                 </div>
                                                 <div class="main-menu__btn-box">
-                                                    <a href="contact.html" class="thm-btn main-menu__btn">Get Free Quote
+                                                    <a href="contact-ar.html" class="thm-btn main-menu__btn">احصل على عرض
                                                         <i class="icon-right-arrow"></i> </a>
                                                 </div>
                                             </div>
@@ -188,7 +197,7 @@
             </div>
             <div class="container">
                 <div class="page-header__inner">
-                    <h2>contact us</h2>
+                    <h2>اتصل بنا</h2>
                 </div>
             </div>
         </section>
@@ -211,7 +220,7 @@
                                     <span class="icon-help"></span>
                                 </div>
                                 <div class="contact-details__text">
-                                    <p>Have Question?</p>
+                                    <p>هل لديك سؤال؟</p>
                                     <h3><a href="tel:0554499170">0554499170 - 0554499676</a></h3>
                                 </div>
                             </div>
@@ -222,7 +231,7 @@
                                     <span class="icon-mailbox"></span>
                                 </div>
                                 <div class="contact-details__text">
-                                    <p>Write Email</p>
+                                    <p>راسلنا عبر البريد</p>
                                     <h3><a href="mailto:needhelp@company.com">needhelp@company.com</a></h3>
                                 </div>
                             </div>
@@ -233,8 +242,8 @@
                                     <span class="icon-maps-and-flags"></span>
                                 </div>
                                 <div class="contact-details__text">
-                                    <p>Visit Office</p>
-                                    <h3>10th Of Ramadan Industrial Zone B1 - Egypt</h3>
+                                    <p>زر مكتبنا</p>
+                                    <h3>العاشر من رمضان المنطقة الصناعية B1 - مصر</h3>
                                 </div>
                             </div>
                         </div>
@@ -261,8 +270,8 @@
             </div>
             <div class="container">
                 <div class="section-title text-center">
-                    <span class="section-title__tagline">Write a Message</span>
-                    <h2 class="section-title__title">Always here to help you</h2>
+                    <span class="section-title__tagline">أرسل رسالة</span>
+                    <h2 class="section-title__title">دائما هنا لمساعدتك</h2>
                     <div class="section-title__icon">
                         <img loading="lazy" src="assets/images/icon/section-title-icon-1.png" alt="">
                     </div>
@@ -273,32 +282,32 @@
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="contact-form__input-box">
-                                    <input type="text" placeholder="Your Name" name="name">
+                                    <input type="text" placeholder="الاسم" name="name">
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="contact-form__input-box">
-                                    <input type="email" placeholder="Email Address" name="email">
+                                    <input type="email" placeholder="البريد الإلكتروني" name="email">
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="contact-form__input-box">
-                                    <input type="text" placeholder="Phone" name="Phone Number">
+                                    <input type="text" placeholder="رقم الهاتف" name="Phone Number">
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="contact-form__input-box">
-                                    <input type="text" placeholder="Subject" name="Subject">
+                                    <input type="text" placeholder="الموضوع" name="Subject">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xl-12">
                                 <div class="contact-form__input-box text-message-box">
-                                    <textarea name="message" placeholder="Write a Comment"></textarea>
+                                    <textarea name="message" placeholder="اكتب رسالتك"></textarea>
                                 </div>
                                 <div class="contact-form__btn-box">
-                                    <a href="about.html" class="thm-btn contact-two__btn">Send a Message<i
+                                    <a href="about-ar.html" class="thm-btn contact-two__btn">أرسل الرسالة<i
                                             class="icon-right-arrow"></i> </a>
                                 </div>
                             </div>
@@ -320,33 +329,31 @@
                             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                                 <div class="footer-widget__column footer-widget__about">
                                     <div class="footer-widget__logo">
-                                        <a href="index.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
+                                        <a href="index-ar.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
                                     </div>
                                     <div class="footer-widget__about-text-box">
-                                        <p class="footer-widget__about-text">Egyptian Integrated Food Industries -
-                                            specializing in premium cheese and butter products for local and export
-                                            markets.</p>
+                                        <p class="footer-widget__about-text">المصرية للصناعات الغذائية المتكاملة - متخصصة في منتجات الجبن والزبدة الفاخرة للأسواق المحلية والتصدير.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                                 <div class="footer-widget__column footer-widget__Explore">
                                     <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">Explore</h3>
+                                        <h3 class="footer-widget__title">استكشف</h3>
                                     </div>
                                     <ul class="footer-widget__Explore-list list-unstyled">
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="farmers.html">Our Farmers</a></li>
-                                        <li><a href="project-01.html">New Projects</a></li>
-                                        <li><a href="services.html">Services</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="about-ar.html">عن الشركة</a></li>
+                                        <li><a href="farmers.html">مزارعونا</a></li>
+                                        <li><a href="project-01.html">مشاريع جديدة</a></li>
+                                        <li><a href="services.html">خدماتنا</a></li>
+                                        <li><a href="contact-ar.html">اتصل بنا</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
                                 <div class="footer-widget__column footer-widget__news">
                                     <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">News</h3>
+                                        <h3 class="footer-widget__title">أخبارنا</h3>
                                     </div>
                                     <ul class="footer-widget__news-list list-unstyled">
                                         <li>
@@ -354,11 +361,8 @@
                                                 <img loading="lazy" src="assets/images/resources/footer-widget-news-img-1.jpg" alt="">
                                             </div>
                                             <div class="footer-widget__news-content">
-                                                <p class="footer-widget__news-date">20 Jul, 2022</p>
-                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">A
-                                                        Our Products
-                                                        Gives
-                                                        More Good Taste</a></h5>
+                                                <p class="footer-widget__news-date">20 يوليو، 2022</p>
+                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">منتجاتنا تعطي طعماً أفضل</a></h5>
                                             </div>
                                         </li>
                                         <li>
@@ -366,11 +370,8 @@
                                                 <img loading="lazy" src="assets/images/resources/footer-widget-news-img-2.jpg" alt="">
                                             </div>
                                             <div class="footer-widget__news-content">
-                                                <p class="footer-widget__news-date">20 Jul, 2022</p>
-                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">A
-                                                        Our Products
-                                                        Gives
-                                                        More Good Taste</a></h5>
+                                                <p class="footer-widget__news-date">20 يوليو، 2022</p>
+                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">منتجاتنا تعطي طعماً أفضل</a></h5>
                                             </div>
                                         </li>
                                     </ul>
@@ -379,7 +380,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                                 <div class="footer-widget__column footer-widget__Contact">
                                     <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">Contact</h3>
+                                        <h3 class="footer-widget__title">اتصل بنا</h3>
                                     </div>
                                     <ul class="footer-widget__Contact-list list-unstyled">
                                         <li>
@@ -403,13 +404,13 @@
                                                 <span class="icon-pin"></span>
                                             </div>
                                             <div class="text">
-                                                <p>10th Of Ramadan Industrial Zone B1 - Egypt</p>
+                                                <p>العاشر من رمضان المنطقة الصناعية B1 - مصر</p>
                                             </div>
                                         </li>
                                     </ul>
                                     <form class="footer-widget__Contact-form">
                                         <div class="footer-widget__Contact-input-box">
-                                            <input type="email" placeholder="Email Address" name="email">
+                                            <input type="email" placeholder="البريد الإلكتروني" name="email">
                                             <button type="submit" class="footer-widget__Contact-btn"><i
                                                     class="icon-right-arrow"></i></button>
                                         </div>
@@ -425,7 +426,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="site-footer__bottom-inner">
-                                <p class="site-footer__bottom-text">© Copyright 2022 by <a href="#">EL Masria.com</a>
+                                <p class="site-footer__bottom-text">© الحقوق محفوظة 2024 بواسطة <a href="#">المصرية</a>
                                 </p>
                                 <div class="site-footer__social">
                                     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -456,7 +457,8 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
 
             <div class="logo-box">
-                <a href="index.html" aria-label="logo image"><img loading="lazy" src="assets/photos/logo.png" width="143" alt="" /></a>
+                <a href="index-ar.html" aria-label="logo image"><img loading="lazy" src="assets/images/resources/logo-2.png" width="143"
+                        alt="" /></a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>
@@ -539,3 +541,4 @@
 </body>
 
 </html>
+

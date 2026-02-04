@@ -1,0 +1,552 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تميز الألبان مهم للحياة الصحية - المصرية</title>
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <meta name="description" content="الشركة المصرية لتصنيع الألبان - فوائد الألبان الصحية" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Cairo Font for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/custom-animate.css" />
+    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css" />
+    <link rel="stylesheet" href="assets/vendors/odometer/odometer.min.css" />
+    <link rel="stylesheet" href="assets/vendors/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="assets/icons/style.css">
+    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/reey-font/stylesheet.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/vendors/bxslider/jquery.bxslider.css" />
+    <link rel="stylesheet" href="assets/vendors/bootstrap-select/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="assets/vendors/vegas/vegas.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/vendors/timepicker/timePicker.css" />
+    <link rel="stylesheet" href="assets/css/language-switcher.css" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="assets/css/elmasria.css" />
+    <link rel="stylesheet" href="assets/css/elmasria-responsive.css" />
+    <link rel="stylesheet" href="assets/css/rtl-fix.css" />
+
+    <!-- Disable custom cursor and add Arabic font -->
+    <style>
+        /* Arabic Font Override */
+        body, h1, h2, h3, h4, h5, h6, p, a, span, li, div, input, textarea, button {
+            font-family: 'Cairo', sans-serif !important;
+        }
+
+        .custom-cursor__cursor,
+        .custom-cursor__cursor-two {
+            display: none !important;
+            visibility: hidden !important;
+        }
+
+        * {
+            cursor: auto !important;
+        }
+
+        body {
+            cursor: auto !important;
+        }
+        
+        /* RTL Icons mirroring */
+        .icon-right-arrow::before {
+            content: "\e908"; 
+            transform: rotate(180deg);
+            display: inline-block;
+        }
+
+        /* News Detail Styling */
+        .news-detail {
+            padding: 80px 0;
+        }
+
+        .news-detail__img {
+            margin-bottom: 40px;
+            border-radius: 15px;
+            overflow: hidden;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .news-detail__img img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .news-detail__meta {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ece9e0;
+        }
+
+        .news-detail__meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--el-masria-gray);
+            font-size: 15px;
+        }
+
+        .news-detail__meta-item i {
+            color: var(--el-masria-base);
+            font-size: 18px;
+        }
+
+        .news-detail__title {
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--el-masria-black);
+            margin-bottom: 30px;
+        }
+
+        .news-detail__content {
+            font-size: 16px;
+            line-height: 30px;
+            color: var(--el-masria-gray);
+        }
+
+        .news-detail__content p {
+            margin-bottom: 25px;
+        }
+
+        .news-detail__content h3 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--el-masria-black);
+            margin: 35px 0 20px;
+        }
+
+        .news-detail__content ul {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+
+        .news-detail__content ul li {
+            position: relative;
+            padding-right: 30px; /* Adjusted for RTL */
+            margin-bottom: 15px;
+        }
+
+        .news-detail__content ul li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            right: 0; /* Adjusted for RTL */
+            color: var(--el-masria-base);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="preloader">
+        <div class="preloader__image"></div>
+    </div>
+    <!-- /.preloader -->
+
+    <div class="page-wrapper">
+        <header class="main-header">
+            <div class="main-header__wrapper">
+                <div class="main-header__wrapper-inner">
+                    <div class="main-header__logo">
+                        <a href="index-ar.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
+                    </div>
+                    <div class="main-header__menu-box">
+                        <div class="main-header__menu-box-top">
+                            <ul class="list-unstyled main-header__contact-list">
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon-email"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="mailto:needhelp@company.com">needhelp@company.com</a></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon-pin"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p>العاشر من رمضان المنطقة الصناعية B1 - مصر</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="main-header__social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="main-header__menu-box-bottom">
+                            <nav class="main-menu">
+                                <div class="main-menu__wrapper">
+                                    <div class="main-menu__wrapper-inner">
+                                        <div class="main-menu__left">
+                                            <div class="main-menu__main-menu-box">
+                                                <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                                                <ul class="main-menu__list">
+                                                    <li>
+                                                        <a href="index-ar.html">الرئيسية</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="about-ar.html">عن الشركة</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="sustainability-ar.html">الاستدامة</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="products-ar.html">منتجاتنا</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="join-us-ar.html">انضم إلينا</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="contact-ar.html">اتصل بنا</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="main-menu__right">
+                                            <div class="main-menu__search-cart-btn-box">
+                                                <div class="main-menu__language-switcher">
+                                                    <a href="news-healthy-living.html" class="main-menu__language-btn">
+                                                        <i class="fas fa-globe"></i>
+                                                        <span class="main-menu__language-text">English</span>
+                                                    </a>
+                                                </div>
+                                                <div class="main-menu__btn-box">
+                                                    <a href="contact-ar.html" class="thm-btn main-menu__btn">احصل على عرض
+                                                        <i class="icon-right-arrow"></i> </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="main-header__phone-contact-box">
+                        <div class="main-header__phone-number">
+                            <a href="tel:0554499170">0554499170 - 0554499676</a>
+                        </div>
+                        <div class="main-header__call-box">
+                            <div class="main-header__call-inner">
+                                <div class="main-header__call-icon">
+                                    <span class="fas fa-phone"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+        </div><!-- /.stricky-header -->
+
+        <!--Page Header Start-->
+        <section class="page-header">
+            <div class="page-header-bg" style="background-image: url(assets/photos/21.jpeg)">
+            </div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <h2>الأخبار والمقالات</h2>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+
+        <!--News Detail Start-->
+        <section class="news-detail">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-10 offset-xl-1">
+                        <div class="news-detail__img">
+                            <img loading="lazy" src="assets/photos/21.jpeg" alt="تميز الألبان والحياة الصحية">
+                        </div>
+                        
+                        <div class="news-detail__meta">
+                            <div class="news-detail__meta-item">
+                                <i class="far fa-calendar"></i>
+                                <span>5 أكتوبر، 2024</span>
+                            </div>
+                            <div class="news-detail__meta-item">
+                                <i class="far fa-user"></i>
+                                <span>فريق المصرية</span>
+                            </div>
+                            <div class="news-detail__meta-item">
+                                <i class="far fa-folder"></i>
+                                <span>الصحة والتغذية</span>
+                            </div>
+                        </div>
+
+                        <h2 class="news-detail__title">تميز الألبان مهم للحياة الصحية</h2>
+
+                        <div class="news-detail__content">
+                            <p>في عالم اليوم الذي يركز على الصحة، أصبحت جودة الطعام الذي نستهلكه أكثر أهمية من أي وقت مضى. تلعب منتجات الألبان، عند إنتاجها بتميز وعناية، دوراً حيوياً في دعم أنماط الحياة الصحية لجميع الفئات العمرية. في المصرية، نحن ندرك أن التزامنا بتميز الألبان يؤثر بشكل مباشر على صحة ورفاهية العائلات التي نخدمها.</p>
+
+                            <p>تدعم عقود من الأبحاث الغذائية العلاقة بين منتجات الألبان عالية الجودة والحياة الصحية. ومع ذلك، لا يتم إنشاء جميع منتجات الألبان على قدم المساواة. يكمن الاختلاف في طرق الإنتاج، وتدابير مراقبة الجودة، والالتزام بالتميز الذي يحدد منتجات الألبان المتميزة حقاً.</p>
+
+                            <h3>قوة غذائية</h3>
+
+                            <p>تعد منتجات الألبان من بين أكثر الأطعمة اكتمالاً في الطبيعة، حيث تقدم مزيجاً فريداً من العناصر الغذائية الأساسية التي يصعب الحصول عليها من مصادر أخرى. توفر منتجات الألبان عالية الجودة الكالسيوم المتاح حيوياً، والبروتينات الكاملة، وفيتامينات د و ب12، والفوسفور، ومعادن حيوية أخرى تدعم وظائف الجسم المختلفة.</p>
+
+                            <p>الكالسيوم، الذي ربما يكون العنصر الغذائي الأكثر شهرة في منتجات الألبان، ضروري لبناء والحفاظ على عظام وأسنان قوية. ومع ذلك، تمتد فوائده إلى ما هو أبعد من صحة الهيكل العظمي. يلعب الكالسيوم أدواراً أساسية في وظيفة العضلات، ونقل الأعصاب، وتخثر الدم. يمتص الجسم الكالسيوم الموجود في منتجات الألبان بشكل جيد للغاية، مما يجعل الألبان مصدراً فعالاً لهذا المعدن الحيوي.</p>
+
+                            <h3>الجودة تحدث الفرق</h3>
+
+                            <p>تتأثر القيمة الغذائية لمنتجات الألبان بشكل مباشر بجودة الإنتاج. عندما يتم إنتاج منتجات الألبان بتميز - من صحة حيوانات الألبان إلى طرق المعالجة المستخدمة - فإنها تحتفظ بأقصى قيمة غذائية. ولهذا السبب فإن التزامنا بالجودة في كل مرحلة من مراحل الإنتاج لا يتعلق فقط بالطعم؛ بل يتعلق بتقديم التغذية المثلى لعملائنا.</p>
+
+                            <p>يحتوي الحليب الطازج عالي الجودة على إنزيمات وبروتينات مفيدة يمكن أن تتعرض للخطر بسبب المعالجة أو المناولة غير السليمة. يضمن التحكم الدقيق في درجة الحرارة، ونهج المعالجة البسيط، وإدارة سلسلة التبريد السريعة لدينا بقاء هذه العناصر الغذائية القيمة سليمة من المزرعة إلى المائدة.</p>
+
+                            <h3>الفوائد الصحية عبر مراحل الحياة</h3>
+
+                            <ul>
+                                <li>يدعم نمو العظام وقوتها لدى الأطفال في مرحلة النمو</li>
+                                <li>يوفر العناصر الغذائية الأساسية للأمهات الحوامل والمرضعات</li>
+                                <li>يساعد في الحفاظ على كتلة العضلات وكثافة العظام لدى البالغين</li>
+                                <li>يدعم الشيخوخة الصحية ويقلل من خطر الإصابة بهشاشة العظام لدى كبار السن</li>
+                                <li>يساهم في صحة القلب والأوعية الدموية من خلال الأحماض الدهنية المفيدة</li>
+                                <li>يدعم وظيفة الجهاز المناعي بمركبات نشطة بيولوجياً</li>
+                            </ul>
+
+                            <h3>دور البروتين</h3>
+
+                            <p>تعد منتجات الألبان مصادر ممتازة للبروتين عالي الجودة، حيث تحتوي على جميع الأحماض الأمينية التسعة الأساسية التي لا يستطيع الجسم إنتاجها بمفرده. هذه البروتينات الكاملة ضرورية لبناء وإصلاح الأنسجة، وإنتاج الإنزيمات والهرمونات، ودعم وظيفة المناعة.</p>
+
+                            <p>البروتينات في منتجات الألبان، وخاصة مصل اللبن والكازين، قابلة للهضم بشكل كبير ويستخدمها الجسم بكفاءة. غالباً ما يلجأ الرياضيون والأفراد النشطون إلى منتجات الألبان للتعافي بعد التمرين، حيث يدعم مزيج البروتينات والكربوهيدرات إصلاح العضلات وتجديد الجليكوجين.</p>
+
+                            <h3>البروبيوتيك وصحة الجهاز الهضمي</h3>
+
+                            <p>تحتوي العديد من منتجات الألبان، وخاصة الأصناف المخمرة مثل الزبادي وبعض أنواع الجبن، على بكتيريا مفيدة تعرف باسم البروبيوتيك. تدعم هذه الكائنات الحية الدقيقة الصديقة صحة الجهاز الهضمي، وتعزز امتصاص العناصر الغذائية، وتساهم في ميكروبيوم أمعاء صحي. تؤثر جودة منتج الألبان بشكل مباشر على حيوية وفعالية هذه البكتيريا المفيدة.</p>
+
+                            <p>تشجع عمليات صنع الجبن التقليدية لدينا بشكل طبيعي تطور الثقافات البكتيرية المفيدة. لا تساهم هذه البروبيوتيك في النكهات المميزة لأجباننا فحسب، بل تقدم أيضاً فوائد صحية محتملة للمستهلكين.</p>
+
+                            <h3>تآزر فيتامين د والكالسيوم</h3>
+
+                            <p>واحدة من المزايا الفريدة لمنتجات الألبان هي التآزر الطبيعي بين الكالسيوم وفيتامين د. يعزز فيتامين د امتصاص الكالسيوم في الأمعاء، مما يجعل الألبان مصدراً فعالاً بشكل استثنائي لهذين العنصرين الغذائيين المهمين. هذه الشراكة مهمة بشكل خاص لصحة العظام، وظيفة المناعة، والعافية العامة.</p>
+
+                            <p>في المصرية، نضمن أن تحافظ منتجات الألبان لدينا على مستويات مثالية من فيتامين د الطبيعي من خلال المناولة الدقيقة والمعالجة البسيطة. يحافظ هذا على الملف الغذائي الطبيعي الذي يجعل الألبان مكوناً قيماً في النظام الغذائي الصحي.</p>
+
+                            <h3>دعم أنماط الحياة النشطة</h3>
+
+                            <p>بالنسبة للأفراد الذين يعيشون أنماط حياة نشطة، تقدم منتجات الألبان عالية الجودة مزايا فريدة. مزيج البروتينات والكربوهيدرات والكهارل في الألبان يجعلها خياراً ممتازاً للتغذية قبل وبعد التمرين. توفر السكريات الطبيعية طاقة سريعة، بينما تدعم البروتينات تعافي العضلات ونموها.</p>
+
+                            <p>أظهرت الأبحاث أن تناول منتجات الألبان كجزء من نظام غذائي متوازن يمكن أن يدعم إدارة الوزن، وتنميو العضلات، والأداء البدني العام. ومع ذلك، يتم تعظيم هذه الفوائد عندما تكون منتجات الألبان من أعلى جودة - خالية من الملوثات وغنية بالعناصر الغذائية الطبيعية.</p>
+
+                            <h3>التزامنا بصحتكم</h3>
+
+                            <p>في المصرية، ننظر إلى دورنا على أنه أكثر من مجرد منتجي ألبان - نحن شركاء في صحة وعافية المجتمعات التي نخدمها. تدفع هذه المسؤولية التزامنا الذي لا يتزعزع بالتميز في كل جانب من جوانب عملياتنا. من رعاية حيوانات الألبان لدينا إلى التعبئة النهائية لمنتجاتنا، يتم اتخاذ كل قرار مع وضع صحة عملائنا في الاعتبار.</p>
+
+                            <p>نحن نستثمر باستمرار في تدابير مراقبة الجودة، ومعدات المعالجة الحديثة، وتدريب الموظفين لضمان أن كل منتج يلبي أعلى معايير السلامة والقيمة الغذائية. تتحقق بروتوكولات الاختبار الشاملة لدينا من أن منتجاتنا خالية من الملوثات مع الاحتفاظ بإمكاناتها الغذائية الكاملة.</p>
+
+                            <p>تميز الألبان لا يتعلق فقط بإنتاج منتجات لذيذة - إنه يتعلق بالمساهمة في صحة وحيوية العائلات التي تثق بنا في تغذيتها. من خلال الحفاظ على أعلى معايير الجودة والسلامة، نضمن أن تستمر منتجات الألبان لدينا في لعب دور إيجابي في دعم أنماط الحياة الصحية والنشطة للأجيال القادمة.</p>
+
+                            <p>عندما تختار منتجات الألبان المصرية، فأنت لا تختار الطعام فقط - أنت تختار التزاماً بالصحة والجودة والتميز الذي كان سمة مميزة لنا منذ اليوم الأول. هكذا يهم تميز الألبان حقاً للحياة الصحية.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--News Detail End-->
+
+        <!--Site Footer Start-->
+        <footer class="site-footer">
+            <div class="site-footer__top">
+                <div class="container">
+                    <div class="site-footer__top-inner">
+                        <div class="site-footer-shape-1 float-bob-x" style="background-image: url(assets/images/shapes/site-footer-shape-1.png);"></div>
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                                <div class="footer-widget__column footer-widget__about">
+                                    <div class="footer-widget__logo">
+                                        <a href="index-ar.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
+                                    </div>
+                                    <div class="footer-widget__about-text-box">
+                                        <p class="footer-widget__about-text">المصرية للصناعات الغذائية المتكاملة - متخصصة في منتجات الجبن والزبدة الفاخرة للأسواق المحلية والتصدير.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                                <div class="footer-widget__column footer-widget__Explore">
+                                    <div class="footer-widget__title-box">
+                                        <h3 class="footer-widget__title">استكشف</h3>
+                                    </div>
+                                    <ul class="footer-widget__Explore-list list-unstyled">
+                                        <li><a href="about-ar.html">عن الشركة</a></li>
+                                        <li><a href="products-ar.html">منتجاتنا</a></li>
+                                        <li><a href="sustainability-ar.html">الاستدامة</a></li>
+                                        <li><a href="join-us-ar.html">انضم إلينا</a></li>
+                                        <li><a href="contact-ar.html">اتصل بنا</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                                <div class="footer-widget__column footer-widget__Contact">
+                                    <div class="footer-widget__title-box">
+                                        <h3 class="footer-widget__title">اتصل بنا</h3>
+                                    </div>
+                                    <ul class="footer-widget__Contact-list list-unstyled">
+                                        <li>
+                                            <div class="icon">
+                                                <span class="fas fa-phone-square-alt"></span>
+                                            </div>
+                                            <div class="text">
+                                                <p><a href="tel:0554499170">0554499170 - 0554499676</a></p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon">
+                                                <span class="fas fa-envelope"></span>
+                                            </div>
+                                            <div class="text">
+                                                <p><a href="mailto:needhelp@company.com">needhelp@company.com</a></p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon">
+                                                <span class="icon-pin"></span>
+                                            </div>
+                                            <div class="text">
+                                                <p>العاشر من رمضان المنطقة الصناعية B1 - مصر</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-footer__bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="site-footer__bottom-inner">
+                                <p class="site-footer__bottom-text">© الحقوق محفوظة 2024 بواسطة <a href="#">المصرية</a></p>
+                                <div class="site-footer__social">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-facebook"></i></a>
+                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="site-footer__bottom-scroll">
+                                    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="icon-up-arrow"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--Site Footer End-->
+
+    </div><!-- /.page-wrapper -->
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+            <div class="logo-box">
+                <a href="index-ar.html" aria-label="logo image"><img loading="lazy" src="assets/photos/logo.png" width="143" alt="" /></a>
+            </div>
+            <div class="mobile-nav__container"></div>
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:info@eifidairy.com">info@eifidairy.com</a>
+                </li>
+                <li>
+                    <i class="fa fa-phone-alt"></i>
+                    <a href="tel:0554499170">0554499170 - 0554499676</a>
+                </li>
+            </ul>
+            <div class="mobile-nav__top">
+                <div class="mobile-nav__social">
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-facebook-square"></a>
+                    <a href="#" class="fab fa-pinterest-p"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <div class="search-popup__content">
+            <form action="#">
+                <label for="search" class="sr-only">search here</label>
+                <input type="text" id="search" placeholder="Search Here..." />
+                <button type="submit" aria-label="search submit" class="thm-btn">
+                    <i class="icon-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="icon-up-arrow"></i></a>
+
+    <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script src="assets/vendors/nouislider/nouislider.min.js"></script>
+    <script src="assets/vendors/odometer/odometer.min.js"></script>
+    <script src="assets/vendors/swiper/swiper.min.js"></script>
+    <script src="assets/vendors/tiny-slider/tiny-slider.min.js"></script>
+    <script src="assets/vendors/wnumb/wNumb.min.js"></script>
+    <script src="assets/vendors/wow/wow.js"></script>
+    <script src="assets/vendors/isotope/isotope.js"></script>
+    <script src="assets/vendors/countdown/countdown.min.js"></script>
+    <script src="assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/vendors/bxslider/jquery.bxslider.min.js"></script>
+    <script src="assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="assets/vendors/vegas/vegas.min.js"></script>
+    <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
+    <script src="assets/vendors/timepicker/timePicker.js"></script>
+    <script src="assets/vendors/circleType/jquery.circleType.js"></script>
+    <script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
+
+    <!-- template js -->
+    <script src="assets/js/elmasria.js"></script>
+
+</body>
+
+</html>
+

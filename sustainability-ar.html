@@ -1,10 +1,10 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sustainability - EL Masria - Egyptian Dairy Manufacturing Company</title>
+    <title>الاستدامة - المصرية - الشركة المصرية لتصنيع الألبان</title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
@@ -14,13 +14,14 @@
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Cairo Font for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
 
     <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
@@ -47,9 +48,15 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/elmasria.css" />
     <link rel="stylesheet" href="assets/css/elmasria-responsive.css" />
+    <link rel="stylesheet" href="assets/css/rtl-fix.css" />
 
     <!-- Premium Sustainability Page Styling -->
     <style>
+        /* Arabic Font Override */
+        body, h1, h2, h3, h4, h5, h6, p, a, span, li, div {
+            font-family: 'Cairo', sans-serif !important;
+        }
+
         .custom-cursor__cursor,
         .custom-cursor__cursor-two {
             display: none !important;
@@ -63,6 +70,13 @@
         body {
             cursor: auto !important;
             background: #f8f9fa;
+        }
+        
+         /* RTL Icons mirroring */
+        .icon-right-arrow::before {
+            content: "\e908"; 
+            transform: rotate(180deg);
+            display: inline-block;
         }
 
         /* Premium Page Header */
@@ -179,14 +193,15 @@
         }
 
         .about-three__points li:hover {
-            padding-left: 10px;
+            padding-left: 10px; /* Adjusted for RTL, may need testing */
             color: #4CAF50;
         }
 
         .about-three__points li .icon {
             color: #4CAF50;
             font-size: 20px;
-            margin-right: 15px;
+            margin-left: 15px; /* Adjusted for RTL */
+            margin-right: 0;
         }
 
         /* Premium Buttons */
@@ -239,7 +254,7 @@
             <div class="main-header__wrapper">
                 <div class="main-header__wrapper-inner">
                     <div class="main-header__logo">
-                        <a href="index.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
+                        <a href="index-ar.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
                     </div>
                     <div class="main-header__menu-box">
                         <div class="main-header__menu-box-top">
@@ -257,7 +272,7 @@
                                         <i class="icon-pin"></i>
                                     </div>
                                     <div class="text">
-                                        <p>10th Of Ramadan Industrial Zone B1 - Egypt</p>
+                                        <p>العاشر من رمضان المنطقة الصناعية B1 - مصر</p>
                                     </div>
                                 </li>
                             </ul>
@@ -276,37 +291,37 @@
                                             <div class="main-menu__main-menu-box">
                                                 <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                                                 <ul class="main-menu__list">
-                                                    <li>
-                                                        <a href="index.html">Home</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="about.html">About</a>
-                                                    </li>
-                                                    <li class="current">
-                                                        <a href="sustainability.html">Sustainability</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="products.html">Products</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="join-us.html">Join Us</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="contact.html">Contact</a>
-                                                    </li>
-                                                </ul>
+    <li>
+        <a href="index-ar.html">الرئيسية</a>
+    </li>
+    <li>
+        <a href="about-ar.html">عن الشركة</a>
+    </li>
+    <li class="current">
+        <a href="sustainability-ar.html">الاستدامة</a>
+    </li>
+    <li>
+        <a href="products-ar.html">منتجاتنا</a>
+    </li>
+    <li>
+        <a href="join-us-ar.html">انضم إلينا</a>
+    </li>
+    <li>
+        <a href="contact-ar.html">اتصل بنا</a>
+    </li>
+</ul>
                                             </div>
                                         </div>
                                         <div class="main-menu__right">
                                             <div class="main-menu__search-cart-btn-box">
                                                 <div class="main-menu__language-switcher">
-                                                    <a href="sustainability-ar.html" class="main-menu__language-btn">
-    <i class="fas fa-globe"></i>
-    <span class="main-menu__language-text">عربي</span>
-</a>
+                                                    <a href="sustainability.html" class="main-menu__language-btn">
+                                                        <i class="fas fa-globe"></i>
+                                                        <span class="main-menu__language-text">English</span>
+                                                    </a>
                                                 </div>
                                                 <div class="main-menu__btn-box">
-                                                    <a href="contact.html" class="thm-btn main-menu__btn">Get Free Quote
+                                                    <a href="contact-ar.html" class="thm-btn main-menu__btn">احصل على عرض
                                                         <i class="icon-right-arrow"></i> </a>
                                                 </div>
                                             </div>
@@ -342,7 +357,7 @@
             </div>
             <div class="container">
                 <div class="page-header__inner">
-                    <h2>Sustainability</h2>
+                    <h2>الاستدامة</h2>
                 </div>
             </div>
         </section>
@@ -378,38 +393,37 @@
                     <div class="col-xl-6">
                         <div class="about-three__right">
                             <div class="section-title text-left">
-                                <span class="section-title__tagline">Our Commitment</span>
-                                <h2 class="section-title__title">Sustainable Dairy Production</h2>
+                                <span class="section-title__tagline">التزامنا</span>
+                                <h2 class="section-title__title">إنتاج ألبان مستدام</h2>
                                 <div class="section-title__icon">
                                     <img loading="lazy" src="assets/images/icon/section-title-icon-1.png" alt="">
                                 </div>
                             </div>
-                            <p class="about-three__text-1">At Egyptian Integrated Food Industries, we are committed to
-                                sustainable practices in every aspect of our dairy production, from sourcing to
-                                packaging.</p>
+                            <p class="about-three__text-1">في الشركة المصرية للصناعات الغذائية المتكاملة، نحن ملتزمون
+                                بالممارسات المستدامة في كل جانب من جوانب إنتاج الألبان لدينا، من المصدر إلى التعبئة.</p>
                             <ul class="list-unstyled about-three__points">
                                 <li>
                                     <div class="icon-box">
                                         <span class="fa fa-check"></span>
-                                        <p class="icon-box-text">Environmental Responsibility</p>
+                                        <p class="icon-box-text">المسؤولية البيئية</p>
                                     </div>
                                     <div class="content">
-                                        <p>Minimizing our environmental footprint</p>
+                                        <p>تقليل بصمتنا البيئية</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="icon-box">
                                         <span class="fa fa-check"></span>
-                                        <p class="icon-box-text">Resource Management</p>
+                                        <p class="icon-box-text">إدارة الموارد</p>
                                     </div>
                                     <div class="content">
-                                        <p>Efficient use of water and energy</p>
+                                        <p>الاستخدام الفعال للمياه والطاقة</p>
                                     </div>
                                 </li>
                             </ul>
                             <div class="about-three__progress">
                                 <div class="about-three__progress-single">
-                                    <h4 class="about-three__progress-title">Sustainability Goals</h4>
+                                    <h4 class="about-three__progress-title">أهداف الاستدامة</h4>
                                     <div class="bar">
                                         <div class="bar-inner count-bar" data-percent="85%">
                                             <div class="count-text">85%</div>
@@ -417,7 +431,7 @@
                                     </div>
                                 </div>
                                 <div class="about-three__progress-single">
-                                    <h4 class="about-three__progress-title">Waste Reduction</h4>
+                                    <h4 class="about-three__progress-title">تقليل النفايات</h4>
                                     <div class="bar marb-0">
                                         <div class="bar-inner count-bar" data-percent="78%">
                                             <div class="count-text">78%</div>
@@ -436,36 +450,36 @@
         <section class="sustainability-stats-section">
             <div class="container">
                 <div class="section-title text-center">
-                    <span class="section-title__tagline">Our Impact</span>
-                    <h2 class="section-title__title">Sustainability By The Numbers</h2>
+                    <span class="section-title__tagline">تأثيرنا</span>
+                    <h2 class="section-title__title">الاستدامة بالأرقام</h2>
                 </div>
                 <div class="row">
                     <!-- Stat Item 1 -->
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <div class="stat-card">
                             <div class="stat-card__number">75%</div>
-                            <div class="stat-card__text">Water Conservation</div>
+                            <div class="stat-card__text">الحفاظ على المياه</div>
                         </div>
                     </div>
                     <!-- Stat Item 2 -->
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <div class="stat-card">
                             <div class="stat-card__number">90%</div>
-                            <div class="stat-card__text">Recyclable Packaging</div>
+                            <div class="stat-card__text">عبوات قابلة لإعادة التدوير</div>
                         </div>
                     </div>
                     <!-- Stat Item 3 -->
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <div class="stat-card">
                             <div class="stat-card__number">60%</div>
-                            <div class="stat-card__text">Energy Reduction</div>
+                            <div class="stat-card__text">تخفيض الطاقة</div>
                         </div>
                     </div>
                     <!-- Stat Item 4 -->
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <div class="stat-card">
                             <div class="stat-card__number">100%</div>
-                            <div class="stat-card__text">Quality Standards</div>
+                            <div class="stat-card__text">معايير الجودة</div>
                         </div>
                     </div>
                 </div>
@@ -476,7 +490,7 @@
         <section style="padding: 100px 0; background: #f8f9fa;">
             <div class="container">
                 <div class="section-title text-center" style="margin-bottom: 60px;">
-                    <h2 class="section-title__title">Our Environmental Commitments</h2>
+                    <h2 class="section-title__title">التزاماتنا البيئية</h2>
                     <div class="section-title__icon">
                         <img loading="lazy" src="assets/images/icon/section-title-icon-1.png" alt="">
                     </div>
@@ -488,9 +502,9 @@
                             <div class="commitment-card__icon-box">
                                 <span class="icon-harvester"></span>
                             </div>
-                            <h4 class="commitment-card__title">Renewable Energy</h4>
-                            <p class="commitment-card__text">Transitioning to 100% renewable energy sources in
-                                our manufacturing facilities by 2030, including solar and wind power.</p>
+                            <h4 class="commitment-card__title">الطاقة المتجددة</h4>
+                            <p class="commitment-card__text">الانتقال إلى مصادر الطاقة المتجددة بنسبة 100% في
+                                منشآتنا التصنيعية بحلول عام 2030، بما في ذلك الطاقة الشمسية وطاقة الرياح.</p>
                         </div>
                     </div>
                     <!-- Commitment Card 2 -->
@@ -499,9 +513,9 @@
                             <div class="commitment-card__icon-box">
                                 <span class="icon-agriculture-1"></span>
                             </div>
-                            <h4 class="commitment-card__title">Zero Waste Initiative</h4>
-                            <p class="commitment-card__text">Implementing comprehensive recycling programs and
-                                working toward zero landfill waste in all our production processes.</p>
+                            <h4 class="commitment-card__title">مبادرة صفر نفايات</h4>
+                            <p class="commitment-card__text">تنفيذ برامج إعادة تدوير شاملة والعمل نحو
+                                صفر نفايات في جميع عمليات الإنتاج لدينا.</p>
                         </div>
                     </div>
                     <!-- Commitment Card 3 -->
@@ -510,9 +524,9 @@
                             <div class="commitment-card__icon-box">
                                 <span class="icon-harvest-1"></span>
                             </div>
-                            <h4 class="commitment-card__title">Water Stewardship</h4>
-                            <p class="commitment-card__text">Advanced water recycling systems that reduce
-                                consumption by 75% and ensure responsible water management.</p>
+                            <h4 class="commitment-card__title">إدارة المياه</h4>
+                            <p class="commitment-card__text">أنظمة متقدمة لإعادة تدوير المياه تقلل
+                                الاستهلاك بنسبة 75% وتضمن إدارة مسؤولة للمياه.</p>
                         </div>
                     </div>
                     <!-- Commitment Card 4 -->
@@ -521,9 +535,9 @@
                             <div class="commitment-card__icon-box">
                                 <span class="icon-agriculture-2"></span>
                             </div>
-                            <h4 class="commitment-card__title">Sustainable Packaging</h4>
-                            <p class="commitment-card__text">Using eco-friendly, biodegradable materials for
-                                all product packaging, minimizing plastic use and environmental impact.</p>
+                            <h4 class="commitment-card__title">تغليف مستدام</h4>
+                            <p class="commitment-card__text">استخدام مواد صديقة للبيئة وقابلة للتحلل الحيوي
+                                لجميع عبوات المنتجات، مما يقلل من استخدام البلاستيك والأثر البيئي.</p>
                         </div>
                     </div>
                     <!-- Commitment Card 5 -->
@@ -532,10 +546,9 @@
                             <div class="commitment-card__icon-box">
                                 <span class="icon-harvester"></span>
                             </div>
-                            <h4 class="commitment-card__title">Responsible Sourcing</h4>
-                            <p class="commitment-card__text">Partnering with local farmers who practice
-                                sustainable dairy production, ensuring ethical and environmentally-friendly supply
-                                chains.</p>
+                            <h4 class="commitment-card__title">التوريد المسؤول</h4>
+                            <p class="commitment-card__text">الشراكة مع المزارعين المحليين الذين يمارسون
+                                إنتاج الألبان المستدام، وضمان سلاسل توريد أخلاقية وصديقة للبيئة.</p>
                         </div>
                     </div>
                     <!-- Commitment Card 6 -->
@@ -544,9 +557,9 @@
                             <div class="commitment-card__icon-box">
                                 <span class="icon-agriculture-1"></span>
                             </div>
-                            <h4 class="commitment-card__title">Carbon Neutrality</h4>
-                            <p class="commitment-card__text">Committed to achieving carbon neutrality by 2035
-                                through emission reduction and carbon offset programs.</p>
+                            <h4 class="commitment-card__title">الحياد الكربوني</h4>
+                            <p class="commitment-card__text">ملتزمون بتحقيق الحياد الكربوني بحلول عام 2035
+                                من خلال تقليل الانبعاثات وبرامج تعويض الكربون.</p>
                         </div>
                     </div>
                 </div>
@@ -557,8 +570,8 @@
         <section class="sustainability-timeline-section">
             <div class="container">
                 <div class="section-title text-center" style="margin-bottom: 60px;">
-                    <span class="section-title__tagline">Our Progress</span>
-                    <h2 class="section-title__title">The Sustainability Journey</h2>
+                    <span class="section-title__tagline">تقدمنا</span>
+                    <h2 class="section-title__title">رحلة الاستدامة</h2>
                     <div class="section-title__icon">
                         <img loading="lazy" src="assets/images/icon/section-title-icon-1.png" alt="">
                     </div>
@@ -573,7 +586,8 @@
                         "nav": true,
                         "dots": false,
                         "smartSpeed": 700,
-                        "navText": ["<span class=\"icon-left-arrow\"></span>","<span class=\"icon-right-arrow\"></span>"],
+                        "rtl": true,
+                        "navText": ["<span class=\"icon-right-arrow\"></span>","<span class=\"icon-left-arrow\"></span>"],
                         "responsive": {
                             "0": { "items": 1 },
                             "768": { "items": 2 },
@@ -587,8 +601,8 @@
                             <div class="timeline-stem"></div>
                             <div class="timeline-content">
                                 <span class="timeline-year-box">2020</span>
-                                <h4 class="timeline-title">Foundation</h4>
-                                <p class="timeline-text">Launched our initiative with comprehensive impact assessments.</p>
+                                <h4 class="timeline-title">التأسيس</h4>
+                                <p class="timeline-text">أطلقنا مبادرتنا بتقييمات شاملة للأثر.</p>
                             </div>
                         </div>
                         
@@ -596,8 +610,8 @@
                         <div class="timeline-item timeline-item--up">
                             <div class="timeline-content">
                                 <span class="timeline-year-box">2021</span>
-                                <h4 class="timeline-title">Baseline Metrics</h4>
-                                <p class="timeline-text">Established detailed baseline metrics for water and energy usage.</p>
+                                <h4 class="timeline-title">المقاييس الأساسية</h4>
+                                <p class="timeline-text">وضع مقاييس أساسية مفصلة لاستخدام المياه والطاقة.</p>
                             </div>
                             <div class="timeline-stem"></div>
                             <div class="timeline-dot"></div>
@@ -609,8 +623,8 @@
                             <div class="timeline-stem"></div>
                             <div class="timeline-content">
                                 <span class="timeline-year-box">2022</span>
-                                <h4 class="timeline-title">Implementation</h4>
-                                <p class="timeline-text">Implemented advanced water recycling and began energy transition.</p>
+                                <h4 class="timeline-title">التنفيذ</h4>
+                                <p class="timeline-text">تنفيذ إعادة تدوير المياه المتقدمة وبدء الانتقال في الطاقة.</p>
                             </div>
                         </div>
 
@@ -618,8 +632,8 @@
                         <div class="timeline-item timeline-item--up">
                             <div class="timeline-content">
                                 <span class="timeline-year-box">2023</span>
-                                <h4 class="timeline-title">Carbon Reduction</h4>
-                                <p class="timeline-text">Achieved a 35% reduction in carbon footprint through logistics.</p>
+                                <h4 class="timeline-title">تقليل الكربون</h4>
+                                <p class="timeline-text">تحقيق انخفاض بنسبة 35% في البصمة الكربونية من خلال الخدمات اللوجستية.</p>
                             </div>
                             <div class="timeline-stem"></div>
                             <div class="timeline-dot"></div>
@@ -631,8 +645,8 @@
                             <div class="timeline-stem"></div>
                             <div class="timeline-content">
                                 <span class="timeline-year-box">2024</span>
-                                <h4 class="timeline-title">Acceleration</h4>
-                                <p class="timeline-text">Achieved 75% water conservation and recyclable packaging goal.</p>
+                                <h4 class="timeline-title">التسريع</h4>
+                                <p class="timeline-text">تحقيق هدف الحفاظ على المياه بنسبة 75% والتعبئة القابلة لإعادة التدوير.</p>
                             </div>
                         </div>
 
@@ -640,8 +654,8 @@
                         <div class="timeline-item timeline-item--up">
                             <div class="timeline-content">
                                 <span class="timeline-year-box">2030</span>
-                                <h4 class="timeline-title">Vision 2030</h4>
-                                <p class="timeline-text">Targeting 100% renewable energy and zero waste operations.</p>
+                                <h4 class="timeline-title">رؤية 2030</h4>
+                                <p class="timeline-text">استهداف طاقة متجددة بنسبة 100% وعمليات صفر نفايات.</p>
                             </div>
                             <div class="timeline-stem"></div>
                             <div class="timeline-dot"></div>
@@ -665,33 +679,31 @@
                             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                                 <div class="footer-widget__column footer-widget__about">
                                     <div class="footer-widget__logo">
-                                        <a href="index.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
+                                        <a href="index-ar.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
                                     </div>
                                     <div class="footer-widget__about-text-box">
-                                        <p class="footer-widget__about-text">Egyptian Integrated Food Industries -
-                                            specializing in premium cheese and butter products for local and export
-                                            markets.</p>
+                                        <p class="footer-widget__about-text">المصرية للصناعات الغذائية المتكاملة - متخصصة في منتجات الجبن والزبدة الفاخرة للأسواق المحلية والتصدير.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                                 <div class="footer-widget__column footer-widget__Explore">
                                     <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">Explore</h3>
+                                        <h3 class="footer-widget__title">استكشف</h3>
                                     </div>
                                     <ul class="footer-widget__Explore-list list-unstyled">
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="farmers.html">Our Farmers</a></li>
-                                        <li><a href="project-01.html">New Projects</a></li>
-                                        <li><a href="services.html">Services</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                    </ul>
+    <li><a href="about-ar.html">عن الشركة</a></li>
+    <li><a href="farmers.html">مزارعونا</a></li>
+    <li><a href="project-01.html">مشاريع جديدة</a></li>
+    <li><a href="services.html">خدماتنا</a></li>
+    <li><a href="contact-ar.html">اتصل بنا</a></li>
+</ul>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
                                 <div class="footer-widget__column footer-widget__news">
                                     <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">News</h3>
+                                        <h3 class="footer-widget__title">أخبارنا</h3>
                                     </div>
                                     <ul class="footer-widget__news-list list-unstyled">
                                         <li>
@@ -699,11 +711,8 @@
                                                 <img loading="lazy" src="assets/photos/14.jpeg" alt="">
                                             </div>
                                             <div class="footer-widget__news-content">
-                                                <p class="footer-widget__news-date">20 Jul, 2022</p>
-                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">A
-                                                        Our Products
-                                                        Gives
-                                                        More Good Taste</a></h5>
+                                                <p class="footer-widget__news-date">20 يوليو، 2022</p>
+                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">منتجاتنا تعطي طعماً أفضل</a></h5>
                                             </div>
                                         </li>
                                         <li>
@@ -711,11 +720,8 @@
                                                 <img loading="lazy" src="assets/photos/15.jpeg" alt="">
                                             </div>
                                             <div class="footer-widget__news-content">
-                                                <p class="footer-widget__news-date">20 Jul, 2022</p>
-                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">A
-                                                        Our Products
-                                                        Gives
-                                                        More Good Taste</a></h5>
+                                                <p class="footer-widget__news-date">20 يوليو، 2022</p>
+                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">منتجاتنا تعطي طعماً أفضل</a></h5>
                                             </div>
                                         </li>
                                     </ul>
@@ -724,7 +730,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                                 <div class="footer-widget__column footer-widget__Contact">
                                     <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">Contact</h3>
+                                        <h3 class="footer-widget__title">اتصل بنا</h3>
                                     </div>
                                     <ul class="footer-widget__Contact-list list-unstyled">
                                         <li>
@@ -748,13 +754,13 @@
                                                 <span class="icon-pin"></span>
                                             </div>
                                             <div class="text">
-                                                <p>10th Of Ramadan Industrial Zone B1 - Egypt</p>
+                                                <p>العاشر من رمضان المنطقة الصناعية B1 - مصر</p>
                                             </div>
                                         </li>
                                     </ul>
                                     <form class="footer-widget__Contact-form">
                                         <div class="footer-widget__Contact-input-box">
-                                            <input type="email" placeholder="Email Address" name="email">
+                                            <input type="email" placeholder="البريد الإلكتروني" name="email">
                                             <button type="submit" class="footer-widget__Contact-btn"><i
                                                     class="icon-right-arrow"></i></button>
                                         </div>
@@ -770,7 +776,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="site-footer__bottom-inner">
-                                <p class="site-footer__bottom-text">© Copyright 2022 by <a href="#">EL Masria.com</a>
+                                <p class="site-footer__bottom-text">© الحقوق محفوظة 2024 بواسطة <a href="#">المصرية</a>
                                 </p>
                                 <div class="site-footer__social">
                                     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -799,7 +805,7 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
 
             <div class="logo-box">
-                <a href="index.html" aria-label="logo image"><img loading="lazy" src="assets/photos/logo.png" width="143" alt="" /></a>
+                <a href="index-ar.html" aria-label="logo image"><img loading="lazy" src="assets/photos/logo.png" width="143" alt="" /></a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>
@@ -875,3 +881,4 @@
 </body>
 
 </html>
+

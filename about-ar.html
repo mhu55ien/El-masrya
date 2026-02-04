@@ -1,10 +1,10 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> About Us - EL Masria - Egyptian Dairy Manufacturing Company </title>
+    <title> عن الشركة - المصرية - الشركة المصرية لتصنيع الألبان </title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
@@ -14,13 +14,14 @@
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Cairo Font for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
 
     <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
@@ -46,9 +47,15 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/elmasria.css" />
     <link rel="stylesheet" href="assets/css/elmasria-responsive.css" />
+    <link rel="stylesheet" href="assets/css/rtl-fix.css" />
 
     <!-- Disable custom cursor -->
     <style>
+        /* Arabic Font Override */
+        body, h1, h2, h3, h4, h5, h6, p, a, span, li, div {
+            font-family: 'Cairo', sans-serif !important;
+        }
+
         .custom-cursor__cursor,
         .custom-cursor__cursor-two {
             display: none !important;
@@ -62,16 +69,18 @@
         body {
             cursor: auto !important;
         }
+        
+        /* RTL Icons mirroring */
+        .icon-right-arrow::before {
+            content: "\e908"; 
+            transform: rotate(180deg);
+            display: inline-block;
+        }
     </style>
 
 </head>
 
 <body>
-
-
-
-
-
 
 
     <div class="preloader">
@@ -85,7 +94,7 @@
             <div class="main-header__wrapper">
                 <div class="main-header__wrapper-inner">
                     <div class="main-header__logo">
-                        <a href="index.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
+                        <a href="index-ar.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
                     </div>
                     <div class="main-header__menu-box">
                         <div class="main-header__menu-box-top">
@@ -103,7 +112,7 @@
                                         <i class="icon-pin"></i>
                                     </div>
                                     <div class="text">
-                                        <p>10th Of Ramadan Industrial Zone B1 - Egypt</p>
+                                        <p>العاشر من رمضان المنطقة الصناعية B1 - مصر</p>
                                     </div>
                                 </li>
                             </ul>
@@ -122,37 +131,37 @@
                                             <div class="main-menu__main-menu-box">
                                                 <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                                                 <ul class="main-menu__list">
-                                                    <li>
-                                                        <a href="index.html">Home</a>
-                                                    </li>
-                                                    <li class="current">
-                                                        <a href="about.html">About</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="sustainability.html">Sustainability</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="products.html">Products</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="join-us.html">Join Us</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="contact.html">Contact</a>
-                                                    </li>
-                                                </ul>
+    <li>
+        <a href="index-ar.html">الرئيسية</a>
+    </li>
+    <li class="current">
+        <a href="about-ar.html">عن الشركة</a>
+    </li>
+    <li>
+        <a href="sustainability-ar.html">الاستدامة</a>
+    </li>
+    <li>
+        <a href="products-ar.html">منتجاتنا</a>
+    </li>
+    <li>
+        <a href="join-us-ar.html">انضم إلينا</a>
+    </li>
+    <li>
+        <a href="contact-ar.html">اتصل بنا</a>
+    </li>
+</ul>
                                             </div>
                                         </div>
                                         <div class="main-menu__right">
                                             <div class="main-menu__search-cart-btn-box">
                                                 <div class="main-menu__language-switcher">
-                                                    <a href="about-ar.html" class="main-menu__language-btn">
-    <i class="fas fa-globe"></i>
-    <span class="main-menu__language-text">عربي</span>
-</a>
+                                                    <a href="about.html" class="main-menu__language-btn">
+                                                        <i class="fas fa-globe"></i>
+                                                        <span class="main-menu__language-text">English</span>
+                                                    </a>
                                                 </div>
                                                 <div class="main-menu__btn-box">
-                                                    <a href="contact.html" class="thm-btn main-menu__btn">Get Free Quote
+                                                    <a href="contact-ar.html" class="thm-btn main-menu__btn">احصل على عرض
                                                         <i class="icon-right-arrow"></i> </a>
                                                 </div>
                                             </div>
@@ -188,7 +197,7 @@
             </div>
             <div class="container">
                 <div class="page-header__inner">
-                    <h2>About us</h2>
+                    <h2>عن الشركة</h2>
                 </div>
             </div>
         </section>
@@ -224,38 +233,36 @@
                     <div class="col-xl-6">
                         <div class="about-three__right">
                             <div class="section-title text-left">
-                                <span class="section-title__tagline">About Us</span>
-                                <h2 class="section-title__title">Egyptian Integrated Food Industries</h2>
+                                <span class="section-title__tagline">من نحن</span>
+                                <h2 class="section-title__title">المصرية للصناعات الغذائية المتكاملة</h2>
                                 <div class="section-title__icon">
                                     <img loading="lazy" src="assets/images/icon/section-title-icon-1.png" alt="">
                                 </div>
                             </div>
-                            <p class="about-three__text-1">An Egyptian company specialized in dairy production,
-                                delivering high-quality cheese and butter products with authentic taste and consistent
-                                standards for both local and export markets.</p>
+                            <p class="about-three__text-1">شركة مصرية متخصصة في إنتاج الألبان، تقدم منتجات الجبن والزبدة عالية الجودة بمذاق أصلي ومعايير ثابتة للأسواق المحلية والتصدير.</p>
                             <ul class="list-unstyled about-three__points">
                                 <li>
                                     <div class="icon-box">
                                         <span class="fa fa-check"></span>
-                                        <p class="icon-box-text">Our Vision</p>
+                                        <p class="icon-box-text">رؤيتنا</p>
                                     </div>
                                     <div class="content">
-                                        <p>To become a leading dairy manufacturer in Egypt and the Middle East</p>
+                                        <p>أن نصبح شركة رائدة في تصنيع منتجات الألبان في مصر والشرق الأوسط</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="icon-box">
                                         <span class="fa fa-check"></span>
-                                        <p class="icon-box-text">Our Mission</p>
+                                        <p class="icon-box-text">مهمتنا</p>
                                     </div>
                                     <div class="content">
-                                        <p>To provide safe, natural, and great-tasting dairy products</p>
+                                        <p>توفير منتجات ألبان آمنة وطبيعية ورائعة المذاق</p>
                                     </div>
                                 </li>
                             </ul>
                             <div class="about-three__progress">
                                 <div class="about-three__progress-single">
-                                    <h4 class="about-three__progress-title">Quality Standards</h4>
+                                    <h4 class="about-three__progress-title">معايير الجودة</h4>
                                     <div class="bar">
                                         <div class="bar-inner count-bar" data-percent="91%">
                                             <div class="count-text">91%</div>
@@ -263,7 +270,7 @@
                                     </div>
                                 </div>
                                 <div class="about-three__progress-single">
-                                    <h4 class="about-three__progress-title">Dairy Production</h4>
+                                    <h4 class="about-three__progress-title">إنتاج الألبان</h4>
                                     <div class="bar marb-0">
                                         <div class="bar-inner count-bar" data-percent="68%">
                                             <div class="count-text">68%</div>
@@ -288,6 +295,7 @@
                                 "margin": 0,
                                 "smartSpeed": 700,
                                 "loop":true,
+                                "rtl": true,
                                 "autoplay": 6000,
                                 "nav":false,
                                 "dots":false,
@@ -357,8 +365,7 @@
                         <div class="provide-one__support-icon">
                             <span class="icon-harvester"></span>
                         </div>
-                        <p class="provide-one__support-text">We’re here to support
-                            you every step of the way.</p>
+                        <p class="provide-one__support-text">نحن هنا لدعمك في كل خطوة على الطريق.</p>
                     </div>
                 </div>
                 <div class="Provide-One__right">
@@ -367,15 +374,13 @@
                     </div>
                     <div class="Provide-One__content">
                         <div class="section-title text-left">
-                            <span class="section-title__tagline">Our Beneifts</span>
-                            <h2 class="section-title__title">pROVIDING HIGH QUALITY
-                                PRODUCTS</h2>
+                            <span class="section-title__tagline">فوائدنا</span>
+                            <h2 class="section-title__title">توفير منتجات عالية الجودة</h2>
                             <div class="section-title__icon">
                                 <img loading="lazy" src="assets/images/icon/section-title-icon-1.png" alt="">
                             </div>
                         </div>
-                        <p class="Provide-One__text">There cursus massa at urnaaculis estie. Sed aliquamellus vitae
-                            ultrs condmentum leo massa mollis estiegittis miristum nulla sed medy fringilla vitae.</p>
+                        <p class="Provide-One__text">نلتزم بأعلى معايير الجودة في كل مرحلة من مراحل الإنتاج، لضمان وصول أفضل المنتجات إلى مائدتكم.</p>
                         <div class="Provide-One__progress-wrap">
                             <div class="Provide-One__progress">
                                 <div class="Provide-One__progress-box">
@@ -385,7 +390,7 @@
                                     <span>90%</span>
                                 </div>
                                 <div class="Provide-One__progress-content">
-                                    <h3>Dairy Production <br> Facilities</h3>
+                                    <h3>مرافق إنتاج <br> الألبان</h3>
                                 </div>
                             </div>
                             <div class="Provide-One__progress">
@@ -396,7 +401,7 @@
                                     <span>66%</span>
                                 </div><!-- /.about-five__progress-box -->
                                 <div class="Provide-One__progress-content">
-                                    <h3>Quality <br> products</h3>
+                                    <h3>منتجات <br> عالية الجودة</h3>
                                 </div>
                             </div>
                         </div>
@@ -407,7 +412,6 @@
         <!--Provide One End-->
 
 
-
         <!--Testimonial One Start-->
         <section class="testimonial-one">
             <div class="testimonial-one-bg" style="background-image: url(assets/photos/12.jpeg);"></div>
@@ -416,7 +420,7 @@
                     <div class="col-xl-12">
                         <div class="testimonial-one__top">
                             <div class="section-title text-center">
-                                <h2 class="section-title__title testimonial-title-custom">Testimonials</h2>
+                                <h2 class="section-title__title testimonial-title-custom">آراء العملاء</h2>
                                 <div class="section-title__icon">
                                     <img loading="lazy" src="assets/images/icon/section-title-icon-1.png" alt="">
                                 </div>
@@ -426,6 +430,7 @@
                             <div class="testimonial-one__carousel owl-carousel owl-theme thm-owl__carousel"
                                 data-owl-options='{
                                 "loop": true,
+                                "rtl": true,
                                 "autoplay": false,
                                 "margin": 30,
                                 "nav": true,
@@ -452,9 +457,7 @@
                                 <div class="item">
                                     <div class="testimonial-one__single">
                                         <div class="testimonial-one__content">
-                                            <p class="testimonial-one__text">Lorem ipsum is simply free text dolor sit
-                                                amet, consect notted adipisicing elit sed do eiusmod tempor incididunt
-                                                ut labore et dolore magna aliqua.</p>
+                                            <p class="testimonial-one__text">منتجات ممتازة وطعم رائع، نستخدمها دائمًا في وصفاتنا وتضيف نكهة مميزة للأطباق.</p>
                                             <div class="testimonial-one__client-info">
                                                 <div class="testimonial-one__client-img">
                                                     <img loading="lazy" src="assets/images/testimonial/testimonial-1-1.jpg" alt="">
@@ -466,8 +469,8 @@
                                         </div>
                                         <div class="testimonial-one__client-details-box">
                                             <div class="testimonial-one__client-details">
-                                                <h4 class="testimonial-one__client-name">Sarah Albert</h4>
-                                                <p class="testimonial-one__client-sub-title">Customer</p>
+                                                <h4 class="testimonial-one__client-name">سارة أحمد</h4>
+                                                <p class="testimonial-one__client-sub-title">عميل</p>
                                             </div>
                                         </div>
                                     </div>
@@ -477,9 +480,7 @@
                                 <div class="item">
                                     <div class="testimonial-one__single">
                                         <div class="testimonial-one__content">
-                                            <p class="testimonial-one__text">Lorem ipsum is simply free text dolor sit
-                                                amet, consect notted adipisicing elit sed do eiusmod tempor incididunt
-                                                ut labore et dolore magna aliqua.</p>
+                                            <p class="testimonial-one__text">الجودة لا يعلى عليها، أفضل جبن موزاريلا جربته في مصر.</p>
                                             <div class="testimonial-one__client-info">
                                                 <div class="testimonial-one__client-img">
                                                     <img loading="lazy" src="assets/images/testimonial/testimonial-1-2.jpg" alt="">
@@ -491,8 +492,8 @@
                                         </div>
                                         <div class="testimonial-one__client-details-box">
                                             <div class="testimonial-one__client-details">
-                                                <h4 class="testimonial-one__client-name">Kevin Martin</h4>
-                                                <p class="testimonial-one__client-sub-title">Customer</p>
+                                                <h4 class="testimonial-one__client-name">كريم محمود</h4>
+                                                <p class="testimonial-one__client-sub-title">عميل</p>
                                             </div>
                                         </div>
                                     </div>
@@ -502,9 +503,7 @@
                                 <div class="item">
                                     <div class="testimonial-one__single">
                                         <div class="testimonial-one__content">
-                                            <p class="testimonial-one__text">Lorem ipsum is simply free text dolor sit
-                                                amet, consect notted adipisicing elit sed do eiusmod tempor incididunt
-                                                ut labore et dolore magna aliqua.</p>
+                                            <p class="testimonial-one__text">خدمة عملاء ممتازة وتوصيل سريع، والمنتجات تصل طازجة دائمًا.</p>
                                             <div class="testimonial-one__client-info">
                                                 <div class="testimonial-one__client-img">
                                                     <img loading="lazy" src="assets/images/testimonial/testimonial-1-3.jpg" alt="">
@@ -516,83 +515,8 @@
                                         </div>
                                         <div class="testimonial-one__client-details-box">
                                             <div class="testimonial-one__client-details">
-                                                <h4 class="testimonial-one__client-name">Aleesha Brown</h4>
-                                                <p class="testimonial-one__client-sub-title">Customer</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Testimonial One Single End-->
-                                <!--Testimonial One Single Start-->
-                                <div class="item">
-                                    <div class="testimonial-one__single">
-                                        <div class="testimonial-one__content">
-                                            <p class="testimonial-one__text">Lorem ipsum is simply free text dolor sit
-                                                amet, consect notted adipisicing elit sed do eiusmod tempor incididunt
-                                                ut labore et dolore magna aliqua.</p>
-                                            <div class="testimonial-one__client-info">
-                                                <div class="testimonial-one__client-img">
-                                                    <img loading="lazy" src="assets/images/testimonial/testimonial-1-4.jpg" alt="">
-                                                    <div class="testimonial-one__quote">
-                                                        <span class="icon-quote"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-one__client-details-box">
-                                            <div class="testimonial-one__client-details">
-                                                <h4 class="testimonial-one__client-name">Mike Hardson</h4>
-                                                <p class="testimonial-one__client-sub-title">Customer</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Testimonial One Single End-->
-                                <!--Testimonial One Single Start-->
-                                <div class="item">
-                                    <div class="testimonial-one__single">
-                                        <div class="testimonial-one__content">
-                                            <p class="testimonial-one__text">Lorem ipsum is simply free text dolor sit
-                                                amet, consect notted adipisicing elit sed do eiusmod tempor incididunt
-                                                ut labore et dolore magna aliqua.</p>
-                                            <div class="testimonial-one__client-info">
-                                                <div class="testimonial-one__client-img">
-                                                    <img loading="lazy" src="assets/images/testimonial/testimonial-1-5.jpg" alt="">
-                                                    <div class="testimonial-one__quote">
-                                                        <span class="icon-quote"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-one__client-details-box">
-                                            <div class="testimonial-one__client-details">
-                                                <h4 class="testimonial-one__client-name">Jolie Michale</h4>
-                                                <p class="testimonial-one__client-sub-title">Customer</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Testimonial One Single End-->
-                                <!--Testimonial One Single Start-->
-                                <div class="item">
-                                    <div class="testimonial-one__single">
-                                        <div class="testimonial-one__content">
-                                            <p class="testimonial-one__text">Lorem ipsum is simply free text dolor sit
-                                                amet, consect notted adipisicing elit sed do eiusmod tempor incididunt
-                                                ut labore et dolore magna aliqua.</p>
-                                            <div class="testimonial-one__client-info">
-                                                <div class="testimonial-one__client-img">
-                                                    <img loading="lazy" src="assets/images/testimonial/testimonial-1-6.jpg" alt="">
-                                                    <div class="testimonial-one__quote">
-                                                        <span class="icon-quote"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-one__client-details-box">
-                                            <div class="testimonial-one__client-details">
-                                                <h4 class="testimonial-one__client-name">David Smith</h4>
-                                                <p class="testimonial-one__client-sub-title">Customer</p>
+                                                <h4 class="testimonial-one__client-name">علياء حسن</h4>
+                                                <p class="testimonial-one__client-sub-title">عميل</p>
                                             </div>
                                         </div>
                                     </div>
@@ -607,7 +531,6 @@
         <!--Testimonial One End-->
 
 
-
         <!--Site Footer Start-->
         <footer class="site-footer">
             <div class="site-footer__top">
@@ -619,33 +542,31 @@
                             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                                 <div class="footer-widget__column footer-widget__about">
                                     <div class="footer-widget__logo">
-                                        <a href="index.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
+                                        <a href="index-ar.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
                                     </div>
                                     <div class="footer-widget__about-text-box">
-                                        <p class="footer-widget__about-text">Egyptian Integrated Food Industries -
-                                            specializing in premium cheese and butter products for local and export
-                                            markets.</p>
+                                        <p class="footer-widget__about-text">المصرية للصناعات الغذائية المتكاملة - متخصصة في منتجات الجبن والزبدة الفاخرة للأسواق المحلية والتصدير.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                                 <div class="footer-widget__column footer-widget__Explore">
                                     <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">Explore</h3>
+                                        <h3 class="footer-widget__title">استكشف</h3>
                                     </div>
                                     <ul class="footer-widget__Explore-list list-unstyled">
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="farmers.html">Our Farmers</a></li>
-                                        <li><a href="project-01.html">New Projects</a></li>
-                                        <li><a href="services.html">Services</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                    </ul>
+    <li><a href="about-ar.html">عن الشركة</a></li>
+    <li><a href="farmers.html">مزارعونا</a></li>
+    <li><a href="project-01.html">مشاريع جديدة</a></li>
+    <li><a href="services.html">خدماتنا</a></li>
+    <li><a href="contact-ar.html">اتصل بنا</a></li>
+</ul>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
                                 <div class="footer-widget__column footer-widget__news">
                                     <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">News</h3>
+                                        <h3 class="footer-widget__title">أخبارنا</h3>
                                     </div>
                                     <ul class="footer-widget__news-list list-unstyled">
                                         <li>
@@ -653,11 +574,8 @@
                                                 <img loading="lazy" src="assets/images/resources/footer-widget-news-img-1.jpg" alt="">
                                             </div>
                                             <div class="footer-widget__news-content">
-                                                <p class="footer-widget__news-date">20 Jul, 2022</p>
-                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">A
-                                                        Our Products
-                                                        Gives
-                                                        More Good Taste</a></h5>
+                                                <p class="footer-widget__news-date">20 يوليو، 2022</p>
+                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">منتجاتنا تعطي طعماً أفضل</a></h5>
                                             </div>
                                         </li>
                                         <li>
@@ -665,11 +583,8 @@
                                                 <img loading="lazy" src="assets/images/resources/footer-widget-news-img-2.jpg" alt="">
                                             </div>
                                             <div class="footer-widget__news-content">
-                                                <p class="footer-widget__news-date">20 Jul, 2022</p>
-                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">A
-                                                        Our Products
-                                                        Gives
-                                                        More Good Taste</a></h5>
+                                                <p class="footer-widget__news-date">20 يوليو، 2022</p>
+                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">منتجاتنا تعطي طعماً أفضل</a></h5>
                                             </div>
                                         </li>
                                     </ul>
@@ -678,7 +593,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                                 <div class="footer-widget__column footer-widget__Contact">
                                     <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">Contact</h3>
+                                        <h3 class="footer-widget__title">اتصل بنا</h3>
                                     </div>
                                     <ul class="footer-widget__Contact-list list-unstyled">
                                         <li>
@@ -702,13 +617,13 @@
                                                 <span class="icon-pin"></span>
                                             </div>
                                             <div class="text">
-                                                <p>10th Of Ramadan Industrial Zone B1 - Egypt</p>
+                                                <p>العاشر من رمضان المنطقة الصناعية B1 - مصر</p>
                                             </div>
                                         </li>
                                     </ul>
                                     <form class="footer-widget__Contact-form">
                                         <div class="footer-widget__Contact-input-box">
-                                            <input type="email" placeholder="Email Address" name="email">
+                                            <input type="email" placeholder="البريد الإلكتروني" name="email">
                                             <button type="submit" class="footer-widget__Contact-btn"><i
                                                     class="icon-right-arrow"></i></button>
                                         </div>
@@ -724,7 +639,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="site-footer__bottom-inner">
-                                <p class="site-footer__bottom-text">© Copyright 2022 by <a href="#">EL Masria.com</a>
+                                <p class="site-footer__bottom-text">© الحقوق محفوظة 2024 بواسطة <a href="#">المصرية</a>
                                 </p>
                                 <div class="site-footer__social">
                                     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -755,7 +670,7 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
 
             <div class="logo-box">
-                <a href="index.html" aria-label="logo image"><img loading="lazy" src="assets/images/resources/logo-2.png" width="143"
+                <a href="index-ar.html" aria-label="logo image"><img loading="lazy" src="assets/images/resources/logo-2.png" width="143"
                         alt="" /></a>
             </div>
             <!-- /.logo-box -->
@@ -839,3 +754,4 @@
 </body>
 
 </html>
+

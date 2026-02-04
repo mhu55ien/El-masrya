@@ -1,0 +1,538 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>التميز في عملية صنع الجبن التقليدية - المصرية</title>
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <meta name="description" content="الشركة المصرية لتصنيع الألبان - عملية صنع الجبن" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Cairo Font for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/custom-animate.css" />
+    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css" />
+    <link rel="stylesheet" href="assets/vendors/odometer/odometer.min.css" />
+    <link rel="stylesheet" href="assets/vendors/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="assets/icons/style.css">
+    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/reey-font/stylesheet.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/vendors/bxslider/jquery.bxslider.css" />
+    <link rel="stylesheet" href="assets/vendors/bootstrap-select/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="assets/vendors/vegas/vegas.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/vendors/timepicker/timePicker.css" />
+    <link rel="stylesheet" href="assets/css/language-switcher.css" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="assets/css/elmasria.css" />
+    <link rel="stylesheet" href="assets/css/elmasria-responsive.css" />
+    <link rel="stylesheet" href="assets/css/rtl-fix.css" />
+
+    <!-- Disable custom cursor and add Arabic font -->
+    <style>
+        /* Arabic Font Override */
+        body, h1, h2, h3, h4, h5, h6, p, a, span, li, div, input, textarea, button {
+            font-family: 'Cairo', sans-serif !important;
+        }
+
+        .custom-cursor__cursor,
+        .custom-cursor__cursor-two {
+            display: none !important;
+            visibility: hidden !important;
+        }
+
+        * {
+            cursor: auto !important;
+        }
+
+        body {
+            cursor: auto !important;
+        }
+        
+        /* RTL Icons mirroring */
+        .icon-right-arrow::before {
+            content: "\e908"; 
+            transform: rotate(180deg);
+            display: inline-block;
+        }
+
+        /* News Detail Styling */
+        .news-detail {
+            padding: 80px 0;
+        }
+
+        .news-detail__img {
+            margin-bottom: 40px;
+            border-radius: 15px;
+            overflow: hidden;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .news-detail__img img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .news-detail__meta {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ece9e0;
+        }
+
+        .news-detail__meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--el-masria-gray);
+            font-size: 15px;
+        }
+
+        .news-detail__meta-item i {
+            color: var(--el-masria-base);
+            font-size: 18px;
+        }
+
+        .news-detail__title {
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--el-masria-black);
+            margin-bottom: 30px;
+        }
+
+        .news-detail__content {
+            font-size: 16px;
+            line-height: 30px;
+            color: var(--el-masria-gray);
+        }
+
+        .news-detail__content p {
+            margin-bottom: 25px;
+        }
+
+        .news-detail__content h3 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--el-masria-black);
+            margin: 35px 0 20px;
+        }
+
+        .news-detail__content ul {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+
+        .news-detail__content ul li {
+            position: relative;
+            padding-right: 30px; /* Adjusted for RTL */
+            margin-bottom: 15px;
+        }
+
+        .news-detail__content ul li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            right: 0; /* Adjusted for RTL */
+            color: var(--el-masria-base);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="preloader">
+        <div class="preloader__image"></div>
+    </div>
+    <!-- /.preloader -->
+
+    <div class="page-wrapper">
+        <header class="main-header">
+            <div class="main-header__wrapper">
+                <div class="main-header__wrapper-inner">
+                    <div class="main-header__logo">
+                        <a href="index-ar.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
+                    </div>
+                    <div class="main-header__menu-box">
+                        <div class="main-header__menu-box-top">
+                            <ul class="list-unstyled main-header__contact-list">
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon-email"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="mailto:needhelp@company.com">needhelp@company.com</a></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon-pin"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p>العاشر من رمضان المنطقة الصناعية B1 - مصر</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="main-header__social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="main-header__menu-box-bottom">
+                            <nav class="main-menu">
+                                <div class="main-menu__wrapper">
+                                    <div class="main-menu__wrapper-inner">
+                                        <div class="main-menu__left">
+                                            <div class="main-menu__main-menu-box">
+                                                <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                                                <ul class="main-menu__list">
+                                                    <li>
+                                                        <a href="index-ar.html">الرئيسية</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="about-ar.html">عن الشركة</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="sustainability-ar.html">الاستدامة</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="products-ar.html">منتجاتنا</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="join-us-ar.html">انضم إلينا</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="contact-ar.html">اتصل بنا</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="main-menu__right">
+                                            <div class="main-menu__search-cart-btn-box">
+                                                <div class="main-menu__language-switcher">
+                                                    <a href="news-cheese-making.html" class="main-menu__language-btn">
+                                                        <i class="fas fa-globe"></i>
+                                                        <span class="main-menu__language-text">English</span>
+                                                    </a>
+                                                </div>
+                                                <div class="main-menu__btn-box">
+                                                    <a href="contact-ar.html" class="thm-btn main-menu__btn">احصل على عرض
+                                                        <i class="icon-right-arrow"></i> </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="main-header__phone-contact-box">
+                        <div class="main-header__phone-number">
+                            <a href="tel:0554499170">0554499170 - 0554499676</a>
+                        </div>
+                        <div class="main-header__call-box">
+                            <div class="main-header__call-inner">
+                                <div class="main-header__call-icon">
+                                    <span class="fas fa-phone"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+        </div><!-- /.stricky-header -->
+
+        <!--Page Header Start-->
+        <section class="page-header">
+            <div class="page-header-bg" style="background-image: url(assets/photos/9.jpeg)">
+            </div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <h2>الأخبار والمقالات</h2>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+
+        <!--News Detail Start-->
+        <section class="news-detail">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-10 offset-xl-1">
+                        <div class="news-detail__img">
+                            <img loading="lazy" src="assets/photos/9.jpeg" alt="صناعة الجبن التقليدية">
+                        </div>
+                        
+                        <div class="news-detail__meta">
+                            <div class="news-detail__meta-item">
+                                <i class="far fa-calendar"></i>
+                                <span>15 سبتمبر، 2024</span>
+                            </div>
+                            <div class="news-detail__meta-item">
+                                <i class="far fa-user"></i>
+                                <span>فريق المصرية</span>
+                            </div>
+                            <div class="news-detail__meta-item">
+                                <i class="far fa-folder"></i>
+                                <span>عملية الإنتاج</span>
+                            </div>
+                        </div>
+
+                        <h2 class="news-detail__title">التميز في عملية صنع الجبن التقليدية</h2>
+
+                        <div class="news-detail__content">
+                            <p>صناعة الجبن فن قديم يجمع بين التقاليد والعلم الحديث. في المصرية، نكرم الأساليب التي اختبرت عبر الزمن مع دمج أحدث التقنيات لإنتاج جبن يلبي أعلى معايير الجودة والمذاق. يعكس التزامنا بالتميز في إنتاج الجبن احترامنا العميق لهذه الحرفة التي تعود لقرون.</p>
+
+                            <p>تبدأ رحلة صنع الجبن الاستثنائي قبل وقت طويل من دخول أول قطرة حليب إلى منشأتنا. يبدأ الأمر بفهم التوازن الدقيق بين التقنيات التقليدية المتوارثة عبر الأجيال والدقة التي يتطلبها علم الغذاء الحديث. هذا المزيج المتناغم هو ما يميز جبننا في الأسواق المحلية والدولية.</p>
+
+                            <h3>الأساس: اختيار حليب عالي الجودة</h3>
+
+                            <p>يبدأ كل جبن عظيم بحليب استثنائي. نحن نستورد الحليب من مزارع ألبان مختارة بعناية تلبي متطلبات الجودة الصارمة لدينا. يلعب تكوين الحليب - بما في ذلك محتوى الدهون ومستويات البروتين والنضارة العامة - دوراً حاسماً في تحديد الخصائص النهائية للجبن. يقوم فريق مراقبة الجودة لدينا بإجراء اختبارات شاملة لكل دفعة للتأكد من أنها تلبي معاييرنا الدقيقة.</p>
+
+                            <p>درجة الحرارة والتوقيت أمران بالغا الأهمية منذ لحظة وصول الحليب إلى منشأتنا. نحافظ على إدارة دقيقة لسلسلة التبريد للحفاظ على الخصائص الطبيعية للحليب ومنع أي تدهور قد يؤثر على جودة المنتج النهائي.</p>
+
+                            <h3>فن الزراعة والتخثر</h3>
+
+                            <p>تحويل الحليب إلى جبن هو عملية رائعة تعتمد على تفاعلات بيولوجية يتم التحكم فيها بعناية. نستخدم ثقافات بكتيرية مختارة خصيصاً تساهم في نكهة الجبن وملمسه وخصائص التعتيق. يتم اختيار هذه الثقافات بناءً على نوع الجبن المحدد الذي يتم إنتاجه وإضافتها إلى الحليب في ظروف خاضعة لرقابة صارمة.</p>
+
+                            <p>التخثر، العملية التي تشكل فيها بروتينات الحليب خثارة صلبة، هو ربما الخطوة الأكثر أهمية في صنع الجبن. نستخدم المنفحة الطبيعية ونحافظ على مستويات دقيقة لدرجة الحرارة والحموضة لضمان تكوين خثارة مثالي. توقيت هذه العملية أمر بالغ الأهمية - القصير جداً وستكون الخثارة ضعيفة؛ الطويل جداً وتصبح قاسية وصعبة العمل معها.</p>
+
+                            <h3>التقنيات التقليدية في الإنتاج الحديث</h3>
+
+                            <ul>
+                                <li>تقطيع الخثارة يدوياً لتحقيق الملمس المثالي</li>
+                                <li>طرق تقليب لطيفة تحافظ على سلامة الخثارة</li>
+                                <li>تقنيات كبس تقليدية لإزالة الرطوبة بشكل مثالي</li>
+                                <li>تعتيق طبيعي في بيئات يتم التحكم فيها مناخياً</li>
+                                <li>تقليب منتظم وعناية أثناء عملية النضج</li>
+                                <li>تقييم الجودة في كل مرحلة من مراحل الإنتاج</li>
+                            </ul>
+
+                            <h3>عملية التعتيق</h3>
+
+                            <p>التعتيق، أو "أفيناج"، هو المرحلة التي يطور فيها الجبن نكهاته المعقدة وخصائصه المميزة. تم تصميم مرافق التعتيق لدينا لتكرار الظروف المثالية الموجودة في كهوف الجبن التقليدية، مع تحكم دقيق في درجة الحرارة والرطوبة ودوران الهواء. تتطلب أصناف الجبن المختلفة فترات تعتيق مختلفة - من بضعة أسابيع للجبن الطازج إلى عدة أشهر للأصناف المعتقة.</p>
+
+                            <p>أثناء التعتيق، يقوم صانعو الجبن المحترفون لدينا بفحص ورعاية كل دفعة بانتظام. ويشمل ذلك تقليب عجلات الجبن، ومراقبة مستويات الرطوبة، وتقييم تطور النكهة. يضمن هذا النهج العملي أن يصل كل جبن إلى كامل إمكاناته قبل طرحه في السوق.</p>
+
+                            <h3>مراقبة الجودة وسلامة الغذاء</h3>
+
+                            <p>بينما نكرم الطرق التقليدية، لا نتنازل أبداً عن سلامة الغذاء. تعمل منشأة الإنتاج لدينا وفقاً لبروتوكولات HACCP الصارمة (تحليل المخاطر ونقاط التحكم الحرجة). تخضع كل دفعة لاختبارات شاملة للسلامة البكتيرية، وخصائص التعتيق المناسبة، واتساق ملف النكهة.</p>
+
+                            <p>نحتفظ بسجلات مفصلة لكل دفعة إنتاج، مما يسمح لنا بتتبع كل منتج من المزرعة المصدر عبر كل خطوة من خطوات الإنتاج إلى الجبن المعبأ النهائي. تضمن إمكانية التتبع هذه المساءلة وتسمح لنا بالحفاظ على أعلى معايير الجودة والسلامة.</p>
+
+                            <h3>الابتكار يلتقي بالتقاليد</h3>
+
+                            <p>في المصرية، نؤمن بأن احترام التقاليد لا يعني مقاومة الابتكار. نستثمر باستمرار في البحث والتطوير لتحسين عملياتنا مع الحفاظ على الطابع الأصيل لجبننا. ويشمل ذلك استكشاف ثقافات بكتيرية جديدة، وتحسين ظروف التعتيق، وتطوير أصناف جديدة تجذب تفضيلات المستهلكين المتطورة.</p>
+
+                            <p>التزامنا بالتميز في صناعة الجبن التقليدية ليس مجرد الحفاظ على الماضي - إنه يتعلق بخلق مستقبل مستدام لمنتجات الألبان المصرية. من خلال الجمع بين حكمة الأساليب التقليدية والفهم العلمي الحديث، ننتج جبناً يكرم تراثه مع تلبية معايير الجودة والسلامة المعاصرة.</p>
+
+                            <p>كل قطعة جبن تغادر منشأتنا تمثل تتويجاً لقرون من تقاليد صنع الجبن، وتفاني حرفيينا المهرة، والتزامنا الراسخ بالجودة. هذا هو فرق المصرية - حيث يلتقي التقليد بالتميز في كل قضمة.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--News Detail End-->
+
+        <!--Site Footer Start-->
+        <footer class="site-footer">
+            <div class="site-footer__top">
+                <div class="container">
+                    <div class="site-footer__top-inner">
+                        <div class="site-footer-shape-1 float-bob-x" style="background-image: url(assets/images/shapes/site-footer-shape-1.png);"></div>
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                                <div class="footer-widget__column footer-widget__about">
+                                    <div class="footer-widget__logo">
+                                        <a href="index-ar.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
+                                    </div>
+                                    <div class="footer-widget__about-text-box">
+                                        <p class="footer-widget__about-text">المصرية للصناعات الغذائية المتكاملة - متخصصة في منتجات الجبن والزبدة الفاخرة للأسواق المحلية والتصدير.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                                <div class="footer-widget__column footer-widget__Explore">
+                                    <div class="footer-widget__title-box">
+                                        <h3 class="footer-widget__title">استكشف</h3>
+                                    </div>
+                                    <ul class="footer-widget__Explore-list list-unstyled">
+                                        <li><a href="about-ar.html">عن الشركة</a></li>
+                                        <li><a href="products-ar.html">منتجاتنا</a></li>
+                                        <li><a href="sustainability-ar.html">الاستدامة</a></li>
+                                        <li><a href="join-us-ar.html">انضم إلينا</a></li>
+                                        <li><a href="contact-ar.html">اتصل بنا</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                                <div class="footer-widget__column footer-widget__Contact">
+                                    <div class="footer-widget__title-box">
+                                        <h3 class="footer-widget__title">اتصل بنا</h3>
+                                    </div>
+                                    <ul class="footer-widget__Contact-list list-unstyled">
+                                        <li>
+                                            <div class="icon">
+                                                <span class="fas fa-phone-square-alt"></span>
+                                            </div>
+                                            <div class="text">
+                                                <p><a href="tel:0554499170">0554499170 - 0554499676</a></p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon">
+                                                <span class="fas fa-envelope"></span>
+                                            </div>
+                                            <div class="text">
+                                                <p><a href="mailto:needhelp@company.com">needhelp@company.com</a></p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon">
+                                                <span class="icon-pin"></span>
+                                            </div>
+                                            <div class="text">
+                                                <p>العاشر من رمضان المنطقة الصناعية B1 - مصر</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-footer__bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="site-footer__bottom-inner">
+                                <p class="site-footer__bottom-text">© الحقوق محفوظة 2024 بواسطة <a href="#">المصرية</a></p>
+                                <div class="site-footer__social">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-facebook"></i></a>
+                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="site-footer__bottom-scroll">
+                                    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="icon-up-arrow"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--Site Footer End-->
+
+    </div><!-- /.page-wrapper -->
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+            <div class="logo-box">
+                <a href="index-ar.html" aria-label="logo image"><img loading="lazy" src="assets/photos/logo.png" width="143" alt="" /></a>
+            </div>
+            <div class="mobile-nav__container"></div>
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:info@eifidairy.com">info@eifidairy.com</a>
+                </li>
+                <li>
+                    <i class="fa fa-phone-alt"></i>
+                    <a href="tel:0554499170">0554499170 - 0554499676</a>
+                </li>
+            </ul>
+            <div class="mobile-nav__top">
+                <div class="mobile-nav__social">
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-facebook-square"></a>
+                    <a href="#" class="fab fa-pinterest-p"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <div class="search-popup__content">
+            <form action="#">
+                <label for="search" class="sr-only">search here</label>
+                <input type="text" id="search" placeholder="Search Here..." />
+                <button type="submit" aria-label="search submit" class="thm-btn">
+                    <i class="icon-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="icon-up-arrow"></i></a>
+
+    <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script src="assets/vendors/nouislider/nouislider.min.js"></script>
+    <script src="assets/vendors/odometer/odometer.min.js"></script>
+    <script src="assets/vendors/swiper/swiper.min.js"></script>
+    <script src="assets/vendors/tiny-slider/tiny-slider.min.js"></script>
+    <script src="assets/vendors/wnumb/wNumb.min.js"></script>
+    <script src="assets/vendors/wow/wow.js"></script>
+    <script src="assets/vendors/isotope/isotope.js"></script>
+    <script src="assets/vendors/countdown/countdown.min.js"></script>
+    <script src="assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/vendors/bxslider/jquery.bxslider.min.js"></script>
+    <script src="assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="assets/vendors/vegas/vegas.min.js"></script>
+    <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
+    <script src="assets/vendors/timepicker/timePicker.js"></script>
+    <script src="assets/vendors/circleType/jquery.circleType.js"></script>
+    <script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
+
+    <!-- template js -->
+    <script src="assets/js/elmasria.js"></script>
+
+</body>
+
+</html>
+

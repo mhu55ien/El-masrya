@@ -1,26 +1,24 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Contact Us - EL Masria - Egyptian Dairy Manufacturing Company </title>
+    <title>لماذا الجودة مهمة في إنتاج الألبان - المصرية</title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
     <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
-    <meta name="description" content="Egyptian Dairy Manufacturing Company " />
+    <meta name="description" content="الشركة المصرية لتصنيع الألبان - الجودة في الإنتاج" />
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Cairo Font for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
@@ -42,13 +40,20 @@
     <link rel="stylesheet" href="assets/vendors/vegas/vegas.min.css" />
     <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
     <link rel="stylesheet" href="assets/vendors/timepicker/timePicker.css" />
+    <link rel="stylesheet" href="assets/css/language-switcher.css" />
 
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/elmasria.css" />
     <link rel="stylesheet" href="assets/css/elmasria-responsive.css" />
+    <link rel="stylesheet" href="assets/css/rtl-fix.css" />
 
-    <!-- Disable custom cursor -->
+    <!-- Disable custom cursor and add Arabic font -->
     <style>
+        /* Arabic Font Override */
+        body, h1, h2, h3, h4, h5, h6, p, a, span, li, div, input, textarea, button {
+            font-family: 'Cairo', sans-serif !important;
+        }
+
         .custom-cursor__cursor,
         .custom-cursor__cursor-two {
             display: none !important;
@@ -62,30 +67,118 @@
         body {
             cursor: auto !important;
         }
+        
+        /* RTL Icons mirroring */
+        .icon-right-arrow::before {
+            content: "\e908"; 
+            transform: rotate(180deg);
+            display: inline-block;
+        }
+
+        /* News Detail Styling */
+        .news-detail {
+            padding: 80px 0;
+        }
+
+        .news-detail__img {
+            margin-bottom: 40px;
+            border-radius: 15px;
+            overflow: hidden;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .news-detail__img img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .news-detail__meta {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ece9e0;
+        }
+
+        .news-detail__meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--el-masria-gray);
+            font-size: 15px;
+        }
+
+        .news-detail__meta-item i {
+            color: var(--el-masria-base);
+            font-size: 18px;
+        }
+
+        .news-detail__title {
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--el-masria-black);
+            margin-bottom: 30px;
+        }
+
+        .news-detail__content {
+            font-size: 16px;
+            line-height: 30px;
+            color: var(--el-masria-gray);
+        }
+
+        .news-detail__content p {
+            margin-bottom: 25px;
+        }
+
+        .news-detail__content h3 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--el-masria-black);
+            margin: 35px 0 20px;
+        }
+
+        .news-detail__content ul {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+
+        .news-detail__content ul li {
+            position: relative;
+            padding-right: 30px; /* Adjusted for RTL */
+            margin-bottom: 15px;
+        }
+
+        .news-detail__content ul li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            right: 0; /* Adjusted for RTL */
+            color: var(--el-masria-base);
+        }
     </style>
 
 </head>
 
 <body>
 
-
-
-
-
-
-
     <div class="preloader">
         <div class="preloader__image"></div>
     </div>
     <!-- /.preloader -->
-
 
     <div class="page-wrapper">
         <header class="main-header">
             <div class="main-header__wrapper">
                 <div class="main-header__wrapper-inner">
                     <div class="main-header__logo">
-                        <a href="index.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
+                        <a href="index-ar.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
                     </div>
                     <div class="main-header__menu-box">
                         <div class="main-header__menu-box-top">
@@ -103,7 +196,7 @@
                                         <i class="icon-pin"></i>
                                     </div>
                                     <div class="text">
-                                        <p>10th Of Ramadan Industrial Zone B1 - Egypt</p>
+                                        <p>العاشر من رمضان المنطقة الصناعية B1 - مصر</p>
                                     </div>
                                 </li>
                             </ul>
@@ -123,22 +216,22 @@
                                                 <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                                                 <ul class="main-menu__list">
                                                     <li>
-                                                        <a href="index.html">Home</a>
+                                                        <a href="index-ar.html">الرئيسية</a>
                                                     </li>
                                                     <li>
-                                                        <a href="about.html">About</a>
+                                                        <a href="about-ar.html">عن الشركة</a>
                                                     </li>
                                                     <li>
-                                                        <a href="sustainability.html">Sustainability</a>
+                                                        <a href="sustainability-ar.html">الاستدامة</a>
                                                     </li>
                                                     <li>
-                                                        <a href="products.html">Products</a>
+                                                        <a href="products-ar.html">منتجاتنا</a>
                                                     </li>
                                                     <li>
-                                                        <a href="join-us.html">Join Us</a>
+                                                        <a href="join-us-ar.html">انضم إلينا</a>
                                                     </li>
-                                                    <li class="current">
-                                                        <a href="contact.html">Contact</a>
+                                                    <li>
+                                                        <a href="contact-ar.html">اتصل بنا</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -146,13 +239,13 @@
                                         <div class="main-menu__right">
                                             <div class="main-menu__search-cart-btn-box">
                                                 <div class="main-menu__language-switcher">
-                                                    <a href="contact-ar.html" class="main-menu__language-btn">
-    <i class="fas fa-globe"></i>
-    <span class="main-menu__language-text">عربي</span>
-</a>
+                                                    <a href="news-quality-matters.html" class="main-menu__language-btn">
+                                                        <i class="fas fa-globe"></i>
+                                                        <span class="main-menu__language-text">English</span>
+                                                    </a>
                                                 </div>
                                                 <div class="main-menu__btn-box">
-                                                    <a href="contact.html" class="thm-btn main-menu__btn">Get Free Quote
+                                                    <a href="contact-ar.html" class="thm-btn main-menu__btn">احصل على عرض
                                                         <i class="icon-right-arrow"></i> </a>
                                                 </div>
                                             </div>
@@ -184,202 +277,119 @@
 
         <!--Page Header Start-->
         <section class="page-header">
-            <div class="page-header-bg" style="background-image: url(assets/photos/22.jpeg)">
+            <div class="page-header-bg" style="background-image: url(assets/photos/8.jpeg)">
             </div>
             <div class="container">
                 <div class="page-header__inner">
-                    <h2>contact us</h2>
+                    <h2>الأخبار والمقالات</h2>
                 </div>
             </div>
         </section>
         <!--Page Header End-->
 
-        <!--Google Map Start-->
-        <section class="google-map">
+        <!--News Detail Start-->
+        <section class="news-detail">
             <div class="container">
-                <div class="google-map-box">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd"
-                        class="google-map__one" allowfullscreen>
-                    </iframe>
-                </div>
-                <div class="contact-details">
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-6 col-md-6">
-                            <div class="contact-details__single">
-                                <div class="contact-details__icon">
-                                    <span class="icon-help"></span>
-                                </div>
-                                <div class="contact-details__text">
-                                    <p>Have Question?</p>
-                                    <h3><a href="tel:0554499170">0554499170 - 0554499676</a></h3>
-                                </div>
+                <div class="row">
+                    <div class="col-xl-10 offset-xl-1">
+                        <div class="news-detail__img">
+                            <img loading="lazy" src="assets/photos/8.jpeg" alt="الجودة في إنتاج الألبان">
+                        </div>
+                        
+                        <div class="news-detail__meta">
+                            <div class="news-detail__meta-item">
+                                <i class="far fa-calendar"></i>
+                                <span>28 أغسطس، 2024</span>
+                            </div>
+                            <div class="news-detail__meta-item">
+                                <i class="far fa-user"></i>
+                                <span>فريق المصرية</span>
+                            </div>
+                            <div class="news-detail__meta-item">
+                                <i class="far fa-folder"></i>
+                                <span>معايير الجودة</span>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-6 col-md-6">
-                            <div class="contact-details__single">
-                                <div class="contact-details__icon">
-                                    <span class="icon-mailbox"></span>
-                                </div>
-                                <div class="contact-details__text">
-                                    <p>Write Email</p>
-                                    <h3><a href="mailto:needhelp@company.com">needhelp@company.com</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-6 col-md-6">
-                            <div class="contact-details__single contact-details__single-last">
-                                <div class="contact-details__icon">
-                                    <span class="icon-maps-and-flags"></span>
-                                </div>
-                                <div class="contact-details__text">
-                                    <p>Visit Office</p>
-                                    <h3>10th Of Ramadan Industrial Zone B1 - Egypt</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-6 col-md-6">
-                            <div class="contact-details__single">
-                                <div class="contact-details__social">
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-facebook"></i></a>
-                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Google Map End-->
 
-        <!--Contact Two Start-->
-        <section class="contact-two">
-            <div class="contact-two__shape-1 float-bob-x">
-                <img loading="lazy" src="assets/images/shapes/contact-two-shape-1.png" alt="">
-            </div>
-            <div class="container">
-                <div class="section-title text-center">
-                    <span class="section-title__tagline">Write a Message</span>
-                    <h2 class="section-title__title">Always here to help you</h2>
-                    <div class="section-title__icon">
-                        <img loading="lazy" src="assets/images/icon/section-title-icon-1.png" alt="">
+                        <h2 class="news-detail__title">لماذا الجودة مهمة في إنتاج الألبان</h2>
+
+                        <div class="news-detail__content">
+                            <p>في صناعة الألبان، الجودة ليست مجرد معيار - إنها التزام بالتميز يؤثر على كل جانب من جوانب الإنتاج، من المزرعة إلى المائدة. في المصرية، نحن ندرك أن إنتاج منتجات ألبان متميزة يتطلب تفانياً لا يتزعزع في الجودة في كل خطوة من خطوات العملية.</p>
+
+                            <p>تبدأ الجودة في إنتاج الألبان من المصدر. تؤثر صحة ورفاهية الحيوانات الحلوب بشكل مباشر على جودة الحليب الذي تنتجه. ولهذا السبب نعمل بشكل وثيق مع المزارعين المحليين الذين يشاركوننا التزامنا برعاية الحيوان وممارسات الزراعة المستدامة. الرعاية البيطرية المنتظمة، والتغذية السليمة، وظروف المعيشة المريحة هي عناصر أساسية تساهم في إنتاج حليب عالي الجودة.</p>
+
+                            <h3>العلم وراء مراقبة الجودة</h3>
+
+                            <p>يعتمد إنتاج الألبان الحديث بشكل كبير على الأساليب العلمية وبروتوكولات الاختبار الصارمة. تم تجهيز مرافقنا الحديثة بمعدات اختبار متقدمة تراقب معايير الجودة المختلفة طوال عملية الإنتاج. من لحظة وصول الحليب إلى منشأتنا، يخضع لاختبارات شاملة للتأكد من أنه يلبي معايير الجودة الصارمة لدينا.</p>
+
+                            <p>التحكم في درجة الحرارة هو أحد أهم العوامل في الحفاظ على جودة منتجات الألبان. نحافظ على ظروف درجة حرارة دقيقة أثناء التخزين والمعالجة والنقل للحفاظ على القيمة الغذائية ونضارة منتجاتنا. يضمن هذا الاهتمام بالتفاصيل أن يتلقى عملاؤنا منتجات ليست آمنة فحسب، بل تحتفظ أيضاً بجودتها الطبيعية.</p>
+
+                            <h3>مؤشرات الجودة الرئيسية التي نراقبها</h3>
+
+                            <ul>
+                                <li>العد البكتيري والسلامة الميكروبية</li>
+                                <li>محتوى الدهون والبروتين</li>
+                                <li>اتساق درجة الحرارة طوال سلسلة التبريد</li>
+                                <li>مستويات الحموضة</li>
+                                <li>غياب المضادات الحيوية والملوثات</li>
+                                <li>الخصائص الحسية (الطعم، الرائحة، الملمس)</li>
+                            </ul>
+
+                            <h3>التأثير على صحة المستهلك</h3>
+
+                            <p>تمتد أهمية الجودة في إنتاج الألبان إلى ما هو أبعد من الطعم والملمس - فهي تؤثر بشكل مباشر على صحة المستهلك وتغذيته. منتجات الألبان عالية الجودة هي مصادر غنية بالعناصر الغذائية الأساسية بما في ذلك الكالسيوم والبروتين وفيتامينات د و ب12 ومعادن حيوية أخرى. عندما يتم المساس بمعايير الجودة، يمكن أن تتضاءل هذه الفوائد الغذائية.</p>
+
+                            <p>يضمن التزامنا بالجودة أن كل منتج يغادر منشأتنا يوفر أقصى قيمة غذائية للمستهلكين. نحن نؤمن بأن منتجات الألبان عالية الجودة تلعب دوراً حاسماً في دعم أنماط الحياة الصحية، خاصة للأطفال في مرحلة النمو، والنساء الحوامل، وكبار السن الذين لديهم متطلبات غذائية أعلى.</p>
+
+                            <h3>الاستدامة والجودة</h3>
+
+                            <p>في المصرية، ندرك أن الجودة الحقيقية تشمل المسؤولية البيئية. تمتد معايير الجودة لدينا إلى الممارسات المستدامة التي تقلل من الأثر البيئي مع الحفاظ على تميز المنتج. ويشمل ذلك الاستخدام الفعال للمياه، وبرامج تقليل النفايات، وطرق المعالجة الموفرة للطاقة.</p>
+
+                            <p>من خلال الاستثمار في الجودة على كل المستويات - من ممارسات الزراعة المستدامة إلى تكنولوجيا المعالجة المتقدمة - نضمن أن منتجاتنا تلبي أعلى المعايير مع المساهمة في كوكب أكثر صحة للأجيال القادمة.</p>
+
+                            <p>الجودة في إنتاج الألبان ليست وجهة بل رحلة مستمرة من التحسين والابتكار. بينما نمضي قدماً، نظل ملتزمين برفع مستوى معايير الجودة في صناعة الألبان المصرية، وضمان أن كل منتج يحمل اسم المصرية يمثل قمة التميز في تصنيع الألبان.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="contact-two__form-box">
-                    <form action="assets/inc/sendemail.php" class="contact-two__form contact-form-validated"
-                        novalidate="novalidate">
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="contact-form__input-box">
-                                    <input type="text" placeholder="Your Name" name="name">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="contact-form__input-box">
-                                    <input type="email" placeholder="Email Address" name="email">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="contact-form__input-box">
-                                    <input type="text" placeholder="Phone" name="Phone Number">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="contact-form__input-box">
-                                    <input type="text" placeholder="Subject" name="Subject">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="contact-form__input-box text-message-box">
-                                    <textarea name="message" placeholder="Write a Comment"></textarea>
-                                </div>
-                                <div class="contact-form__btn-box">
-                                    <a href="about.html" class="thm-btn contact-two__btn">Send a Message<i
-                                            class="icon-right-arrow"></i> </a>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
                 </div>
             </div>
         </section>
-        <!--Contact Two End-->
+        <!--News Detail End-->
 
         <!--Site Footer Start-->
         <footer class="site-footer">
             <div class="site-footer__top">
                 <div class="container">
                     <div class="site-footer__top-inner">
-                        <div class="site-footer-shape-1 float-bob-x"
-                            style="background-image: url(assets/images/shapes/site-footer-shape-1.png);"></div>
+                        <div class="site-footer-shape-1 float-bob-x" style="background-image: url(assets/images/shapes/site-footer-shape-1.png);"></div>
                         <div class="row">
                             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                                 <div class="footer-widget__column footer-widget__about">
                                     <div class="footer-widget__logo">
-                                        <a href="index.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
+                                        <a href="index-ar.html"><img loading="lazy" src="assets/photos/logo.png" width="150" alt=""></a>
                                     </div>
                                     <div class="footer-widget__about-text-box">
-                                        <p class="footer-widget__about-text">Egyptian Integrated Food Industries -
-                                            specializing in premium cheese and butter products for local and export
-                                            markets.</p>
+                                        <p class="footer-widget__about-text">المصرية للصناعات الغذائية المتكاملة - متخصصة في منتجات الجبن والزبدة الفاخرة للأسواق المحلية والتصدير.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                                 <div class="footer-widget__column footer-widget__Explore">
                                     <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">Explore</h3>
+                                        <h3 class="footer-widget__title">استكشف</h3>
                                     </div>
                                     <ul class="footer-widget__Explore-list list-unstyled">
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="farmers.html">Our Farmers</a></li>
-                                        <li><a href="project-01.html">New Projects</a></li>
-                                        <li><a href="services.html">Services</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                                <div class="footer-widget__column footer-widget__news">
-                                    <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">News</h3>
-                                    </div>
-                                    <ul class="footer-widget__news-list list-unstyled">
-                                        <li>
-                                            <div class="footer-widget__news-img">
-                                                <img loading="lazy" src="assets/images/resources/footer-widget-news-img-1.jpg" alt="">
-                                            </div>
-                                            <div class="footer-widget__news-content">
-                                                <p class="footer-widget__news-date">20 Jul, 2022</p>
-                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">A
-                                                        Our Products
-                                                        Gives
-                                                        More Good Taste</a></h5>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="footer-widget__news-img">
-                                                <img loading="lazy" src="assets/images/resources/footer-widget-news-img-2.jpg" alt="">
-                                            </div>
-                                            <div class="footer-widget__news-content">
-                                                <p class="footer-widget__news-date">20 Jul, 2022</p>
-                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">A
-                                                        Our Products
-                                                        Gives
-                                                        More Good Taste</a></h5>
-                                            </div>
-                                        </li>
+                                        <li><a href="about-ar.html">عن الشركة</a></li>
+                                        <li><a href="products-ar.html">منتجاتنا</a></li>
+                                        <li><a href="sustainability-ar.html">الاستدامة</a></li>
+                                        <li><a href="join-us-ar.html">انضم إلينا</a></li>
+                                        <li><a href="contact-ar.html">اتصل بنا</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                                 <div class="footer-widget__column footer-widget__Contact">
                                     <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">Contact</h3>
+                                        <h3 class="footer-widget__title">اتصل بنا</h3>
                                     </div>
                                     <ul class="footer-widget__Contact-list list-unstyled">
                                         <li>
@@ -403,17 +413,10 @@
                                                 <span class="icon-pin"></span>
                                             </div>
                                             <div class="text">
-                                                <p>10th Of Ramadan Industrial Zone B1 - Egypt</p>
+                                                <p>العاشر من رمضان المنطقة الصناعية B1 - مصر</p>
                                             </div>
                                         </li>
                                     </ul>
-                                    <form class="footer-widget__Contact-form">
-                                        <div class="footer-widget__Contact-input-box">
-                                            <input type="email" placeholder="Email Address" name="email">
-                                            <button type="submit" class="footer-widget__Contact-btn"><i
-                                                    class="icon-right-arrow"></i></button>
-                                        </div>
-                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -425,8 +428,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="site-footer__bottom-inner">
-                                <p class="site-footer__bottom-text">© Copyright 2022 by <a href="#">EL Masria.com</a>
-                                </p>
+                                <p class="site-footer__bottom-text">© الحقوق محفوظة 2024 بواسطة <a href="#">المصرية</a></p>
                                 <div class="site-footer__social">
                                     <a href="#"><i class="fab fa-twitter"></i></a>
                                     <a href="#"><i class="fab fa-facebook"></i></a>
@@ -434,8 +436,7 @@
                                     <a href="#"><i class="fab fa-instagram"></i></a>
                                 </div>
                                 <div class="site-footer__bottom-scroll">
-                                    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i
-                                            class="icon-up-arrow"></i></a>
+                                    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="icon-up-arrow"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -445,66 +446,51 @@
         </footer>
         <!--Site Footer End-->
 
-
     </div><!-- /.page-wrapper -->
-
 
     <div class="mobile-nav__wrapper">
         <div class="mobile-nav__overlay mobile-nav__toggler"></div>
-        <!-- /.mobile-nav__overlay -->
         <div class="mobile-nav__content">
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
-
             <div class="logo-box">
-                <a href="index.html" aria-label="logo image"><img loading="lazy" src="assets/photos/logo.png" width="143" alt="" /></a>
+                <a href="index-ar.html" aria-label="logo image"><img loading="lazy" src="assets/photos/logo.png" width="143" alt="" /></a>
             </div>
-            <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>
-            <!-- /.mobile-nav__container -->
-
             <ul class="mobile-nav__contact list-unstyled">
                 <li>
                     <i class="fa fa-envelope"></i>
-                    <a href="mailto:needhelp@packageName__.com">needhelp@EL Masria.com</a>
+                    <a href="mailto:info@eifidairy.com">info@eifidairy.com</a>
                 </li>
                 <li>
                     <i class="fa fa-phone-alt"></i>
                     <a href="tel:0554499170">0554499170 - 0554499676</a>
                 </li>
-            </ul><!-- /.mobile-nav__contact -->
+            </ul>
             <div class="mobile-nav__top">
                 <div class="mobile-nav__social">
                     <a href="#" class="fab fa-twitter"></a>
                     <a href="#" class="fab fa-facebook-square"></a>
                     <a href="#" class="fab fa-pinterest-p"></a>
                     <a href="#" class="fab fa-instagram"></a>
-                </div><!-- /.mobile-nav__social -->
-            </div><!-- /.mobile-nav__top -->
-
-
-
+                </div>
+            </div>
         </div>
-        <!-- /.mobile-nav__content -->
     </div>
-    <!-- /.mobile-nav__wrapper -->
 
     <div class="search-popup">
         <div class="search-popup__overlay search-toggler"></div>
-        <!-- /.search-popup__overlay -->
         <div class="search-popup__content">
             <form action="#">
-                <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
+                <label for="search" class="sr-only">search here</label>
                 <input type="text" id="search" placeholder="Search Here..." />
                 <button type="submit" aria-label="search submit" class="thm-btn">
                     <i class="icon-magnifying-glass"></i>
                 </button>
             </form>
         </div>
-        <!-- /.search-popup__content -->
     </div>
-    <!-- /.search-popup -->
 
-
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="icon-up-arrow"></i></a>
 
     <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
     <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -531,11 +517,10 @@
     <script src="assets/vendors/circleType/jquery.circleType.js"></script>
     <script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
 
-
-
-
     <!-- template js -->
     <script src="assets/js/elmasria.js"></script>
+
 </body>
 
 </html>
+
